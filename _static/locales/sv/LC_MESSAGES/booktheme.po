@@ -8,56 +8,11 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Sphinx Book Theme"
-msgstr "Sphinx Boktema"
-
-msgid "By"
-msgstr "Av"
-
-msgid "previous page"
-msgstr "föregående sida"
-
-msgid "repository"
-msgstr "repositorium"
-
-msgid "Copyright"
-msgstr "Upphovsrätt"
-
-msgid "Edit this page"
-msgstr "Redigera den här sidan"
-
-msgid "Theme by the"
-msgstr "Tema av"
-
-msgid "Source repository"
-msgstr "Källkodsrepositorium"
-
-msgid "suggest edit"
-msgstr "föreslå ändring"
-
-msgid "Fullscreen mode"
-msgstr "Fullskärmsläge"
-
-msgid "Contents"
-msgstr "Innehåll"
-
-msgid "Download notebook file"
-msgstr "Ladda ner notebook-fil"
-
-msgid "Toggle navigation"
-msgstr "Växla navigering"
-
-msgid "Open an issue"
-msgstr "Öppna en problemrapport"
-
-msgid "By the"
-msgstr "Av den"
-
-msgid "open issue"
-msgstr "öppna problemrapport"
-
 msgid "Last updated on"
 msgstr "Senast uppdaterad den"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx Boktema"
 
 msgid "Download source file"
 msgstr "Ladda ner källfil"
@@ -65,11 +20,56 @@ msgstr "Ladda ner källfil"
 msgid "Print to PDF"
 msgstr "Skriv ut till PDF"
 
-msgid "Launch"
-msgstr "Öppna"
+msgid "next page"
+msgstr "nästa sida"
+
+msgid "Fullscreen mode"
+msgstr "Fullskärmsläge"
+
+msgid "Theme by the"
+msgstr "Tema av"
+
+msgid "suggest edit"
+msgstr "föreslå ändring"
+
+msgid "Copyright"
+msgstr "Upphovsrätt"
+
+msgid "By the"
+msgstr "Av den"
+
+msgid "Source repository"
+msgstr "Källkodsrepositorium"
+
+msgid "Download notebook file"
+msgstr "Ladda ner notebook-fil"
+
+msgid "Toggle navigation"
+msgstr "Växla navigering"
+
+msgid "open issue"
+msgstr "öppna problemrapport"
 
 msgid "Download this page"
 msgstr "Ladda ner den här sidan"
 
-msgid "next page"
-msgstr "nästa sida"
+msgid "repository"
+msgstr "repositorium"
+
+msgid "previous page"
+msgstr "föregående sida"
+
+msgid "By"
+msgstr "Av"
+
+msgid "Launch"
+msgstr "Öppna"
+
+msgid "Contents"
+msgstr "Innehåll"
+
+msgid "Edit this page"
+msgstr "Redigera den här sidan"
+
+msgid "Open an issue"
+msgstr "Öppna en problemrapport"

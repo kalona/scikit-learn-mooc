@@ -8,56 +8,11 @@ msgstr ""
 "Language: hr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Sphinx Book Theme"
-msgstr "Tema knjige Sphinx"
-
-msgid "By"
-msgstr "Po"
-
-msgid "previous page"
-msgstr "Prethodna stranica"
-
-msgid "repository"
-msgstr "spremište"
-
-msgid "Copyright"
-msgstr "Autorska prava"
-
-msgid "Edit this page"
-msgstr "Uredite ovu stranicu"
-
-msgid "Theme by the"
-msgstr "Tema autora"
-
-msgid "Source repository"
-msgstr "Izvorno spremište"
-
-msgid "suggest edit"
-msgstr "predloži uređivanje"
-
-msgid "Fullscreen mode"
-msgstr "Način preko cijelog zaslona"
-
-msgid "Contents"
-msgstr "Sadržaj"
-
-msgid "Download notebook file"
-msgstr "Preuzmi datoteku bilježnice"
-
-msgid "Toggle navigation"
-msgstr "Uključi / isključi navigaciju"
-
-msgid "Open an issue"
-msgstr "Otvorite izdanje"
-
-msgid "By the"
-msgstr "Od strane"
-
-msgid "open issue"
-msgstr "otvoreno izdanje"
-
 msgid "Last updated on"
 msgstr "Posljednje ažuriranje:"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema knjige Sphinx"
 
 msgid "Download source file"
 msgstr "Preuzmi izvornu datoteku"
@@ -65,11 +20,56 @@ msgstr "Preuzmi izvornu datoteku"
 msgid "Print to PDF"
 msgstr "Ispis u PDF"
 
-msgid "Launch"
-msgstr "Pokrenite"
+msgid "next page"
+msgstr "sljedeća stranica"
+
+msgid "Fullscreen mode"
+msgstr "Način preko cijelog zaslona"
+
+msgid "Theme by the"
+msgstr "Tema autora"
+
+msgid "suggest edit"
+msgstr "predloži uređivanje"
+
+msgid "Copyright"
+msgstr "Autorska prava"
+
+msgid "By the"
+msgstr "Od strane"
+
+msgid "Source repository"
+msgstr "Izvorno spremište"
+
+msgid "Download notebook file"
+msgstr "Preuzmi datoteku bilježnice"
+
+msgid "Toggle navigation"
+msgstr "Uključi / isključi navigaciju"
+
+msgid "open issue"
+msgstr "otvoreno izdanje"
 
 msgid "Download this page"
 msgstr "Preuzmite ovu stranicu"
 
-msgid "next page"
-msgstr "sljedeća stranica"
+msgid "repository"
+msgstr "spremište"
+
+msgid "previous page"
+msgstr "Prethodna stranica"
+
+msgid "By"
+msgstr "Po"
+
+msgid "Launch"
+msgstr "Pokrenite"
+
+msgid "Contents"
+msgstr "Sadržaj"
+
+msgid "Edit this page"
+msgstr "Uredite ovu stranicu"
+
+msgid "Open an issue"
+msgstr "Otvorite izdanje"

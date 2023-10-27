@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -39,9 +39,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=927b94d3fcb96560df09"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -57,8 +57,8 @@
     <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../_static/sklearn_mooc.js"></script>
     <script src="../_static/matomo.js"></script>
+    <script src="../_static/sklearn_mooc.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -72,7 +72,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="📃 Solution for Exercise M4.02" href="linear_models_sol_02.html" />
-    <link rel="prev" title="Linear regression for a non-linear features-target relationship" href="linear_regression_non_linear_link.html" />
+    <link rel="prev" title="Non-linear feature engineering for Linear Regression" href="linear_regression_non_linear_link.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -152,13 +152,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="../_static/scikit-learn-logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/scikit-learn-logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/scikit-learn-logo.png" class="logo__image only-light" alt="Scikit-learn course - Home"/>
+    <script>document.write(`<img src="../_static/scikit-learn-logo.png" class="logo__image only-dark" alt="Scikit-learn course - Home"/>`);</script>
   
   
 </a></div>
@@ -265,30 +266,29 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../linear_models/linear_models_module_intro.html">Module overview</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../linear_models/linear_models_intuitions_index.html">Intuitions on linear models</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_slides.html">🎥 Intuitions on linear models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_01.html">✅ Quiz M4.01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_regression_without_sklearn.html">Linear regression without scikit-learn</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_ex_01.html">📝 Exercise M4.01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_sol_01.html">📃 Solution for Exercise M4.01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_regression_in_sklearn.html">Linear regression using scikit-learn</a></li>
-<li class="toctree-l2"><a class="reference internal" href="logistic_regression.html">Linear model for classification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_02.html">✅ Quiz M4.02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistic_regression.html">Linear models for classification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_01.html">✅ Quiz M4.01</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../linear_models/linear_models_non_linear_index.html">Non-linear feature engineering for linear models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="linear_regression_non_linear_link.html">Linear regression for a non-linear features-target relationship</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linear_regression_non_linear_link.html">Non-linear feature engineering for Linear Regression</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">📝 Exercise M4.02</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_sol_02.html">📃 Solution for Exercise M4.02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linear_models_feature_engineering_classification.html">Non-linear feature engineering for Logistic Regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logistic_regression_non_linear.html">Beyond linear separation in classification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_03.html">✅ Quiz M4.03</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_02.html">✅ Quiz M4.02</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../linear_models/linear_models_regularization_index.html">Regularization in linear model</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../linear_models/regularized_linear_models_slides.html">🎥 Intuitions on regularized linear models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_regularization.html">Regularization of linear regression model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_04.html">✅ Quiz M4.04</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_ex_03.html">📝 Exercise M4.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_sol_03.html">📃 Solution for Exercise M4.03</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_05.html">✅ Quiz M4.05</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_03.html">✅ Quiz M4.03</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../linear_models/linear_models_wrap_up_quiz.html">🏁 Wrap-up quiz 4</a></li>
@@ -683,13 +683,13 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="exercise-m4-02">
 <h1>📝 Exercise M4.02<a class="headerlink" href="#exercise-m4-02" title="Permalink to this heading">#</a></h1>
 <p>In the previous notebook, we showed that we can add new features based on the
-original feature to make the model more expressive, for instance <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">2</span></code> or <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">3</span></code>.
-In that case we only used a single feature in <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
+original feature <code class="docutils literal notranslate"><span class="pre">x</span></code> to make the model more expressive, for instance <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">2</span></code> or
+<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">3</span></code>. In that case we only used a single feature in <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
 <p>The aim of this notebook is to train a linear regression algorithm on a
 dataset with more than a single feature. In such a “multi-dimensional” feature
-space we can derive new features of the form <code class="docutils literal notranslate"><span class="pre">x1</span> <span class="pre">*</span> <span class="pre">x2</span></code>, <code class="docutils literal notranslate"><span class="pre">x2</span> <span class="pre">*</span> <span class="pre">x3</span></code>,
-etc. Products of features are usually called “non-linear or
-multiplicative interactions” between features.</p>
+space we can derive new features of the form <code class="docutils literal notranslate"><span class="pre">x1</span> <span class="pre">*</span> <span class="pre">x2</span></code>, <code class="docutils literal notranslate"><span class="pre">x2</span> <span class="pre">*</span> <span class="pre">x3</span></code>, etc.
+Products of features are usually called “non-linear” or “multiplicative”
+interactions between features.</p>
 <p>Feature engineering can be an important step of a model pipeline as long as
 the new features are expected to be predictive. For instance, think of a
 classification model to decide if a patient has risk of developing a heart
@@ -797,7 +797,9 @@ as metric.</p>
 </div>
 </div>
 </div>
-<p>Compute the mean and std of the MAE in grams (g).</p>
+<p>Compute the mean and std of the MAE in grams (g). Remember you have to revert
+the sign introduced when metrics start with <code class="docutils literal notranslate"><span class="pre">neg_</span></code>, such as in
+<code class="docutils literal notranslate"><span class="pre">&quot;neg_mean_absolute_error&quot;</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
@@ -808,8 +810,11 @@ as metric.</p>
 <p>Now create a pipeline using <code class="docutils literal notranslate"><span class="pre">make_pipeline</span></code> consisting of a
 <code class="docutils literal notranslate"><span class="pre">PolynomialFeatures</span></code> and a linear regression. Set <code class="docutils literal notranslate"><span class="pre">degree=2</span></code> and
 <code class="docutils literal notranslate"><span class="pre">interaction_only=True</span></code> to the feature engineering step. Remember not to
-include the bias to avoid redundancies with the linear’s regression intercept.</p>
-<p>Use the same strategy as before to cross-validate such a pipeline.</p>
+include a “bias” feature (that is a constant-valued feature) to avoid
+introducing a redundancy with the intercept of the subsequent linear
+regression model.</p>
+<p>You may want to use the <code class="docutils literal notranslate"><span class="pre">.set_output(transform=&quot;pandas&quot;)</span></code> method of the
+pipeline to answer the next question.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
@@ -817,8 +822,51 @@ include the bias to avoid redundancies with the linear’s regression intercept.
 </div>
 </div>
 </div>
-<p>Compute the mean and std of the MAE in grams (g) and compare with the results
+<p>Transform the first 5 rows of the dataset and look at the column names. How
+many features are generated at the output of the <code class="docutils literal notranslate"><span class="pre">PolynomialFeatures</span></code> step in
+the previous pipeline?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Check that the values for the new interaction features are correct for a few
+of them.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use the same cross-validation strategy as done previously to estimate the mean
+and std of the MAE in grams (g) for such a pipeline. Compare with the results
 without feature engineering.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s try to build an alternative pipeline with an adjustable number of
+intermediate features while keeping a similar predictive power. To do so, try
+using the <code class="docutils literal notranslate"><span class="pre">Nystroem</span></code> transformer instead of <code class="docutils literal notranslate"><span class="pre">PolynomialFeatures</span></code>. Set the
+kernel parameter to <code class="docutils literal notranslate"><span class="pre">&quot;poly&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">degree</span></code> to 2. Adjust the number of
+components to be as small as possible while keeping a good cross-validation
+performance.</p>
+<p>Hint: Use a <code class="docutils literal notranslate"><span class="pre">ValidationCurveDisplay</span></code> with <code class="docutils literal notranslate"><span class="pre">param_range</span> <span class="pre">=</span> <span class="pre">np.array([5,</span> <span class="pre">10,</span> <span class="pre">50,</span> <span class="pre">100])</span></code> to find the optimal <code class="docutils literal notranslate"><span class="pre">n_components</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>How do the mean and std of the MAE for the Nystroem pipeline with optimal
+<code class="docutils literal notranslate"><span class="pre">n_components</span></code> compare to the other previous models?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here.</span>
@@ -864,7 +912,7 @@ without feature engineering.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Linear regression for a non-linear features-target relationship</p>
+        <p class="prev-next-title">Non-linear feature engineering for Linear Regression</p>
       </div>
     </a>
     <a class="right-next"
@@ -938,8 +986,8 @@ By scikit-learn developers
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>

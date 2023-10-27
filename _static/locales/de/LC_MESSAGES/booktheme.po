@@ -8,56 +8,11 @@ msgstr ""
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Sphinx Book Theme"
-msgstr "Sphinx-Buch-Thema"
-
-msgid "By"
-msgstr "Durch"
-
-msgid "previous page"
-msgstr "vorherige Seite"
-
-msgid "repository"
-msgstr "Repository"
-
-msgid "Copyright"
-msgstr "Urheberrechte ©"
-
-msgid "Edit this page"
-msgstr "Bearbeite diese Seite"
-
-msgid "Theme by the"
-msgstr "Thema von der"
-
-msgid "Source repository"
-msgstr "Quell-Repository"
-
-msgid "suggest edit"
-msgstr "vorschlagen zu bearbeiten"
-
-msgid "Fullscreen mode"
-msgstr "Vollbildmodus"
-
-msgid "Contents"
-msgstr "Inhalt"
-
-msgid "Download notebook file"
-msgstr "Notebook-Datei herunterladen"
-
-msgid "Toggle navigation"
-msgstr "Navigation umschalten"
-
-msgid "Open an issue"
-msgstr "Öffnen Sie ein Problem"
-
-msgid "By the"
-msgstr "Bis zum"
-
-msgid "open issue"
-msgstr "offenes Thema"
-
 msgid "Last updated on"
 msgstr "Zuletzt aktualisiert am"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx-Buch-Thema"
 
 msgid "Download source file"
 msgstr "Quelldatei herunterladen"
@@ -65,11 +20,56 @@ msgstr "Quelldatei herunterladen"
 msgid "Print to PDF"
 msgstr "In PDF drucken"
 
-msgid "Launch"
-msgstr "Starten"
+msgid "next page"
+msgstr "Nächste Seite"
+
+msgid "Fullscreen mode"
+msgstr "Vollbildmodus"
+
+msgid "Theme by the"
+msgstr "Thema von der"
+
+msgid "suggest edit"
+msgstr "vorschlagen zu bearbeiten"
+
+msgid "Copyright"
+msgstr "Urheberrechte ©"
+
+msgid "By the"
+msgstr "Bis zum"
+
+msgid "Source repository"
+msgstr "Quell-Repository"
+
+msgid "Download notebook file"
+msgstr "Notebook-Datei herunterladen"
+
+msgid "Toggle navigation"
+msgstr "Navigation umschalten"
+
+msgid "open issue"
+msgstr "offenes Thema"
 
 msgid "Download this page"
 msgstr "Laden Sie diese Seite herunter"
 
-msgid "next page"
-msgstr "Nächste Seite"
+msgid "repository"
+msgstr "Repository"
+
+msgid "previous page"
+msgstr "vorherige Seite"
+
+msgid "By"
+msgstr "Durch"
+
+msgid "Launch"
+msgstr "Starten"
+
+msgid "Contents"
+msgstr "Inhalt"
+
+msgid "Edit this page"
+msgstr "Bearbeite diese Seite"
+
+msgid "Open an issue"
+msgstr "Öffnen Sie ein Problem"

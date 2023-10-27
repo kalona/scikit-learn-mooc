@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Linear model for classification &#8212; Scikit-learn course</title>
+    <title>Linear models for classification &#8212; Scikit-learn course</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -39,9 +39,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=927b94d3fcb96560df09"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -57,8 +57,8 @@
     <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../_static/sklearn_mooc.js"></script>
     <script src="../_static/matomo.js"></script>
+    <script src="../_static/sklearn_mooc.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="✅ Quiz M4.02" href="../linear_models/linear_models_quiz_m4_02.html" />
+    <link rel="next" title="✅ Quiz M4.01" href="../linear_models/linear_models_quiz_m4_01.html" />
     <link rel="prev" title="Linear regression using scikit-learn" href="linear_regression_in_sklearn.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -152,13 +152,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="../_static/scikit-learn-logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/scikit-learn-logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/scikit-learn-logo.png" class="logo__image only-light" alt="Scikit-learn course - Home"/>
+    <script>document.write(`<img src="../_static/scikit-learn-logo.png" class="logo__image only-dark" alt="Scikit-learn course - Home"/>`);</script>
   
   
 </a></div>
@@ -265,30 +266,29 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../linear_models/linear_models_module_intro.html">Module overview</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../linear_models/linear_models_intuitions_index.html">Intuitions on linear models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_slides.html">🎥 Intuitions on linear models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_01.html">✅ Quiz M4.01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_regression_without_sklearn.html">Linear regression without scikit-learn</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_ex_01.html">📝 Exercise M4.01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_sol_01.html">📃 Solution for Exercise M4.01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_regression_in_sklearn.html">Linear regression using scikit-learn</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Linear model for classification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_02.html">✅ Quiz M4.02</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Linear models for classification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_01.html">✅ Quiz M4.01</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../linear_models/linear_models_non_linear_index.html">Non-linear feature engineering for linear models</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="linear_regression_non_linear_link.html">Linear regression for a non-linear features-target relationship</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linear_regression_non_linear_link.html">Non-linear feature engineering for Linear Regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_ex_02.html">📝 Exercise M4.02</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_sol_02.html">📃 Solution for Exercise M4.02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linear_models_feature_engineering_classification.html">Non-linear feature engineering for Logistic Regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logistic_regression_non_linear.html">Beyond linear separation in classification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_03.html">✅ Quiz M4.03</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_02.html">✅ Quiz M4.02</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../linear_models/linear_models_regularization_index.html">Regularization in linear model</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../linear_models/regularized_linear_models_slides.html">🎥 Intuitions on regularized linear models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_regularization.html">Regularization of linear regression model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_04.html">✅ Quiz M4.04</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_ex_03.html">📝 Exercise M4.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_sol_03.html">📃 Solution for Exercise M4.03</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_05.html">✅ Quiz M4.05</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_03.html">✅ Quiz M4.03</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../linear_models/linear_models_wrap_up_quiz.html">🏁 Wrap-up quiz 4</a></li>
@@ -655,7 +655,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -666,11 +668,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Linear model for classification</h1>
+    <h1>Linear models for classification</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimated-predicted-probabilities">(Estimated) predicted probabilities</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -680,8 +690,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="linear-model-for-classification">
-<h1>Linear model for classification<a class="headerlink" href="#linear-model-for-classification" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="linear-models-for-classification">
+<h1>Linear models for classification<a class="headerlink" href="#linear-models-for-classification" title="Permalink to this heading">#</a></h1>
 <p>In regression, we saw that the target to be predicted is a continuous
 variable. In classification, the target is discrete (e.g. categorical).</p>
 <p>In this notebook we go back to the penguin dataset. However, this time the
@@ -809,48 +819,11 @@ general.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-</pre></div>
-</div>
-<img alt="../_images/02c6c4ff44f07de7d6469ff1bebcc173d7928518102d679afca86d16b3c0b6d2.png" src="../_images/02c6c4ff44f07de7d6469ff1bebcc173d7928518102d679afca86d16b3c0b6d2.png" />
+<img alt="../_images/f46d6d48b1b44f5c93b776ae4d3798b4c03b32b838843d853edd6711d65d6545.png" src="../_images/f46d6d48b1b44f5c93b776ae4d3798b4c03b32b838843d853edd6711d65d6545.png" />
 </div>
 </div>
-<p>Thus, we see that our decision function is represented by a line separating
-the 2 classes.</p>
-<p>Since the line is oblique, it means that we used a combination of both
-features:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coefs</span> <span class="o">=</span> <span class="n">logistic_regression</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># the coefficients is a 2d array</span>
-<span class="n">weights</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">coefs</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">culmen_columns</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">weights</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">()</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Weights of the logistic regression&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/997327ce5219c0953b3ca3c9aa0c8a85475b79196ddf3440c68f1d91c77afe36.png" src="../_images/997327ce5219c0953b3ca3c9aa0c8a85475b79196ddf3440c68f1d91c77afe36.png" />
-</div>
-</div>
-<p>Indeed, both coefficients are non-null. If one of them had been zero, the
-decision boundary would have been either horizontal or vertical.</p>
-<p>Furthermore the intercept is also non-zero, which means that the decision does
-not go through the point with (0, 0) coordinates.</p>
+<p>Thus, we see that our decision function is represented by a straight line
+separating the 2 classes.</p>
 <p>For the mathematically inclined reader, the equation of the decision boundary
 is:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>coef0 * x0 + coef1 * x1 + intercept = 0
@@ -862,13 +835,177 @@ is:</p>
 </pre></div>
 </div>
 <p>which is the equation of a straight line.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you want to go further, try changing the <code class="docutils literal notranslate"><span class="pre">response_method</span></code> to
-<code class="docutils literal notranslate"><span class="pre">&quot;predict_proba&quot;</span></code> in the <code class="docutils literal notranslate"><span class="pre">DecisionBoundaryDisplay</span></code> above. Now the boundaries
-encode by color the estimated probability of belonging to either class, as
-mentioned in the introductory slides 🎥 Intuitions on linear models.</p>
+<p>Since the line is oblique, it means that both coefficients (also called
+weights) are non-null:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coefs</span> <span class="o">=</span> <span class="n">logistic_regression</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">coefs</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Weight for &#39;</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">&#39;&quot;</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">culmen_columns</span><span class="p">])</span>
+<span class="n">weights</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Weight for &#39;Culmen Length (mm)&#39;    3.724988
+Weight for &#39;Culmen Depth (mm)&#39;    -1.096500
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can <a class="reference external" href="https://scikit-learn.org/stable/modules/compose.html#access-pipeline-steps">access pipeline
+steps</a>
+by name or position. In the code above <code class="docutils literal notranslate"><span class="pre">logistic_regression[-1]</span></code> means the
+last step of the pipeline. Then you can access the attributes of that step such
+as <code class="docutils literal notranslate"><span class="pre">coef_</span></code>. Notice also that the <code class="docutils literal notranslate"><span class="pre">coef_</span></code> attribute is an array of shape (1,
+<code class="docutils literal notranslate"><span class="pre">n_features</span></code>) an then we access it via its first entry. Alternatively one
+could use <code class="docutils literal notranslate"><span class="pre">coef_.ravel()</span></code>.</p>
+<p>We are now ready to visualize the weight values as a barplot:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">weights</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">()</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Weights of the logistic regression&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/51be103ac26bff670694013d91b4d439515266766f7bc87fec8845480c5479a5.png" src="../_images/51be103ac26bff670694013d91b4d439515266766f7bc87fec8845480c5479a5.png" />
+</div>
+</div>
+<p>If one of the weights had been zero, the decision boundary would have been
+either horizontal or vertical.</p>
+<p>Furthermore the intercept is also non-zero, which means that the decision does
+not go through the point with (0, 0) coordinates.</p>
+<section id="estimated-predicted-probabilities">
+<h2>(Estimated) predicted probabilities<a class="headerlink" href="#estimated-predicted-probabilities" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">predict</span></code> method in classification models returns what we call a “hard
+class prediction”, i.e. the most likely class a given data point would belong
+to. We can confirm the intuition given by the <code class="docutils literal notranslate"><span class="pre">DecisionBoundaryDisplay</span></code> by
+testing on a hypothetical <code class="docutils literal notranslate"><span class="pre">sample</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_penguin</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;Culmen Length (mm)&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">45</span><span class="p">],</span> <span class="s2">&quot;Culmen Depth (mm)&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">17</span><span class="p">]}</span>
+<span class="p">)</span>
+<span class="n">logistic_regression</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_penguin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Chinstrap&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this case, our logistic regression classifier predicts the Chinstrap
+species. Note that this agrees with the decision boundary plot above: the
+coordinates of this test data point match a location close to the decision
+boundary, in the red region.</p>
+<p>As mentioned in the introductory slides 🎥 <strong>Intuitions on linear models</strong>,
+one can alternatively use the <code class="docutils literal notranslate"><span class="pre">predict_proba</span></code> method to compute continuous
+values (“soft predictions”) that correspond to an estimation of the confidence
+of the target belonging to each class.</p>
+<p>For a binary classification scenario, the logistic regression makes both hard
+and soft predictions based on the <a class="reference external" href="https://en.wikipedia.org/wiki/Logistic_function">logistic
+function</a> (also called
+sigmoid function), which is S-shaped and maps any input into a value between 0
+and 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred_proba</span> <span class="o">=</span> <span class="n">logistic_regression</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">test_penguin</span><span class="p">)</span>
+<span class="n">y_pred_proba</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.17145312, 0.82854688]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>More in general, the output of <code class="docutils literal notranslate"><span class="pre">predict_proba</span></code> is an array of shape
+(<code class="docutils literal notranslate"><span class="pre">n_samples</span></code>, <code class="docutils literal notranslate"><span class="pre">n_classes</span></code>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred_proba</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Also notice that the sum of (estimated) predicted probabilities across classes
+is 1.0 for each given sample. We can visualize them for our <code class="docutils literal notranslate"><span class="pre">test_penguin</span></code> as
+follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_proba_sample</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+    <span class="n">y_pred_proba</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">index</span><span class="o">=</span><span class="n">logistic_regression</span><span class="o">.</span><span class="n">classes_</span>
+<span class="p">)</span>
+<span class="n">y_proba_sample</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Estimated probability&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Probability of the sample belonging to a penguin class&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c12119dddd346e370966363bbfec278e9da716ff68287f594b7c37f11a168924.png" src="../_images/c12119dddd346e370966363bbfec278e9da716ff68287f594b7c37f11a168924.png" />
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We insist that the output of <code class="docutils literal notranslate"><span class="pre">predict_proba</span></code> are just estimations. Their
+reliability on being a good estimate of the true conditional class-assignment
+probabilities depends on the quality of the model. Even classifiers with a
+high accuracy on a test set may be overconfident for some individuals and
+underconfident for others.</p>
+</div>
+<p>Similarly to the hard decision boundary shown above, one can set the
+<code class="docutils literal notranslate"><span class="pre">response_method</span></code> to <code class="docutils literal notranslate"><span class="pre">&quot;predict_proba&quot;</span></code> in the <code class="docutils literal notranslate"><span class="pre">DecisionBoundaryDisplay</span></code> to
+rather show the confidence on individual classifications. In such case the
+boundaries encode the estimated probablities by color. In particular, when
+using <a class="reference external" href="https://matplotlib.org/stable/users/explain/colors/colormaps.html#diverging">matplotlib diverging
+colormaps</a>
+such as <code class="docutils literal notranslate"><span class="pre">&quot;RdBu_r&quot;</span></code>, the softer the color, the more unsure about which class to
+choose (the probability of 0.5 is mapped to white color).</p>
+<p>Equivalently, towards the tails of the curve the sigmoid function approaches
+its asymptotic values of 0 or 1, which are mapped to darker colors. Indeed,
+the closer the predicted probability is to 0 or 1, the more confident the
+classifier is in its predictions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DecisionBoundaryDisplay</span><span class="o">.</span><span class="n">from_estimator</span><span class="p">(</span>
+    <span class="n">logistic_regression</span><span class="p">,</span>
+    <span class="n">data_test</span><span class="p">,</span>
+    <span class="n">response_method</span><span class="o">=</span><span class="s2">&quot;predict_proba&quot;</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;RdBu_r&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">penguins_test</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">culmen_columns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">culmen_columns</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="n">hue</span><span class="o">=</span><span class="n">target_column</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;tab:red&quot;</span><span class="p">,</span> <span class="s2">&quot;tab:blue&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Predicted probability of the trained</span><span class="se">\n</span><span class="s2"> LogisticRegression&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c61a833ae07f16e0ef31400075465aee2b01ef39c75d6933da7e46ae250c15ee.png" src="../_images/c61a833ae07f16e0ef31400075465aee2b01ef39c75d6933da7e46ae250c15ee.png" />
+</div>
+</div>
+<p>For multi-class classification the logistic regression uses the <a class="reference external" href="https://en.wikipedia.org/wiki/Softmax_function">softmax
+function</a> to make predictions.
+Giving more details on that scenario is beyond the scope of this MOOC.</p>
+<p>In any case, interested users are refered to the <a class="reference external" href="https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression">scikit-learn user guide</a>
+for a more mathematical description of the <code class="docutils literal notranslate"><span class="pre">predict_proba</span></code> method of the
+<code class="docutils literal notranslate"><span class="pre">LogisticRegression</span></code> and the respective normalization functions.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -911,11 +1048,11 @@ mentioned in the introductory slides 🎥 Intuitions on linear models.</p>
       </div>
     </a>
     <a class="right-next"
-       href="../linear_models/linear_models_quiz_m4_02.html"
+       href="../linear_models/linear_models_quiz_m4_01.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">✅ Quiz M4.02</p>
+        <p class="prev-next-title">✅ Quiz M4.01</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -925,6 +1062,20 @@ mentioned in the introductory slides 🎥 Intuitions on linear models.</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimated-predicted-probabilities">(Estimated) predicted probabilities</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
@@ -981,8 +1132,8 @@ By scikit-learn developers
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>

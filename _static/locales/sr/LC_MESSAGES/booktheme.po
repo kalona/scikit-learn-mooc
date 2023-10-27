@@ -8,56 +8,11 @@ msgstr ""
 "Language: sr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Sphinx Book Theme"
-msgstr "Тема књиге Спхинк"
-
-msgid "By"
-msgstr "Од стране"
-
-msgid "previous page"
-msgstr "Претходна страница"
-
-msgid "repository"
-msgstr "спремиште"
-
-msgid "Copyright"
-msgstr "Ауторско право"
-
-msgid "Edit this page"
-msgstr "Уредите ову страницу"
-
-msgid "Theme by the"
-msgstr "Тхеме би"
-
-msgid "Source repository"
-msgstr "Изворно спремиште"
-
-msgid "suggest edit"
-msgstr "предложи уређивање"
-
-msgid "Fullscreen mode"
-msgstr "Режим целог екрана"
-
-msgid "Contents"
-msgstr "Садржај"
-
-msgid "Download notebook file"
-msgstr "Преузмите датотеку бележнице"
-
-msgid "Toggle navigation"
-msgstr "Укључи / искључи навигацију"
-
-msgid "Open an issue"
-msgstr "Отворите издање"
-
-msgid "By the"
-msgstr "Од"
-
-msgid "open issue"
-msgstr "отворено издање"
-
 msgid "Last updated on"
 msgstr "Последње ажурирање"
+
+msgid "Sphinx Book Theme"
+msgstr "Тема књиге Спхинк"
 
 msgid "Download source file"
 msgstr "Преузми изворну датотеку"
@@ -65,11 +20,56 @@ msgstr "Преузми изворну датотеку"
 msgid "Print to PDF"
 msgstr "Испис у ПДФ"
 
-msgid "Launch"
-msgstr "Лансирање"
+msgid "next page"
+msgstr "Следећа страна"
+
+msgid "Fullscreen mode"
+msgstr "Режим целог екрана"
+
+msgid "Theme by the"
+msgstr "Тхеме би"
+
+msgid "suggest edit"
+msgstr "предложи уређивање"
+
+msgid "Copyright"
+msgstr "Ауторско право"
+
+msgid "By the"
+msgstr "Од"
+
+msgid "Source repository"
+msgstr "Изворно спремиште"
+
+msgid "Download notebook file"
+msgstr "Преузмите датотеку бележнице"
+
+msgid "Toggle navigation"
+msgstr "Укључи / искључи навигацију"
+
+msgid "open issue"
+msgstr "отворено издање"
 
 msgid "Download this page"
 msgstr "Преузмите ову страницу"
 
-msgid "next page"
-msgstr "Следећа страна"
+msgid "repository"
+msgstr "спремиште"
+
+msgid "previous page"
+msgstr "Претходна страница"
+
+msgid "By"
+msgstr "Од стране"
+
+msgid "Launch"
+msgstr "Лансирање"
+
+msgid "Contents"
+msgstr "Садржај"
+
+msgid "Edit this page"
+msgstr "Уредите ову страницу"
+
+msgid "Open an issue"
+msgstr "Отворите издање"

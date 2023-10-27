@@ -8,56 +8,11 @@ msgstr ""
 "Language: sl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Sphinx Book Theme"
-msgstr "Tema knjige Sphinx"
-
-msgid "By"
-msgstr "Avtor"
-
-msgid "previous page"
-msgstr "Prejšnja stran"
-
-msgid "repository"
-msgstr "odlagališče"
-
-msgid "Copyright"
-msgstr "avtorske pravice"
-
-msgid "Edit this page"
-msgstr "Uredite to stran"
-
-msgid "Theme by the"
-msgstr "Tema avtorja"
-
-msgid "Source repository"
-msgstr "Izvorno skladišče"
-
-msgid "suggest edit"
-msgstr "predlagajte urejanje"
-
-msgid "Fullscreen mode"
-msgstr "Celozaslonski način"
-
-msgid "Contents"
-msgstr "Vsebina"
-
-msgid "Download notebook file"
-msgstr "Prenesite datoteko zvezka"
-
-msgid "Toggle navigation"
-msgstr "Preklopi navigacijo"
-
-msgid "Open an issue"
-msgstr "Odprite številko"
-
-msgid "By the"
-msgstr "Avtor"
-
-msgid "open issue"
-msgstr "odprto vprašanje"
-
 msgid "Last updated on"
 msgstr "Nazadnje posodobljeno dne"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema knjige Sphinx"
 
 msgid "Download source file"
 msgstr "Prenesite izvorno datoteko"
@@ -65,11 +20,56 @@ msgstr "Prenesite izvorno datoteko"
 msgid "Print to PDF"
 msgstr "Natisni v PDF"
 
-msgid "Launch"
-msgstr "Kosilo"
+msgid "next page"
+msgstr "Naslednja stran"
+
+msgid "Fullscreen mode"
+msgstr "Celozaslonski način"
+
+msgid "Theme by the"
+msgstr "Tema avtorja"
+
+msgid "suggest edit"
+msgstr "predlagajte urejanje"
+
+msgid "Copyright"
+msgstr "avtorske pravice"
+
+msgid "By the"
+msgstr "Avtor"
+
+msgid "Source repository"
+msgstr "Izvorno skladišče"
+
+msgid "Download notebook file"
+msgstr "Prenesite datoteko zvezka"
+
+msgid "Toggle navigation"
+msgstr "Preklopi navigacijo"
+
+msgid "open issue"
+msgstr "odprto vprašanje"
 
 msgid "Download this page"
 msgstr "Prenesite to stran"
 
-msgid "next page"
-msgstr "Naslednja stran"
+msgid "repository"
+msgstr "odlagališče"
+
+msgid "previous page"
+msgstr "Prejšnja stran"
+
+msgid "By"
+msgstr "Avtor"
+
+msgid "Launch"
+msgstr "Kosilo"
+
+msgid "Contents"
+msgstr "Vsebina"
+
+msgid "Edit this page"
+msgstr "Uredite to stran"
+
+msgid "Open an issue"
+msgstr "Odprite številko"

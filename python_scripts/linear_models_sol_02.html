@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -39,9 +39,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=927b94d3fcb96560df09"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -57,8 +57,8 @@
     <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../_static/sklearn_mooc.js"></script>
     <script src="../_static/matomo.js"></script>
+    <script src="../_static/sklearn_mooc.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Beyond linear separation in classification" href="logistic_regression_non_linear.html" />
+    <link rel="next" title="Non-linear feature engineering for Logistic Regression" href="linear_models_feature_engineering_classification.html" />
     <link rel="prev" title="📝 Exercise M4.02" href="linear_models_ex_02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -152,13 +152,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="../_static/scikit-learn-logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/scikit-learn-logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/scikit-learn-logo.png" class="logo__image only-light" alt="Scikit-learn course - Home"/>
+    <script>document.write(`<img src="../_static/scikit-learn-logo.png" class="logo__image only-dark" alt="Scikit-learn course - Home"/>`);</script>
   
   
 </a></div>
@@ -265,30 +266,29 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../linear_models/linear_models_module_intro.html">Module overview</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../linear_models/linear_models_intuitions_index.html">Intuitions on linear models</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_slides.html">🎥 Intuitions on linear models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_01.html">✅ Quiz M4.01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_regression_without_sklearn.html">Linear regression without scikit-learn</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_ex_01.html">📝 Exercise M4.01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_sol_01.html">📃 Solution for Exercise M4.01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_regression_in_sklearn.html">Linear regression using scikit-learn</a></li>
-<li class="toctree-l2"><a class="reference internal" href="logistic_regression.html">Linear model for classification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_02.html">✅ Quiz M4.02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistic_regression.html">Linear models for classification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_01.html">✅ Quiz M4.01</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../linear_models/linear_models_non_linear_index.html">Non-linear feature engineering for linear models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="linear_regression_non_linear_link.html">Linear regression for a non-linear features-target relationship</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linear_regression_non_linear_link.html">Non-linear feature engineering for Linear Regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_ex_02.html">📝 Exercise M4.02</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">📃 Solution for Exercise M4.02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linear_models_feature_engineering_classification.html">Non-linear feature engineering for Logistic Regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logistic_regression_non_linear.html">Beyond linear separation in classification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_03.html">✅ Quiz M4.03</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_02.html">✅ Quiz M4.02</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../linear_models/linear_models_regularization_index.html">Regularization in linear model</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../linear_models/regularized_linear_models_slides.html">🎥 Intuitions on regularized linear models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_regularization.html">Regularization of linear regression model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_04.html">✅ Quiz M4.04</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_ex_03.html">📝 Exercise M4.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_models_sol_03.html">📃 Solution for Exercise M4.03</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_05.html">✅ Quiz M4.05</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linear_models/linear_models_quiz_m4_03.html">✅ Quiz M4.03</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../linear_models/linear_models_wrap_up_quiz.html">🏁 Wrap-up quiz 4</a></li>
@@ -683,13 +683,13 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="solution-for-exercise-m4-02">
 <h1>📃 Solution for Exercise M4.02<a class="headerlink" href="#solution-for-exercise-m4-02" title="Permalink to this heading">#</a></h1>
 <p>In the previous notebook, we showed that we can add new features based on the
-original feature to make the model more expressive, for instance <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">2</span></code> or <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">3</span></code>.
-In that case we only used a single feature in <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
+original feature <code class="docutils literal notranslate"><span class="pre">x</span></code> to make the model more expressive, for instance <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">2</span></code> or
+<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">3</span></code>. In that case we only used a single feature in <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
 <p>The aim of this notebook is to train a linear regression algorithm on a
 dataset with more than a single feature. In such a “multi-dimensional” feature
-space we can derive new features of the form <code class="docutils literal notranslate"><span class="pre">x1</span> <span class="pre">*</span> <span class="pre">x2</span></code>, <code class="docutils literal notranslate"><span class="pre">x2</span> <span class="pre">*</span> <span class="pre">x3</span></code>,
-etc. Products of features are usually called “non-linear or
-multiplicative interactions” between features.</p>
+space we can derive new features of the form <code class="docutils literal notranslate"><span class="pre">x1</span> <span class="pre">*</span> <span class="pre">x2</span></code>, <code class="docutils literal notranslate"><span class="pre">x2</span> <span class="pre">*</span> <span class="pre">x3</span></code>, etc.
+Products of features are usually called “non-linear” or “multiplicative”
+interactions between features.</p>
 <p>Feature engineering can be an important step of a model pipeline as long as
 the new features are expected to be predictive. For instance, think of a
 classification model to decide if a patient has risk of developing a heart
@@ -810,7 +810,9 @@ as metric.</p>
 </div>
 </div>
 </div>
-<p>Compute the mean and std of the MAE in grams (g).</p>
+<p>Compute the mean and std of the MAE in grams (g). Remember you have to revert
+the sign introduced when metrics start with <code class="docutils literal notranslate"><span class="pre">neg_</span></code>, such as in
+<code class="docutils literal notranslate"><span class="pre">&quot;neg_mean_absolute_error&quot;</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># solution</span>
@@ -834,7 +836,8 @@ as metric.</p>
 include a “bias” feature (that is a constant-valued feature) to avoid
 introducing a redundancy with the intercept of the subsequent linear
 regression model.</p>
-<p>Use the same strategy as before to cross-validate such a pipeline.</p>
+<p>You may want to use the <code class="docutils literal notranslate"><span class="pre">.set_output(transform=&quot;pandas&quot;)</span></code> method of the
+pipeline to answer the next question.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># solution</span>
@@ -846,8 +849,129 @@ regression model.</p>
 <span class="p">)</span>
 <span class="n">linear_regression_interactions</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
     <span class="n">poly_features</span><span class="p">,</span> <span class="n">linear_regression</span>
-<span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">set_output</span><span class="p">(</span><span class="n">transform</span><span class="o">=</span><span class="s2">&quot;pandas&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Transform the first 5 rows of the dataset and look at the column names. How
+many features are generated at the output of the <code class="docutils literal notranslate"><span class="pre">PolynomialFeatures</span></code> step in
+the previous pipeline?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># solution</span>
+<span class="n">linear_regression_interactions</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="n">linear_regression_interactions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Flipper Length (mm)</th>
+      <th>Culmen Length (mm)</th>
+      <th>Culmen Depth (mm)</th>
+      <th>Flipper Length (mm) Culmen Length (mm)</th>
+      <th>Flipper Length (mm) Culmen Depth (mm)</th>
+      <th>Culmen Length (mm) Culmen Depth (mm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>181.0</td>
+      <td>39.1</td>
+      <td>18.7</td>
+      <td>7077.1</td>
+      <td>3384.7</td>
+      <td>731.17</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>186.0</td>
+      <td>39.5</td>
+      <td>17.4</td>
+      <td>7347.0</td>
+      <td>3236.4</td>
+      <td>687.30</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>195.0</td>
+      <td>40.3</td>
+      <td>18.0</td>
+      <td>7858.5</td>
+      <td>3510.0</td>
+      <td>725.40</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>193.0</td>
+      <td>36.7</td>
+      <td>19.3</td>
+      <td>7083.1</td>
+      <td>3724.9</td>
+      <td>708.31</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>190.0</td>
+      <td>39.3</td>
+      <td>20.6</td>
+      <td>7467.0</td>
+      <td>3914.0</td>
+      <td>809.58</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We observe that 3 features are generated, corresponding to the different
+combinations of products of the 3 original features, i.e. we have 6
+intermediate features in total. In general, given <code class="docutils literal notranslate"><span class="pre">p</span></code> original features, one
+has <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">*</span> <span class="pre">(p</span> <span class="pre">-</span> <span class="pre">1)</span> <span class="pre">/</span> <span class="pre">2</span></code> interactions.</p>
+<p>Check that the values for the new interaction features are correct for a few
+of them.</p>
+<p>Let’s now check that the value in the 1st row and the 5th column (3384.7) is
+the product of the values at the first and third columns (respectively 181.0
+and 18.7) of the same row:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># solution</span>
+<span class="n">flipper_length_first_sample</span> <span class="o">=</span> <span class="mf">181.0</span>
+<span class="n">culmen_depth_first_sample</span> <span class="o">=</span> <span class="mf">18.7</span>
+<span class="n">flipper_length_first_sample</span> <span class="o">*</span> <span class="n">culmen_depth_first_sample</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3384.7
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use the same cross-validation strategy as done previously to estimate the mean
+and std of the MAE in grams (g) for such a pipeline. Compare with the results
+without feature engineering.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># solution</span>
 <span class="n">cv_results</span> <span class="o">=</span> <span class="n">cross_validate</span><span class="p">(</span>
     <span class="n">linear_regression_interactions</span><span class="p">,</span>
     <span class="n">data</span><span class="p">,</span>
@@ -856,15 +980,6 @@ regression model.</p>
     <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;neg_mean_absolute_error&quot;</span><span class="p">,</span>
     <span class="n">n_jobs</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
 <span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Compute the mean and std of the MAE in grams (g) and compare with the results
-without feature engineering.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># solution</span>
 <span class="nb">print</span><span class="p">(</span>
     <span class="s2">&quot;Mean absolute error on testing set with interactions: &quot;</span>
     <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="o">-</span><span class="n">cv_results</span><span class="p">[</span><span class="s1">&#39;test_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> ± &quot;</span>
@@ -879,10 +994,104 @@ without feature engineering.</p>
 </div>
 </div>
 </div>
-<p>We observe that the mean absolute error is lower and less spread with the
-enriched features. In this case the “interactions” are indeed predictive. In
-the following notebook we will see what happens when the enriched features are
+<p>We observe that the MAE is lower and less spread with the enriched features.
+In this case the additional “interaction” features are indeed predictive.
+Later in this module we will see what happens when the enriched features are
 non-predictive and how to deal with this case.</p>
+<p>Now let’s try to build an alternative pipeline with an adjustable number of
+intermediate features while keeping a similar predictive power. To do so, try
+using the <code class="docutils literal notranslate"><span class="pre">Nystroem</span></code> transformer instead of <code class="docutils literal notranslate"><span class="pre">PolynomialFeatures</span></code>. Set the
+kernel parameter to <code class="docutils literal notranslate"><span class="pre">&quot;poly&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">degree</span></code> to 2. Adjust the number of
+components to be as small as possible while keeping a good cross-validation
+performance.</p>
+<p>Hint: Use a <code class="docutils literal notranslate"><span class="pre">ValidationCurveDisplay</span></code> with <code class="docutils literal notranslate"><span class="pre">param_range</span> <span class="pre">=</span> <span class="pre">np.array([5,</span> <span class="pre">10,</span> <span class="pre">50,</span> <span class="pre">100])</span></code> to find the optimal <code class="docutils literal notranslate"><span class="pre">n_components</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># solution</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.kernel_approximation</span> <span class="kn">import</span> <span class="n">Nystroem</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">ValidationCurveDisplay</span>
+
+<span class="n">nystroem_regression</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+    <span class="n">Nystroem</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;poly&quot;</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+    <span class="n">linear_regression</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">param_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
+<span class="n">disp</span> <span class="o">=</span> <span class="n">ValidationCurveDisplay</span><span class="o">.</span><span class="n">from_estimator</span><span class="p">(</span>
+    <span class="n">nystroem_regression</span><span class="p">,</span>
+    <span class="n">data</span><span class="p">,</span>
+    <span class="n">target</span><span class="p">,</span>
+    <span class="n">param_name</span><span class="o">=</span><span class="s2">&quot;nystroem__n_components&quot;</span><span class="p">,</span>
+    <span class="n">param_range</span><span class="o">=</span><span class="n">param_range</span><span class="p">,</span>
+    <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;neg_mean_absolute_error&quot;</span><span class="p">,</span>
+    <span class="n">negate_score</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">std_display_style</span><span class="o">=</span><span class="s2">&quot;errorbar&quot;</span><span class="p">,</span>
+    <span class="n">n_jobs</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">disp</span><span class="o">.</span><span class="n">ax_</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Number of components&quot;</span><span class="p">,</span>
+    <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Mean absolute error (g)&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Validation curve for Nystroem regression&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/1b13367f3beef39a3a3d82a57d26e5be401067358a8fb1ed6357f481ff39db46.png" src="../_images/1b13367f3beef39a3a3d82a57d26e5be401067358a8fb1ed6357f481ff39db46.png" />
+</div>
+</div>
+<p>In the validation curve above we can observe that a small number of components
+leads to an underfitting model, whereas a large number of components leads to
+an overfitting model. The optimal number of Nyström components is around 10
+for this dataset.</p>
+<p>How do the mean and std of the MAE for the Nystroem pipeline with optimal
+<code class="docutils literal notranslate"><span class="pre">n_components</span></code> compare to the other previous models?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># solution</span>
+<span class="n">nystroem_regression</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="n">nystroem__n_components</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">cv_results</span> <span class="o">=</span> <span class="n">cross_validate</span><span class="p">(</span>
+    <span class="n">nystroem_regression</span><span class="p">,</span>
+    <span class="n">data</span><span class="p">,</span>
+    <span class="n">target</span><span class="p">,</span>
+    <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;neg_mean_absolute_error&quot;</span><span class="p">,</span>
+    <span class="n">n_jobs</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="s2">&quot;Mean absolute error on testing set with nystroem: &quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="o">-</span><span class="n">cv_results</span><span class="p">[</span><span class="s1">&#39;test_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> ± &quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cv_results</span><span class="p">[</span><span class="s1">&#39;test_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> g&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean absolute error on testing set with nystroem: 299.087 ± 44.874 g
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this case we have a model with 10 features instead of 6, and which has
+approximately the same prediction error as the model with interactions.</p>
+<p>Notice that if we had <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">100</span></code> original features (instead of 3), the
+<code class="docutils literal notranslate"><span class="pre">PolynomialFeatures</span></code> transformer would have generated <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">*</span> <span class="pre">(100</span> <span class="pre">-</span> <span class="pre">1)</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">4950</span></code> additional interaction features (so we would have 5050 features in
+total). The resulting pipeline would have been much slower to train and
+predict and would have had a much larger memory footprint. Furthermore, the
+large number of interaction features would probably have resulted in an
+overfitting model.</p>
+<p>On the other hand, the <code class="docutils literal notranslate"><span class="pre">Nystroem</span></code> transformer generates a user-adjustable
+number of features (<code class="docutils literal notranslate"><span class="pre">n_components</span></code>). Furthermore, the optimal number of
+components is usually much smaller than that. So the <code class="docutils literal notranslate"><span class="pre">Nystroem</span></code> transformer
+can be more scalable when the number of original features is too large for
+<code class="docutils literal notranslate"><span class="pre">PolynomialFeatures</span></code> to be used.</p>
+<p>The main downside of the <code class="docutils literal notranslate"><span class="pre">Nystroem</span></code> transformer is that it is not possible to
+easily interpret the meaning of the generated features and therefore the
+meaning of the learned coefficients for the downstream linear model.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -925,11 +1134,11 @@ non-predictive and how to deal with this case.</p>
       </div>
     </a>
     <a class="right-next"
-       href="logistic_regression_non_linear.html"
+       href="linear_models_feature_engineering_classification.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Beyond linear separation in classification</p>
+        <p class="prev-next-title">Non-linear feature engineering for Logistic Regression</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -995,8 +1204,8 @@ By scikit-learn developers
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>
