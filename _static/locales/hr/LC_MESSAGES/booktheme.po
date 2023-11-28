@@ -8,68 +8,68 @@ msgstr ""
 "Language: hr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Posljednje ažuriranje:"
-
-msgid "Sphinx Book Theme"
-msgstr "Tema knjige Sphinx"
-
-msgid "Download source file"
-msgstr "Preuzmi izvornu datoteku"
-
-msgid "Print to PDF"
-msgstr "Ispis u PDF"
-
-msgid "next page"
-msgstr "sljedeća stranica"
+msgid "Edit this page"
+msgstr "Uredite ovu stranicu"
 
 msgid "Fullscreen mode"
 msgstr "Način preko cijelog zaslona"
 
-msgid "Theme by the"
-msgstr "Tema autora"
+msgid "previous page"
+msgstr "Prethodna stranica"
 
-msgid "suggest edit"
-msgstr "predloži uređivanje"
-
-msgid "Copyright"
-msgstr "Autorska prava"
-
-msgid "By the"
-msgstr "Od strane"
-
-msgid "Source repository"
-msgstr "Izvorno spremište"
+msgid "Last updated on"
+msgstr "Posljednje ažuriranje:"
 
 msgid "Download notebook file"
 msgstr "Preuzmi datoteku bilježnice"
 
-msgid "Toggle navigation"
-msgstr "Uključi / isključi navigaciju"
-
-msgid "open issue"
-msgstr "otvoreno izdanje"
+msgid "repository"
+msgstr "spremište"
 
 msgid "Download this page"
 msgstr "Preuzmite ovu stranicu"
 
-msgid "repository"
-msgstr "spremište"
+msgid "Sphinx Book Theme"
+msgstr "Tema knjige Sphinx"
 
-msgid "previous page"
-msgstr "Prethodna stranica"
+msgid "Print to PDF"
+msgstr "Ispis u PDF"
 
-msgid "By"
-msgstr "Po"
+msgid "Toggle navigation"
+msgstr "Uključi / isključi navigaciju"
+
+msgid "Open an issue"
+msgstr "Otvorite izdanje"
+
+msgid "By the"
+msgstr "Od strane"
 
 msgid "Launch"
 msgstr "Pokrenite"
 
+msgid "Download source file"
+msgstr "Preuzmi izvornu datoteku"
+
+msgid "Copyright"
+msgstr "Autorska prava"
+
+msgid "Theme by the"
+msgstr "Tema autora"
+
 msgid "Contents"
 msgstr "Sadržaj"
 
-msgid "Edit this page"
-msgstr "Uredite ovu stranicu"
+msgid "Source repository"
+msgstr "Izvorno spremište"
 
-msgid "Open an issue"
-msgstr "Otvorite izdanje"
+msgid "next page"
+msgstr "sljedeća stranica"
+
+msgid "suggest edit"
+msgstr "predloži uređivanje"
+
+msgid "By"
+msgstr "Po"
+
+msgid "open issue"
+msgstr "otvoreno izdanje"

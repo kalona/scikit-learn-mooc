@@ -8,68 +8,68 @@ msgstr ""
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Zuletzt aktualisiert am"
-
-msgid "Sphinx Book Theme"
-msgstr "Sphinx-Buch-Thema"
-
-msgid "Download source file"
-msgstr "Quelldatei herunterladen"
-
-msgid "Print to PDF"
-msgstr "In PDF drucken"
-
-msgid "next page"
-msgstr "Nächste Seite"
+msgid "Edit this page"
+msgstr "Bearbeite diese Seite"
 
 msgid "Fullscreen mode"
 msgstr "Vollbildmodus"
 
-msgid "Theme by the"
-msgstr "Thema von der"
+msgid "previous page"
+msgstr "vorherige Seite"
 
-msgid "suggest edit"
-msgstr "vorschlagen zu bearbeiten"
-
-msgid "Copyright"
-msgstr "Urheberrechte ©"
-
-msgid "By the"
-msgstr "Bis zum"
-
-msgid "Source repository"
-msgstr "Quell-Repository"
+msgid "Last updated on"
+msgstr "Zuletzt aktualisiert am"
 
 msgid "Download notebook file"
 msgstr "Notebook-Datei herunterladen"
 
-msgid "Toggle navigation"
-msgstr "Navigation umschalten"
-
-msgid "open issue"
-msgstr "offenes Thema"
+msgid "repository"
+msgstr "Repository"
 
 msgid "Download this page"
 msgstr "Laden Sie diese Seite herunter"
 
-msgid "repository"
-msgstr "Repository"
+msgid "Sphinx Book Theme"
+msgstr "Sphinx-Buch-Thema"
 
-msgid "previous page"
-msgstr "vorherige Seite"
+msgid "Print to PDF"
+msgstr "In PDF drucken"
 
-msgid "By"
-msgstr "Durch"
+msgid "Toggle navigation"
+msgstr "Navigation umschalten"
+
+msgid "Open an issue"
+msgstr "Öffnen Sie ein Problem"
+
+msgid "By the"
+msgstr "Bis zum"
 
 msgid "Launch"
 msgstr "Starten"
 
+msgid "Download source file"
+msgstr "Quelldatei herunterladen"
+
+msgid "Copyright"
+msgstr "Urheberrechte ©"
+
+msgid "Theme by the"
+msgstr "Thema von der"
+
 msgid "Contents"
 msgstr "Inhalt"
 
-msgid "Edit this page"
-msgstr "Bearbeite diese Seite"
+msgid "Source repository"
+msgstr "Quell-Repository"
 
-msgid "Open an issue"
-msgstr "Öffnen Sie ein Problem"
+msgid "next page"
+msgstr "Nächste Seite"
+
+msgid "suggest edit"
+msgstr "vorschlagen zu bearbeiten"
+
+msgid "By"
+msgstr "Durch"
+
+msgid "open issue"
+msgstr "offenes Thema"

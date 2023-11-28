@@ -12,12 +12,12 @@
 # However, we did not present a proper framework to evaluate the tuned models.
 # Instead, we focused on the mechanism used to find the best set of parameters.
 #
-# In this notebook, we will reuse some knowledge presented in the module
-# "Selecting the best model" to show how to evaluate models where
-# hyperparameters need to be tuned.
+# In this notebook, we reuse some knowledge presented in the module "Selecting
+# the best model" to show how to evaluate models where hyperparameters need to
+# be tuned.
 #
-# Thus, we will first load the dataset and create the predictive model that we
-# want to optimize and later on, evaluate.
+# Thus, we first load the dataset and create the predictive model that we want
+# to optimize and later on, evaluate.
 #
 # ## Loading the dataset
 #
@@ -111,7 +111,7 @@ print(
 # ### With hyperparameter tuning
 #
 # As shown in the previous notebook, one can use a search strategy that uses
-# cross-validation to find the best set of parameters. Here, we will use a
+# cross-validation to find the best set of parameters. Here, we use a
 # grid-search strategy and reproduce the steps done in the previous notebook.
 #
 # First, we have to embed our model into a grid-search and specify the
@@ -259,11 +259,11 @@ print(
 # This figure illustrates the nested cross-validation strategy using
 # `cv_inner = KFold(n_splits=4)` and `cv_outer = KFold(n_splits=5)`.
 #
-# For each inner cross-validation split (indexed on the left-hand side),
+# For each inner cross-validation split (indexed on the right-hand side),
 # the procedure trains a model on all the red samples and evaluate the quality
 # of the hyperparameters on the green samples.
 #
-# For each outer cross-validation split (indexed on the right-hand side),
+# For each outer cross-validation split (indexed on the left-hand side),
 # the best hyper-parameters are selected based on the validation scores
 # (computed on the greed samples) and a model is refitted on the concatenation
 # of the red and green samples for that outer CV iteration.
