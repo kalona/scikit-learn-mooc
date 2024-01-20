@@ -8,17 +8,17 @@ msgstr ""
 "Language: uk\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Edit this page"
-msgstr "Редагувати цю сторінку"
+msgid "Download source file"
+msgstr "Завантажити вихідний файл"
 
-msgid "Fullscreen mode"
-msgstr "Повноекранний режим"
+msgid "suggest edit"
+msgstr "запропонувати редагувати"
 
-msgid "previous page"
-msgstr "Попередня сторінка"
+msgid "Toggle navigation"
+msgstr "Переключити навігацію"
 
-msgid "Last updated on"
-msgstr "Останнє оновлення:"
+msgid "open issue"
+msgstr "відкритий випуск"
 
 msgid "Download notebook file"
 msgstr "Завантажте файл блокнота"
@@ -26,50 +26,50 @@ msgstr "Завантажте файл блокнота"
 msgid "repository"
 msgstr "сховище"
 
-msgid "Download this page"
-msgstr "Завантажте цю сторінку"
-
-msgid "Sphinx Book Theme"
-msgstr "Тема книги \"Сфінкс\""
+msgid "Theme by the"
+msgstr "Тема від"
 
 msgid "Print to PDF"
 msgstr "Друк у форматі PDF"
 
-msgid "Toggle navigation"
-msgstr "Переключити навігацію"
-
-msgid "Open an issue"
-msgstr "Відкрийте випуск"
-
-msgid "By the"
-msgstr "По"
-
-msgid "Launch"
-msgstr "Запуск"
-
-msgid "Download source file"
-msgstr "Завантажити вихідний файл"
+msgid "Download this page"
+msgstr "Завантажте цю сторінку"
 
 msgid "Copyright"
 msgstr "Авторське право"
 
-msgid "Theme by the"
-msgstr "Тема від"
+msgid "Last updated on"
+msgstr "Останнє оновлення:"
+
+msgid "Launch"
+msgstr "Запуск"
+
+msgid "Open an issue"
+msgstr "Відкрийте випуск"
+
+msgid "Fullscreen mode"
+msgstr "Повноекранний режим"
+
+msgid "Sphinx Book Theme"
+msgstr "Тема книги \"Сфінкс\""
 
 msgid "Contents"
 msgstr "Зміст"
 
-msgid "Source repository"
-msgstr "Джерело сховища"
+msgid "Edit this page"
+msgstr "Редагувати цю сторінку"
 
 msgid "next page"
 msgstr "Наступна сторінка"
 
-msgid "suggest edit"
-msgstr "запропонувати редагувати"
+msgid "Source repository"
+msgstr "Джерело сховища"
 
 msgid "By"
 msgstr "Автор"
 
-msgid "open issue"
-msgstr "відкритий випуск"
+msgid "By the"
+msgstr "По"
+
+msgid "previous page"
+msgstr "Попередня сторінка"

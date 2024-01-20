@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -39,9 +39,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -82,10 +82,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -126,11 +125,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -682,7 +684,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="solution-for-exercise-m7-02">
 <h1>📃 Solution for Exercise M7.02<a class="headerlink" href="#solution-for-exercise-m7-02" title="Permalink to this heading">#</a></h1>
@@ -697,6 +699,18 @@ practicing and implementing cross-validation.</p>
 <span class="n">blood_transfusion</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../datasets/blood_transfusion.csv&quot;</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">blood_transfusion</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;Class&quot;</span><span class="p">)</span>
 <span class="n">target</span> <span class="o">=</span> <span class="n">blood_transfusion</span><span class="p">[</span><span class="s2">&quot;Class&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_5448/2402502265.py:1: DeprecationWarning: 
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+        
+  import pandas as pd
 </pre></div>
 </div>
 </div>
@@ -734,7 +748,7 @@ Check its documentation to learn how to do that.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy score: 0.629 ± 0.145
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy score: 0.630 ± 0.138
 </pre></div>
 </div>
 </div>
@@ -751,7 +765,7 @@ Check its documentation to learn how to do that.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Balanced accuracy score: 0.514 ± 0.102
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Balanced accuracy score: 0.501 ± 0.110
 </pre></div>
 </div>
 </div>
@@ -775,194 +789,134 @@ will not be supported by scikit-learn because it is indeed ambiguous.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:839: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1006: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 136, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 137, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 355, in _score
-    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 214, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 2131, in precision_score
-    p, _, _, _ = precision_recall_fscore_support(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 187, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1724, in precision_recall_fscore_support
-    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1509, in _check_set_wise_labels
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 345, in _score
+    y_pred = method_caller(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 87, in _cached_call
+    result, _ = _get_response_values(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 203, in _get_response_values
     raise ValueError(
-ValueError: pos_label=1 is not a valid label. It should be one of [&#39;donated&#39;, &#39;not donated&#39;]
+ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:839: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1006: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 136, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 137, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 355, in _score
-    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 214, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 2131, in precision_score
-    p, _, _, _ = precision_recall_fscore_support(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 187, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1724, in precision_recall_fscore_support
-    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1509, in _check_set_wise_labels
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 345, in _score
+    y_pred = method_caller(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 87, in _cached_call
+    result, _ = _get_response_values(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 203, in _get_response_values
     raise ValueError(
-ValueError: pos_label=1 is not a valid label. It should be one of [&#39;donated&#39;, &#39;not donated&#39;]
+ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:839: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1006: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 136, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 137, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 355, in _score
-    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 214, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 2131, in precision_score
-    p, _, _, _ = precision_recall_fscore_support(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 187, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1724, in precision_recall_fscore_support
-    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1509, in _check_set_wise_labels
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 345, in _score
+    y_pred = method_caller(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 87, in _cached_call
+    result, _ = _get_response_values(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 203, in _get_response_values
     raise ValueError(
-ValueError: pos_label=1 is not a valid label. It should be one of [&#39;donated&#39;, &#39;not donated&#39;]
+ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:839: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1006: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 136, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 137, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 355, in _score
-    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 214, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 2131, in precision_score
-    p, _, _, _ = precision_recall_fscore_support(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 187, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1724, in precision_recall_fscore_support
-    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1509, in _check_set_wise_labels
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 345, in _score
+    y_pred = method_caller(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 87, in _cached_call
+    result, _ = _get_response_values(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 203, in _get_response_values
     raise ValueError(
-ValueError: pos_label=1 is not a valid label. It should be one of [&#39;donated&#39;, &#39;not donated&#39;]
+ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:839: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1006: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 136, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 137, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 355, in _score
-    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 214, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 2131, in precision_score
-    p, _, _, _ = precision_recall_fscore_support(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 187, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1724, in precision_recall_fscore_support
-    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1509, in _check_set_wise_labels
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 345, in _score
+    y_pred = method_caller(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 87, in _cached_call
+    result, _ = _get_response_values(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 203, in _get_response_values
     raise ValueError(
-ValueError: pos_label=1 is not a valid label. It should be one of [&#39;donated&#39;, &#39;not donated&#39;]
+ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:839: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1006: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 136, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 137, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 355, in _score
-    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 214, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 2131, in precision_score
-    p, _, _, _ = precision_recall_fscore_support(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 187, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1724, in precision_recall_fscore_support
-    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1509, in _check_set_wise_labels
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 345, in _score
+    y_pred = method_caller(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 87, in _cached_call
+    result, _ = _get_response_values(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 203, in _get_response_values
     raise ValueError(
-ValueError: pos_label=1 is not a valid label. It should be one of [&#39;donated&#39;, &#39;not donated&#39;]
+ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:839: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1006: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 136, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 137, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 355, in _score
-    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 214, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 2131, in precision_score
-    p, _, _, _ = precision_recall_fscore_support(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 187, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1724, in precision_recall_fscore_support
-    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1509, in _check_set_wise_labels
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 345, in _score
+    y_pred = method_caller(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 87, in _cached_call
+    result, _ = _get_response_values(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 203, in _get_response_values
     raise ValueError(
-ValueError: pos_label=1 is not a valid label. It should be one of [&#39;donated&#39;, &#39;not donated&#39;]
+ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:839: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1006: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 136, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 137, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 355, in _score
-    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 214, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 2131, in precision_score
-    p, _, _, _ = precision_recall_fscore_support(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 187, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1724, in precision_recall_fscore_support
-    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1509, in _check_set_wise_labels
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 345, in _score
+    y_pred = method_caller(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 87, in _cached_call
+    result, _ = _get_response_values(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 203, in _get_response_values
     raise ValueError(
-ValueError: pos_label=1 is not a valid label. It should be one of [&#39;donated&#39;, &#39;not donated&#39;]
+ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:839: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1006: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 136, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 137, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 355, in _score
-    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 214, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 2131, in precision_score
-    p, _, _, _ = precision_recall_fscore_support(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 187, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1724, in precision_recall_fscore_support
-    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1509, in _check_set_wise_labels
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 345, in _score
+    y_pred = method_caller(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 87, in _cached_call
+    result, _ = _get_response_values(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 203, in _get_response_values
     raise ValueError(
-ValueError: pos_label=1 is not a valid label. It should be one of [&#39;donated&#39;, &#39;not donated&#39;]
+ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:839: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1006: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 136, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 137, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 355, in _score
-    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 214, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 2131, in precision_score
-    p, _, _, _ = precision_recall_fscore_support(
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_param_validation.py&quot;, line 187, in wrapper
-    return func(*args, **kwargs)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1724, in precision_recall_fscore_support
-    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
-  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_classification.py&quot;, line 1509, in _check_set_wise_labels
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 345, in _score
+    y_pred = method_caller(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 87, in _cached_call
+    result, _ = _get_response_values(
+  File &quot;/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 203, in _get_response_values
     raise ValueError(
-ValueError: pos_label=1 is not a valid label. It should be one of [&#39;donated&#39;, &#39;not donated&#39;]
+ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
 </pre></div>
@@ -1002,7 +956,7 @@ in the <code class="docutils literal notranslate"><span class="pre">cross_val_sc
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Precision score: 0.272 ± 0.164
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Precision score: 0.261 ± 0.170
 </pre></div>
 </div>
 </div>
@@ -1026,14 +980,14 @@ for both metrics using a box plot.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;fit_time&#39;: array([0.00247598, 0.00245929, 0.00250316, 0.00245786, 0.00244212,
-        0.00244617, 0.00252938, 0.00243974, 0.00242162, 0.00243354]),
- &#39;score_time&#39;: array([0.00216794, 0.00206065, 0.00222516, 0.00210452, 0.00206637,
-        0.00236869, 0.00210023, 0.00208211, 0.00208402, 0.00204229]),
- &#39;test_accuracy&#39;: array([0.26666667, 0.52      , 0.76      , 0.56      , 0.6       ,
-        0.68      , 0.69333333, 0.77333333, 0.66216216, 0.75675676]),
- &#39;test_balanced_accuracy&#39;: array([0.38450292, 0.4751462 , 0.65204678, 0.40643275, 0.43274854,
-        0.44736842, 0.55116959, 0.73684211, 0.47110423, 0.51186791])}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;fit_time&#39;: array([0.0026722 , 0.00243425, 0.00251389, 0.00241232, 0.00240278,
+        0.00245428, 0.00241208, 0.00250292, 0.00241971, 0.00242949]),
+ &#39;score_time&#39;: array([0.00242257, 0.00236821, 0.00223136, 0.00225663, 0.00229573,
+        0.00226259, 0.0022831 , 0.00229478, 0.00229883, 0.00230455]),
+ &#39;test_accuracy&#39;: array([0.28      , 0.53333333, 0.76      , 0.56      , 0.65333333,
+        0.64      , 0.70666667, 0.78666667, 0.64864865, 0.75675676]),
+ &#39;test_balanced_accuracy&#39;: array([0.39327485, 0.48391813, 0.63304094, 0.40643275, 0.48684211,
+        0.42105263, 0.55994152, 0.74561404, 0.4623323 , 0.51186791])}
 </pre></div>
 </div>
 </div>
@@ -1062,7 +1016,7 @@ for both metrics using a box plot.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6c8cdecc3a00ed279c231afe4686decf4575a8e671bc9afa31982cf9993d1c3a.png" src="../_images/6c8cdecc3a00ed279c231afe4686decf4575a8e671bc9afa31982cf9993d1c3a.png" />
+<img alt="../_images/9946ad4b1dd1ef92507594f2f5c67c4dda4067e4a4f0bc8d23824bd8dd42888c.png" src="../_images/9946ad4b1dd1ef92507594f2f5c67c4dda4067e4a4f0bc8d23824bd8dd42888c.png" />
 </div>
 </div>
 </section>
@@ -1122,6 +1076,8 @@ for both metrics using a box plot.</p>
             
             
               
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -1178,8 +1134,8 @@ By scikit-learn developers
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

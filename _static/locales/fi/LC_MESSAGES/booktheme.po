@@ -8,17 +8,17 @@ msgstr ""
 "Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Edit this page"
-msgstr "Muokkaa tätä sivua"
+msgid "Download source file"
+msgstr "Lataa lähdetiedosto"
 
-msgid "Fullscreen mode"
-msgstr "Koko näytön tila"
+msgid "suggest edit"
+msgstr "ehdottaa muokkausta"
 
-msgid "previous page"
-msgstr "Edellinen sivu"
+msgid "Toggle navigation"
+msgstr "Vaihda navigointia"
 
-msgid "Last updated on"
-msgstr "Viimeksi päivitetty"
+msgid "open issue"
+msgstr "avoin ongelma"
 
 msgid "Download notebook file"
 msgstr "Lataa muistikirjatiedosto"
@@ -26,50 +26,50 @@ msgstr "Lataa muistikirjatiedosto"
 msgid "repository"
 msgstr "arkisto"
 
-msgid "Download this page"
-msgstr "Lataa tämä sivu"
-
-msgid "Sphinx Book Theme"
-msgstr "Sphinx-kirjan teema"
+msgid "Theme by the"
+msgstr "Teeman tekijä"
 
 msgid "Print to PDF"
 msgstr "Tulosta PDF-tiedostoon"
 
-msgid "Toggle navigation"
-msgstr "Vaihda navigointia"
-
-msgid "Open an issue"
-msgstr "Avaa ongelma"
-
-msgid "By the"
-msgstr "Mukaan"
-
-msgid "Launch"
-msgstr "Tuoda markkinoille"
-
-msgid "Download source file"
-msgstr "Lataa lähdetiedosto"
+msgid "Download this page"
+msgstr "Lataa tämä sivu"
 
 msgid "Copyright"
 msgstr "Tekijänoikeus"
 
-msgid "Theme by the"
-msgstr "Teeman tekijä"
+msgid "Last updated on"
+msgstr "Viimeksi päivitetty"
+
+msgid "Launch"
+msgstr "Tuoda markkinoille"
+
+msgid "Open an issue"
+msgstr "Avaa ongelma"
+
+msgid "Fullscreen mode"
+msgstr "Koko näytön tila"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx-kirjan teema"
 
 msgid "Contents"
 msgstr "Sisällys"
 
-msgid "Source repository"
-msgstr "Lähteen arkisto"
+msgid "Edit this page"
+msgstr "Muokkaa tätä sivua"
 
 msgid "next page"
 msgstr "seuraava sivu"
 
-msgid "suggest edit"
-msgstr "ehdottaa muokkausta"
+msgid "Source repository"
+msgstr "Lähteen arkisto"
 
 msgid "By"
 msgstr "Tekijä"
 
-msgid "open issue"
-msgstr "avoin ongelma"
+msgid "By the"
+msgstr "Mukaan"
+
+msgid "previous page"
+msgstr "Edellinen sivu"

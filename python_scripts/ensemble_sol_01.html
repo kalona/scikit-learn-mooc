@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -39,9 +39,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -82,10 +82,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -126,11 +125,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -682,7 +684,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="solution-for-exercise-m6-01">
 <h1>📃 Solution for Exercise M6.01<a class="headerlink" href="#solution-for-exercise-m6-01" title="Permalink to this heading">#</a></h1>
@@ -732,7 +734,7 @@ performance on the testing set using the mean absolute error.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Basic mean absolute error of the bagging regressor:
-36.62 k$
+36.56 k$
 </pre></div>
 </div>
 </div>
@@ -754,8 +756,7 @@ regressor still using the mean absolute error as a metric.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>base_estimator
-bootstrap
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bootstrap
 bootstrap_features
 estimator__ccp_alpha
 estimator__criterion
@@ -766,6 +767,7 @@ estimator__min_impurity_decrease
 estimator__min_samples_leaf
 estimator__min_samples_split
 estimator__min_weight_fraction_leaf
+estimator__monotonic_cst
 estimator__random_state
 estimator__splitter
 estimator
@@ -842,184 +844,184 @@ warm_start
   </thead>
   <tbody>
     <tr>
-      <th>3</th>
-      <td>20</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>9</td>
-      <td>38.900690</td>
-      <td>0.984831</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>18</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>9</td>
-      <td>39.189405</td>
-      <td>1.323118</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>20</td>
-      <td>0.8</td>
-      <td>1.0</td>
-      <td>8</td>
-      <td>40.619796</td>
-      <td>1.089424</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>29</td>
-      <td>0.8</td>
-      <td>1.0</td>
-      <td>8</td>
-      <td>41.141259</td>
-      <td>0.926680</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>12</td>
-      <td>1.0</td>
-      <td>0.8</td>
-      <td>8</td>
-      <td>41.538271</td>
-      <td>0.770225</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>25</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>7</td>
-      <td>43.038144</td>
-      <td>1.318040</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>27</td>
-      <td>1.0</td>
-      <td>0.5</td>
-      <td>8</td>
-      <td>45.159203</td>
-      <td>1.287908</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>17</td>
-      <td>1.0</td>
-      <td>0.8</td>
-      <td>6</td>
-      <td>45.341374</td>
-      <td>1.221116</td>
-    </tr>
-    <tr>
-      <th>0</th>
-      <td>20</td>
-      <td>0.8</td>
-      <td>0.5</td>
-      <td>9</td>
-      <td>45.728495</td>
-      <td>0.467902</td>
-    </tr>
-    <tr>
       <th>12</th>
-      <td>19</td>
+      <td>29</td>
       <td>0.5</td>
       <td>0.8</td>
-      <td>5</td>
-      <td>48.137288</td>
-      <td>0.984844</td>
+      <td>9</td>
+      <td>39.089294</td>
+      <td>1.067065</td>
     </tr>
     <tr>
-      <th>14</th>
-      <td>17</td>
-      <td>1.0</td>
-      <td>0.8</td>
-      <td>5</td>
-      <td>48.338941</td>
-      <td>1.121344</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>15</td>
-      <td>0.8</td>
-      <td>1.0</td>
-      <td>4</td>
-      <td>51.921088</td>
-      <td>1.147459</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>28</td>
-      <td>0.5</td>
-      <td>0.8</td>
-      <td>4</td>
-      <td>52.552042</td>
-      <td>0.631700</td>
-    </tr>
-    <tr>
-      <th>19</th>
+      <th>2</th>
       <td>26</td>
       <td>0.8</td>
-      <td>0.5</td>
-      <td>5</td>
-      <td>53.011299</td>
-      <td>1.193377</td>
+      <td>1.0</td>
+      <td>9</td>
+      <td>39.300547</td>
+      <td>1.101011</td>
     </tr>
     <tr>
       <th>11</th>
       <td>27</td>
+      <td>0.8</td>
+      <td>0.8</td>
+      <td>9</td>
+      <td>39.492742</td>
+      <td>1.434862</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10</td>
+      <td>0.8</td>
+      <td>0.8</td>
+      <td>8</td>
+      <td>40.510044</td>
+      <td>1.070535</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>28</td>
+      <td>0.8</td>
       <td>1.0</td>
+      <td>8</td>
+      <td>40.929917</td>
+      <td>1.271129</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>21</td>
       <td>0.5</td>
-      <td>5</td>
-      <td>53.271892</td>
-      <td>1.226728</td>
+      <td>0.5</td>
+      <td>9</td>
+      <td>44.992867</td>
+      <td>2.294002</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>10</td>
+      <td>19</td>
       <td>0.5</td>
-      <td>0.5</td>
-      <td>5</td>
-      <td>53.944993</td>
-      <td>1.955501</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>16</td>
-      <td>0.8</td>
-      <td>0.5</td>
-      <td>4</td>
-      <td>55.608142</td>
-      <td>0.847273</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>26</td>
-      <td>0.8</td>
       <td>1.0</td>
-      <td>3</td>
-      <td>56.747647</td>
-      <td>1.143000</td>
+      <td>6</td>
+      <td>45.071277</td>
+      <td>0.996454</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>28</td>
+      <td>13</td>
+      <td>0.8</td>
+      <td>0.8</td>
+      <td>6</td>
+      <td>45.450813</td>
+      <td>1.118202</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>10</td>
       <td>0.8</td>
       <td>0.5</td>
-      <td>3</td>
-      <td>60.868533</td>
-      <td>0.789618</td>
+      <td>8</td>
+      <td>47.849397</td>
+      <td>2.434861</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>11</td>
+      <td>0.5</td>
+      <td>1.0</td>
+      <td>5</td>
+      <td>48.111266</td>
+      <td>0.972343</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>14</td>
+      <td>0.5</td>
+      <td>1.0</td>
+      <td>5</td>
+      <td>48.156727</td>
+      <td>1.347714</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>16</td>
+      <td>0.8</td>
+      <td>1.0</td>
+      <td>5</td>
+      <td>48.403273</td>
+      <td>1.048474</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>18</td>
+      <td>0.8</td>
+      <td>0.8</td>
+      <td>5</td>
+      <td>48.546784</td>
+      <td>1.066394</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>19</td>
+      <td>1.0</td>
+      <td>0.8</td>
+      <td>5</td>
+      <td>48.550237</td>
+      <td>1.061089</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>14</td>
+      <td>0.5</td>
+      <td>0.5</td>
+      <td>7</td>
+      <td>49.807348</td>
+      <td>1.133455</td>
     </tr>
     <tr>
       <th>5</th>
       <td>28</td>
       <td>0.5</td>
+      <td>1.0</td>
+      <td>3</td>
+      <td>56.327230</td>
+      <td>1.008260</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>21</td>
+      <td>0.8</td>
+      <td>1.0</td>
+      <td>3</td>
+      <td>56.820887</td>
+      <td>1.008264</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>14</td>
+      <td>0.8</td>
+      <td>0.8</td>
+      <td>3</td>
+      <td>57.081219</td>
+      <td>1.089425</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>23</td>
+      <td>1.0</td>
+      <td>0.8</td>
+      <td>3</td>
+      <td>57.912368</td>
+      <td>1.230531</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>26</td>
+      <td>0.5</td>
       <td>0.5</td>
       <td>3</td>
-      <td>61.010052</td>
-      <td>1.060891</td>
+      <td>60.420797</td>
+      <td>0.696450</td>
     </tr>
   </tbody>
 </table>
@@ -1037,7 +1039,7 @@ warm_start
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean absolute error after tuning of the bagging regressor:
-39.37 k$
+40.42 k$
 </pre></div>
 </div>
 </div>
@@ -1101,6 +1103,8 @@ hyperparameter tuning compared to a single decision tree.</p>
             
             
               
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -1157,8 +1161,8 @@ By scikit-learn developers
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
