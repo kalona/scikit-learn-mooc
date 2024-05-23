@@ -346,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ensemble/ensemble_boosting_index.html">Ensemble based on boosting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ensemble/boosting_slides.html">🎥 Intuitions on ensemble models: boosting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_adaboost.html">Adaptive Boosting (AdaBoost)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree (GBDT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_ex_03.html">📝 Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_sol_03.html">📃 Solution for Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_hist_gradient_boosting.html">Speeding-up gradient-boosting</a></li>
@@ -732,18 +732,6 @@ Appendix - Datasets description section at the end of this MOOC.</p>
     <span class="n">ames_housing</span><span class="p">[</span><span class="n">features_of_interest</span><span class="p">],</span>
     <span class="n">ames_housing</span><span class="p">[</span><span class="n">target_name</span><span class="p">],</span>
 <span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_5075/3637327813.py:1: DeprecationWarning: 
-Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
-(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
-but was not found to be installed on your system.
-If this would cause problems for you,
-please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
-        
-  import pandas as pd
 </pre></div>
 </div>
 </div>
@@ -1242,8 +1230,8 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   background-color: var(--sklearn-color-fitted-level-3);
 }
 </style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Pipeline(steps=[(&#x27;polynomialfeatures&#x27;, PolynomialFeatures(include_bias=False)),
-                (&#x27;linearregression&#x27;, LinearRegression())])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" ><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;Pipeline<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.4/modules/generated/sklearn.pipeline.Pipeline.html">?<span>Documentation for Pipeline</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>Pipeline(steps=[(&#x27;polynomialfeatures&#x27;, PolynomialFeatures(include_bias=False)),
-                (&#x27;linearregression&#x27;, LinearRegression())])</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" ><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;PolynomialFeatures<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.4/modules/generated/sklearn.preprocessing.PolynomialFeatures.html">?<span>Documentation for PolynomialFeatures</span></a></label><div class="sk-toggleable__content fitted"><pre>PolynomialFeatures(include_bias=False)</pre></div> </div></div><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" ><label for="sk-estimator-id-3" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;LinearRegression<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.4/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div></div></div></div></div>
+                (&#x27;linearregression&#x27;, LinearRegression())])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" ><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;Pipeline<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.pipeline.Pipeline.html">?<span>Documentation for Pipeline</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>Pipeline(steps=[(&#x27;polynomialfeatures&#x27;, PolynomialFeatures(include_bias=False)),
+                (&#x27;linearregression&#x27;, LinearRegression())])</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" ><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;PolynomialFeatures<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.preprocessing.PolynomialFeatures.html">?<span>Documentation for PolynomialFeatures</span></a></label><div class="sk-toggleable__content fitted"><pre>PolynomialFeatures(include_bias=False)</pre></div> </div></div><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" ><label for="sk-estimator-id-3" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;LinearRegression<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div></div></div></div></div>
 </div>
 <p>Now, we can access the fitted <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code> (step <code class="docutils literal notranslate"><span class="pre">-1</span></code> i.e. the last step
 of the <code class="docutils literal notranslate"><span class="pre">linear_regression</span></code> pipeline) to recover the feature names.</p>
@@ -1291,7 +1279,7 @@ dataframe containing all the information.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5014e7a887c8d921954ed98605f1e47c0c01ae1df54b8bd73fc238515f03f961.png" src="../_images/5014e7a887c8d921954ed98605f1e47c0c01ae1df54b8bd73fc238515f03f961.png" />
+<img alt="../_images/c910612f8887b1485d025efdc3d8355f509d516326977239938382ca453382b0.png" src="../_images/c910612f8887b1485d025efdc3d8355f509d516326977239938382ca453382b0.png" />
 </div>
 </div>
 <p>By looking at the bar plot above it would seem that most of the features are
@@ -1311,7 +1299,7 @@ symmetric log scale for the plot.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7e99fbab52a5d84a5ac3ce45fa65f4e5f8a4eec68f61a7d953c0a9fcfcf3cb0c.png" src="../_images/7e99fbab52a5d84a5ac3ce45fa65f4e5f8a4eec68f61a7d953c0a9fcfcf3cb0c.png" />
+<img alt="../_images/3d1135234140ef21b9c44b3bd09ef108b681d97ed5f63b67d81307a3cda478b4.png" src="../_images/3d1135234140ef21b9c44b3bd09ef108b681d97ed5f63b67d81307a3cda478b4.png" />
 </div>
 </div>
 <p>Observe that some coefficients are extremely large while others are extremely
@@ -1342,45 +1330,45 @@ ridge model which enforces such behavior.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.59923e-20): result may not be accurate.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.59923e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.59556e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.59556e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.59609e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.59609e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=3.11828e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=3.11828e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=1.06109e-19): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=1.06109e-19): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.60121e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.60121e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.61694e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.61694e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.59735e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.59735e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.59566e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.59566e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.72304e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.72304e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.60047e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.60047e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.59824e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.59824e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.59593e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.59593e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.59564e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.59564e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.5959e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.5959e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.59553e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.59553e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.59686e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.59686e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.60737e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.60737e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.5957e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.5957e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.60243e-20): result may not be accurate.
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:216: LinAlgWarning: Ill-conditioned matrix (rcond=2.60243e-20): result may not be accurate.
   return linalg.solve(A, Xy, assume_a=&quot;pos&quot;, overwrite_a=True).T
 </pre></div>
 </div>
@@ -1445,7 +1433,7 @@ of the weights of ridge with the un-regularized linear regression.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/dff96b986d6b2af7343a9edad5159abff8927e173ee69fee88550d7ae37b21b5.png" src="../_images/dff96b986d6b2af7343a9edad5159abff8927e173ee69fee88550d7ae37b21b5.png" />
+<img alt="../_images/0c1220fe5ebdf1d2d0c8d650684cccb405446274421318bd4e8670d227cdc975.png" src="../_images/0c1220fe5ebdf1d2d0c8d650684cccb405446274421318bd4e8670d227cdc975.png" />
 </div>
 </div>
 <p>Notice that the overall magnitudes of the weights are shrunk
@@ -1578,7 +1566,7 @@ changes in the weights.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3a093a5b8f3e92743d40970bd739c96ed0d2eea1e1899f9c03f34aa3b4ddc27c.png" src="../_images/3a093a5b8f3e92743d40970bd739c96ed0d2eea1e1899f9c03f34aa3b4ddc27c.png" />
+<img alt="../_images/b73b83677f7ab7afa43a87c3098c8ce18037120f87d40bab02d31eacaf320978.png" src="../_images/b73b83677f7ab7afa43a87c3098c8ce18037120f87d40bab02d31eacaf320978.png" />
 </div>
 </div>
 <p>Compared to the previous plots, we see that now most weight magnitudes have a
@@ -1623,7 +1611,7 @@ number of unstable weights also decreased.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8fe39c4c0080f9edc6b9e837aa8fc2e5f9886c7d57ad55b818928291dbeaf046.png" src="../_images/8fe39c4c0080f9edc6b9e837aa8fc2e5f9886c7d57ad55b818928291dbeaf046.png" />
+<img alt="../_images/92117cfc66eb9d61309a814847eb723b62360c16097601f39cc5d1daaabf341f.png" src="../_images/92117cfc66eb9d61309a814847eb723b62360c16097601f39cc5d1daaabf341f.png" />
 </div>
 </div>
 <p>When examining the weight values, we notice that as the <code class="docutils literal notranslate"><span class="pre">alpha</span></code> value
@@ -1700,6 +1688,124 @@ score.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:2339: FutureWarning: &#39;store_cv_values&#39; is deprecated in version 1.5 and will be removed in 1.7. Use &#39;store_cv_results&#39; instead.
+  warnings.warn(
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1754,6 +1860,10 @@ average mean square error across folds for a given value of <code class="docutil
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/sklearn/utils/deprecation.py:102: FutureWarning: Attribute `cv_values_` is deprecated in version 1.5 and will be removed in 1.7. Use `cv_results_` instead.
+  warnings.warn(msg, category=FutureWarning)
+</pre></div>
+</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1852,7 +1962,7 @@ average mean square error across folds for a given value of <code class="docutil
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/90d045f5f2f58ef01382e72503a8fc1f1a7c4b7b9e38b03b697af345c125d745.png" src="../_images/90d045f5f2f58ef01382e72503a8fc1f1a7c4b7b9e38b03b697af345c125d745.png" />
+<img alt="../_images/c6ca0bac982bfb6d35674b7f9a44d9a66ddddc2a1a47296579ed13df30554b56.png" src="../_images/c6ca0bac982bfb6d35674b7f9a44d9a66ddddc2a1a47296579ed13df30554b56.png" />
 </div>
 </div>
 <p>As we can see, regularization is just like salt in cooking: one must balance
@@ -2057,7 +2167,7 @@ By scikit-learn developers
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2022-2024.
       <br/>
     
   </p>

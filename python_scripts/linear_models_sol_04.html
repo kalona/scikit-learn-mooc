@@ -346,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ensemble/ensemble_boosting_index.html">Ensemble based on boosting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ensemble/boosting_slides.html">🎥 Intuitions on ensemble models: boosting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_adaboost.html">Adaptive Boosting (AdaBoost)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree (GBDT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_ex_03.html">📝 Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_sol_03.html">📃 Solution for Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_hist_gradient_boosting.html">Speeding-up gradient-boosting</a></li>
@@ -703,7 +703,7 @@ document.write(`
 <p>In the previous Module we tuned the hyperparameter <code class="docutils literal notranslate"><span class="pre">C</span></code> of the logistic
 regression without mentioning that it controls the regularization strength.
 Later, on the slides on 🎥 <strong>Intuitions on regularized linear models</strong> we
-metioned that a small <code class="docutils literal notranslate"><span class="pre">C</span></code> provides a more regularized model, whereas a
+mentioned that a small <code class="docutils literal notranslate"><span class="pre">C</span></code> provides a more regularized model, whereas a
 non-regularized model is obtained with an infinitely large value of <code class="docutils literal notranslate"><span class="pre">C</span></code>.
 Indeed, <code class="docutils literal notranslate"><span class="pre">C</span></code> behaves as the inverse of the <code class="docutils literal notranslate"><span class="pre">alpha</span></code> coefficient in the <code class="docutils literal notranslate"><span class="pre">Ridge</span></code>
 model.</p>
@@ -727,18 +727,6 @@ Appendix - Datasets description section at the end of this MOOC.</p>
 
 <span class="n">culmen_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Culmen Length (mm)&quot;</span><span class="p">,</span> <span class="s2">&quot;Culmen Depth (mm)&quot;</span><span class="p">]</span>
 <span class="n">target_column</span> <span class="o">=</span> <span class="s2">&quot;Species&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_5231/2298757309.py:1: DeprecationWarning: 
-Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
-(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
-but was not found to be installed on your system.
-If this would cause problems for you,
-please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
-        
-  import pandas as pd
 </pre></div>
 </div>
 </div>
@@ -848,13 +836,13 @@ classifier’s decision boundary.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2f4829ffaf6825d4a15ee073bc9eeabf206858f1a506b09b5161d45ad46d6f01.png" src="../_images/2f4829ffaf6825d4a15ee073bc9eeabf206858f1a506b09b5161d45ad46d6f01.png" />
-<img alt="../_images/05b84715d1127e109d91739ea5f275f4e552008be9b1b6a8245ef80403afb256.png" src="../_images/05b84715d1127e109d91739ea5f275f4e552008be9b1b6a8245ef80403afb256.png" />
-<img alt="../_images/4c908901505665ef2b4c348253cca633c9cc21e9cefe0f3d8064b018df06e945.png" src="../_images/4c908901505665ef2b4c348253cca633c9cc21e9cefe0f3d8064b018df06e945.png" />
-<img alt="../_images/a28eeffa95d7d59558919435e6e451835e71edb34a244aac68585849994d5eb7.png" src="../_images/a28eeffa95d7d59558919435e6e451835e71edb34a244aac68585849994d5eb7.png" />
-<img alt="../_images/658f953f59549d4fa8059e112ba2fee422a949c8c41dab7d8c8b89f25cb4f35c.png" src="../_images/658f953f59549d4fa8059e112ba2fee422a949c8c41dab7d8c8b89f25cb4f35c.png" />
-<img alt="../_images/13ba9314ef15190bd7f71f6559b5938aeb19bc19e0cad76ade787cda80690105.png" src="../_images/13ba9314ef15190bd7f71f6559b5938aeb19bc19e0cad76ade787cda80690105.png" />
-<img alt="../_images/950b734b449f3e7add1670d0e46901931ec857355b9dd0bb39f3dcc5c74ea5ae.png" src="../_images/950b734b449f3e7add1670d0e46901931ec857355b9dd0bb39f3dcc5c74ea5ae.png" />
+<img alt="../_images/8d82f0105e367401bce3ffda356e26e72864e0b6469f3d39215678e0fc94105e.png" src="../_images/8d82f0105e367401bce3ffda356e26e72864e0b6469f3d39215678e0fc94105e.png" />
+<img alt="../_images/d63ec44dfedee85997c9840afa6d122fc81f12b088aa05a584ad916b7f64a14c.png" src="../_images/d63ec44dfedee85997c9840afa6d122fc81f12b088aa05a584ad916b7f64a14c.png" />
+<img alt="../_images/286db6c82c1c15c8ffa5667364e47c9962cd0e7cb983de1403bb5d7d5f9b3db7.png" src="../_images/286db6c82c1c15c8ffa5667364e47c9962cd0e7cb983de1403bb5d7d5f9b3db7.png" />
+<img alt="../_images/9bf41942b5acec6530be1770858dc79263276493ac801eddc8086e3ecdbf835e.png" src="../_images/9bf41942b5acec6530be1770858dc79263276493ac801eddc8086e3ecdbf835e.png" />
+<img alt="../_images/afd11009d023e8851947dbb7bf36b8d22fe5ec3e9f41358bbb13809a4dc1ff49.png" src="../_images/afd11009d023e8851947dbb7bf36b8d22fe5ec3e9f41358bbb13809a4dc1ff49.png" />
+<img alt="../_images/cf3abbf943eb3d5a99b804aceab586485db8b8d0cb424906efa2ce5a3ed79ca9.png" src="../_images/cf3abbf943eb3d5a99b804aceab586485db8b8d0cb424906efa2ce5a3ed79ca9.png" />
+<img alt="../_images/f01c233415c831d841ffc66bf87f7a232178ca774b377bd6bf8d452fb23bad5d.png" src="../_images/f01c233415c831d841ffc66bf87f7a232178ca774b377bd6bf8d452fb23bad5d.png" />
 </div>
 </div>
 <p>On this series of plots we can observe several important points. Regarding the
@@ -925,7 +913,7 @@ by name or position. Then you can query the attributes of that step such as
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cb85a8515fe45c28c95ade03d4b212d974b7d2441a3d8a28c5f782be48ce4d3e.png" src="../_images/cb85a8515fe45c28c95ade03d4b212d974b7d2441a3d8a28c5f782be48ce4d3e.png" />
+<img alt="../_images/bf5f3393779de48ba95eefc45f3d1b1177d5e14d6ed874936f3eae4e7c486940.png" src="../_images/bf5f3393779de48ba95eefc45f3d1b1177d5e14d6ed874936f3eae4e7c486940.png" />
 </div>
 </div>
 <p>As small <code class="docutils literal notranslate"><span class="pre">C</span></code> provides a more regularized model, it shrinks the weights values
@@ -969,13 +957,13 @@ trade-off?</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2f4829ffaf6825d4a15ee073bc9eeabf206858f1a506b09b5161d45ad46d6f01.png" src="../_images/2f4829ffaf6825d4a15ee073bc9eeabf206858f1a506b09b5161d45ad46d6f01.png" />
-<img alt="../_images/f45d12006f6bbf8851b5eca8e7dda767543ee6fe049c258d0b301c3236fb3fc0.png" src="../_images/f45d12006f6bbf8851b5eca8e7dda767543ee6fe049c258d0b301c3236fb3fc0.png" />
-<img alt="../_images/d409ffc616e3296b699d3f00508ed08946728173e9d002d58ea919a7768f8f0a.png" src="../_images/d409ffc616e3296b699d3f00508ed08946728173e9d002d58ea919a7768f8f0a.png" />
-<img alt="../_images/3fa1df74d7ea65852488ef0bd0a6a2b0754a6733e3e02a4923efbee74389f2f5.png" src="../_images/3fa1df74d7ea65852488ef0bd0a6a2b0754a6733e3e02a4923efbee74389f2f5.png" />
-<img alt="../_images/cfbb9e4d4729021777ff0ee4f220a497afdec5f72619342b2ae2c568ac6284fd.png" src="../_images/cfbb9e4d4729021777ff0ee4f220a497afdec5f72619342b2ae2c568ac6284fd.png" />
-<img alt="../_images/ea40d46deb9de627ab26fd533f32238bfa39d89dff12e3474ebd2fb6167e1621.png" src="../_images/ea40d46deb9de627ab26fd533f32238bfa39d89dff12e3474ebd2fb6167e1621.png" />
-<img alt="../_images/ba691380529fc1184483d6d10dd81da1ce53457d79dab3653e144ef7b2db13e7.png" src="../_images/ba691380529fc1184483d6d10dd81da1ce53457d79dab3653e144ef7b2db13e7.png" />
+<img alt="../_images/8d82f0105e367401bce3ffda356e26e72864e0b6469f3d39215678e0fc94105e.png" src="../_images/8d82f0105e367401bce3ffda356e26e72864e0b6469f3d39215678e0fc94105e.png" />
+<img alt="../_images/dfc101e72fbe0c1fb7bf5251a0c7d1d657d0a9685e928bac2b88b816bae0f82c.png" src="../_images/dfc101e72fbe0c1fb7bf5251a0c7d1d657d0a9685e928bac2b88b816bae0f82c.png" />
+<img alt="../_images/01d8ea462bf8ad9615884144bbcbb36ad2f987010540d74bfbb2e92f36cb2b8a.png" src="../_images/01d8ea462bf8ad9615884144bbcbb36ad2f987010540d74bfbb2e92f36cb2b8a.png" />
+<img alt="../_images/2109aaa39d65c9ad7c383ad27bb7643162a3246b6bc5aa41d34148e6d070e9d4.png" src="../_images/2109aaa39d65c9ad7c383ad27bb7643162a3246b6bc5aa41d34148e6d070e9d4.png" />
+<img alt="../_images/b6740e7c89c6ff9ad9aec7de8c9bc71ea4f194a315a2690c624bac88ee3bdefc.png" src="../_images/b6740e7c89c6ff9ad9aec7de8c9bc71ea4f194a315a2690c624bac88ee3bdefc.png" />
+<img alt="../_images/8a6324f701c3cda2a9f2c040155b16dfc2ce3f8930d73d4567003eaa71769855.png" src="../_images/8a6324f701c3cda2a9f2c040155b16dfc2ce3f8930d73d4567003eaa71769855.png" />
+<img alt="../_images/72a47c196fa588b4fd022cc34cb7ecdc28deb15f1aca3cf3101c10b2b0a6f3e8.png" src="../_images/72a47c196fa588b4fd022cc34cb7ecdc28deb15f1aca3cf3101c10b2b0a6f3e8.png" />
 </div>
 </div>
 <ul class="simple">
@@ -1106,7 +1094,7 @@ By scikit-learn developers
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2022-2024.
       <br/>
     
   </p>

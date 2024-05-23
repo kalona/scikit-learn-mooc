@@ -346,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ensemble/ensemble_boosting_index.html">Ensemble based on boosting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ensemble/boosting_slides.html">🎥 Intuitions on ensemble models: boosting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_adaboost.html">Adaptive Boosting (AdaBoost)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree (GBDT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_ex_03.html">📝 Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_sol_03.html">📃 Solution for Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_hist_gradient_boosting.html">Speeding-up gradient-boosting</a></li>
@@ -704,7 +704,7 @@ document.write(`
 <p>In the previous notebooks, we introduce some concepts regarding the evaluation
 of predictive models. While this section could be slightly redundant, we
 intend to go into details into the cross-validation framework.</p>
-<p>Before we dive in, let’s linger on the reasons for always having training and
+<p>Before we dive in, let’s focus on the reasons for always having training and
 testing sets. Let’s first look at the limitation of using a dataset without
 keeping any samples out.</p>
 <p>To illustrate the different concepts, we will use the California housing
@@ -725,7 +725,7 @@ geographical information.</p>
 <p>Therefore, the task to solve is different from the one shown in the previous
 notebook. The target to be predicted is a continuous variable and not anymore
 discrete. This task is called regression.</p>
-<p>This, we will use a predictive model specific to regression and not to
+<p>Thus, we will use a predictive model specific to regression and not to
 classification.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -786,7 +786,7 @@ It can be downloaded/loaded using the
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
 </pre></div>
 </div>
 </div>
@@ -875,8 +875,75 @@ It can be downloaded/loaded using the
       <td>37.85</td>
       <td>-122.25</td>
     </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>20635</th>
+      <td>1.5603</td>
+      <td>25.0</td>
+      <td>5.045455</td>
+      <td>1.133333</td>
+      <td>845.0</td>
+      <td>2.560606</td>
+      <td>39.48</td>
+      <td>-121.09</td>
+    </tr>
+    <tr>
+      <th>20636</th>
+      <td>2.5568</td>
+      <td>18.0</td>
+      <td>6.114035</td>
+      <td>1.315789</td>
+      <td>356.0</td>
+      <td>3.122807</td>
+      <td>39.49</td>
+      <td>-121.21</td>
+    </tr>
+    <tr>
+      <th>20637</th>
+      <td>1.7000</td>
+      <td>17.0</td>
+      <td>5.205543</td>
+      <td>1.120092</td>
+      <td>1007.0</td>
+      <td>2.325635</td>
+      <td>39.43</td>
+      <td>-121.22</td>
+    </tr>
+    <tr>
+      <th>20638</th>
+      <td>1.8672</td>
+      <td>18.0</td>
+      <td>5.329513</td>
+      <td>1.171920</td>
+      <td>741.0</td>
+      <td>2.123209</td>
+      <td>39.43</td>
+      <td>-121.32</td>
+    </tr>
+    <tr>
+      <th>20639</th>
+      <td>2.3886</td>
+      <td>16.0</td>
+      <td>5.254717</td>
+      <td>1.162264</td>
+      <td>1387.0</td>
+      <td>2.616981</td>
+      <td>39.37</td>
+      <td>-121.24</td>
+    </tr>
   </tbody>
 </table>
+<p>20640 rows × 8 columns</p>
 </div></div></div>
 </div>
 <p>To simplify future visualization, let’s transform the prices from the 100
@@ -884,17 +951,23 @@ It can be downloaded/loaded using the
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">target</span> <span class="o">*=</span> <span class="mi">100</span>
-<span class="n">target</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">target</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    452.6
-1    358.5
-2    352.1
-3    341.3
-4    342.2
-Name: MedHouseVal, dtype: float64
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0        452.6
+1        358.5
+2        352.1
+3        341.3
+4        342.2
+         ...  
+20635     78.1
+20636     77.1
+20637     92.3
+20638     84.7
+20639     89.4
+Name: MedHouseVal, Length: 20640, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1321,7 +1394,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>DecisionTreeRegressor(random_state=0)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;DecisionTreeRegressor<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.4/modules/generated/sklearn.tree.DecisionTreeRegressor.html">?<span>Documentation for DecisionTreeRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>DecisionTreeRegressor(random_state=0)</pre></div> </div></div></div></div></div></div>
+</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>DecisionTreeRegressor(random_state=0)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;DecisionTreeRegressor<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.tree.DecisionTreeRegressor.html">?<span>Documentation for DecisionTreeRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>DecisionTreeRegressor(random_state=0)</pre></div> </div></div></div></div></div></div>
 </div>
 <p>After training the regressor, we would like to know its potential
 generalization performance once deployed in production. For this purpose, we
@@ -1794,7 +1867,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>DecisionTreeRegressor(random_state=0)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;DecisionTreeRegressor<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.4/modules/generated/sklearn.tree.DecisionTreeRegressor.html">?<span>Documentation for DecisionTreeRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>DecisionTreeRegressor(random_state=0)</pre></div> </div></div></div></div></div></div>
+</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>DecisionTreeRegressor(random_state=0)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;DecisionTreeRegressor<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.tree.DecisionTreeRegressor.html">?<span>Documentation for DecisionTreeRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>DecisionTreeRegressor(random_state=0)</pre></div> </div></div></div></div></div></div>
 </div>
 <p>Finally, we estimate the different types of errors. Let’s start by computing
 the training error.</p>
@@ -1894,7 +1967,7 @@ it into a pandas dataframe to ease visualization and manipulation.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">cv_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cv_results</span><span class="p">)</span>
-<span class="n">cv_results</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">cv_results</span>
 </pre></div>
 </div>
 </div>
@@ -1925,33 +1998,243 @@ it into a pandas dataframe to ease visualization and manipulation.</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.139418</td>
-      <td>0.002851</td>
+      <td>0.140661</td>
+      <td>0.003283</td>
       <td>-46.909797</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.139549</td>
-      <td>0.002946</td>
+      <td>0.140880</td>
+      <td>0.003181</td>
       <td>-46.421170</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.138029</td>
-      <td>0.002897</td>
+      <td>0.139779</td>
+      <td>0.003209</td>
       <td>-47.411089</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.139780</td>
-      <td>0.003076</td>
+      <td>0.142126</td>
+      <td>0.003199</td>
       <td>-44.319824</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.136912</td>
-      <td>0.002912</td>
+      <td>0.138445</td>
+      <td>0.003136</td>
       <td>-47.607875</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.139853</td>
+      <td>0.003191</td>
+      <td>-45.901300</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0.141298</td>
+      <td>0.003202</td>
+      <td>-46.572767</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0.140701</td>
+      <td>0.003224</td>
+      <td>-46.194585</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0.141642</td>
+      <td>0.003224</td>
+      <td>-45.590236</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0.141812</td>
+      <td>0.003169</td>
+      <td>-45.727998</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0.140062</td>
+      <td>0.003194</td>
+      <td>-49.325285</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0.139639</td>
+      <td>0.003185</td>
+      <td>-47.433377</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0.139413</td>
+      <td>0.003228</td>
+      <td>-46.899316</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0.136931</td>
+      <td>0.003159</td>
+      <td>-46.413821</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0.138759</td>
+      <td>0.003201</td>
+      <td>-46.727109</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0.139570</td>
+      <td>0.003199</td>
+      <td>-44.254324</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0.139415</td>
+      <td>0.003171</td>
+      <td>-48.042372</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0.143155</td>
+      <td>0.003172</td>
+      <td>-43.026746</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0.139133</td>
+      <td>0.003176</td>
+      <td>-46.176363</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0.139574</td>
+      <td>0.003190</td>
+      <td>-47.662623</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0.139457</td>
+      <td>0.003229</td>
+      <td>-44.451056</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>0.139690</td>
+      <td>0.003229</td>
+      <td>-46.173780</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>0.142470</td>
+      <td>0.003189</td>
+      <td>-45.795231</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>0.142035</td>
+      <td>0.003241</td>
+      <td>-46.166307</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>0.139889</td>
+      <td>0.003205</td>
+      <td>-46.360169</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>0.139829</td>
+      <td>0.003220</td>
+      <td>-46.968612</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>0.139970</td>
+      <td>0.003255</td>
+      <td>-46.325623</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>0.139320</td>
+      <td>0.003246</td>
+      <td>-46.522054</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>0.140971</td>
+      <td>0.003211</td>
+      <td>-47.415111</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>0.139978</td>
+      <td>0.003183</td>
+      <td>-46.050461</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>0.140228</td>
+      <td>0.003181</td>
+      <td>-46.182242</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>0.142439</td>
+      <td>0.003237</td>
+      <td>-45.305162</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>0.140569</td>
+      <td>0.003245</td>
+      <td>-44.359681</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>0.140361</td>
+      <td>0.003249</td>
+      <td>-46.829014</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>0.141364</td>
+      <td>0.003421</td>
+      <td>-46.648786</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>0.142366</td>
+      <td>0.003216</td>
+      <td>-45.653002</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>0.140244</td>
+      <td>0.003267</td>
+      <td>-46.864559</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>0.138645</td>
+      <td>0.003184</td>
+      <td>-47.420250</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>0.138907</td>
+      <td>0.003227</td>
+      <td>-47.352148</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>0.139041</td>
+      <td>0.003179</td>
+      <td>-47.102818</td>
     </tr>
   </tbody>
 </table>
@@ -2014,71 +2297,71 @@ score.</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.139418</td>
-      <td>0.002851</td>
+      <td>0.140661</td>
+      <td>0.003283</td>
       <td>-46.909797</td>
       <td>46.909797</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.139549</td>
-      <td>0.002946</td>
+      <td>0.140880</td>
+      <td>0.003181</td>
       <td>-46.421170</td>
       <td>46.421170</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.138029</td>
-      <td>0.002897</td>
+      <td>0.139779</td>
+      <td>0.003209</td>
       <td>-47.411089</td>
       <td>47.411089</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.139780</td>
-      <td>0.003076</td>
+      <td>0.142126</td>
+      <td>0.003199</td>
       <td>-44.319824</td>
       <td>44.319824</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.136912</td>
-      <td>0.002912</td>
+      <td>0.138445</td>
+      <td>0.003136</td>
       <td>-47.607875</td>
       <td>47.607875</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.139016</td>
-      <td>0.002950</td>
+      <td>0.139853</td>
+      <td>0.003191</td>
       <td>-45.901300</td>
       <td>45.901300</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.139500</td>
-      <td>0.003044</td>
+      <td>0.141298</td>
+      <td>0.003202</td>
       <td>-46.572767</td>
       <td>46.572767</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.139872</td>
-      <td>0.002974</td>
+      <td>0.140701</td>
+      <td>0.003224</td>
       <td>-46.194585</td>
       <td>46.194585</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.139805</td>
-      <td>0.003011</td>
+      <td>0.141642</td>
+      <td>0.003224</td>
       <td>-45.590236</td>
       <td>45.590236</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.141236</td>
-      <td>0.002948</td>
+      <td>0.141812</td>
+      <td>0.003169</td>
       <td>-45.727998</td>
       <td>45.727998</td>
     </tr>
@@ -2115,7 +2398,7 @@ estimate of its variability.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c6e6fc8ce67780d4a8a70895d851852a6de74753faa5b93993d54482788afd23.png" src="../_images/c6e6fc8ce67780d4a8a70895d851852a6de74753faa5b93993d54482788afd23.png" />
+<img alt="../_images/e4882abe4e85af48a8c6e000b53d4d81425c40825a30ea5e5383727fc493cab3.png" src="../_images/e4882abe4e85af48a8c6e000b53d4d81425c40825a30ea5e5383727fc493cab3.png" />
 </div>
 </div>
 <p>We observe that the testing error is clustered around 47 k$ and ranges from
@@ -2168,7 +2451,7 @@ the scale of the natural variability of the vector <code class="docutils literal
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9abaf698e215afe64a9e6a3cc66225c763f2706099816e251a48ce61083b56b3.png" src="../_images/9abaf698e215afe64a9e6a3cc66225c763f2706099816e251a48ce61083b56b3.png" />
+<img alt="../_images/3172098caf0ce24f4e6478c65b2b283797ae28c836a8622cfa8e893033a21b42.png" src="../_images/3172098caf0ce24f4e6478c65b2b283797ae28c836a8622cfa8e893033a21b42.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2217,8 +2500,8 @@ passing the option <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;fit_time&#39;: array([0.16226053, 0.15841508, 0.15857387, 0.15921021, 0.15403652]),
- &#39;score_time&#39;: array([0.00227237, 0.00223708, 0.00230455, 0.00214505, 0.00232697]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;fit_time&#39;: array([0.16359043, 0.15993214, 0.16036868, 0.16252542, 0.1559248 ]),
+ &#39;score_time&#39;: array([0.00243592, 0.00234294, 0.00236893, 0.00231409, 0.00239968]),
  &#39;estimator&#39;: [DecisionTreeRegressor(random_state=0),
   DecisionTreeRegressor(random_state=0),
   DecisionTreeRegressor(random_state=0),
@@ -2373,7 +2656,7 @@ By scikit-learn developers
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2022-2024.
       <br/>
     
   </p>

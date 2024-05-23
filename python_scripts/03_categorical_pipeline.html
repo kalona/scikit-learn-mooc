@@ -346,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ensemble/ensemble_boosting_index.html">Ensemble based on boosting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ensemble/boosting_slides.html">🎥 Intuitions on ensemble models: boosting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_adaboost.html">Adaptive Boosting (AdaBoost)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree (GBDT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_ex_03.html">📝 Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_sol_03.html">📃 Solution for Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_hist_gradient_boosting.html">Speeding-up gradient-boosting</a></li>
@@ -726,18 +726,6 @@ categorical data.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2465/601619177.py:1: DeprecationWarning: 
-Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
-(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
-but was not found to be installed on your system.
-If this would cause problems for you,
-please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
-        
-  import pandas as pd
-</pre></div>
-</div>
-</div>
 </div>
 <section id="identify-categorical-variables">
 <h2>Identify categorical variables<a class="headerlink" href="#identify-categorical-variables" title="Permalink to this heading">#</a></h2>
@@ -872,7 +860,7 @@ unwanted columns:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_categorical</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">categorical_columns</span><span class="p">]</span>
-<span class="n">data_categorical</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">data_categorical</span>
 </pre></div>
 </div>
 </div>
@@ -961,8 +949,75 @@ unwanted columns:</p>
       <td>Female</td>
       <td>United-States</td>
     </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>48837</th>
+      <td>Private</td>
+      <td>Assoc-acdm</td>
+      <td>Married-civ-spouse</td>
+      <td>Tech-support</td>
+      <td>Wife</td>
+      <td>White</td>
+      <td>Female</td>
+      <td>United-States</td>
+    </tr>
+    <tr>
+      <th>48838</th>
+      <td>Private</td>
+      <td>HS-grad</td>
+      <td>Married-civ-spouse</td>
+      <td>Machine-op-inspct</td>
+      <td>Husband</td>
+      <td>White</td>
+      <td>Male</td>
+      <td>United-States</td>
+    </tr>
+    <tr>
+      <th>48839</th>
+      <td>Private</td>
+      <td>HS-grad</td>
+      <td>Widowed</td>
+      <td>Adm-clerical</td>
+      <td>Unmarried</td>
+      <td>White</td>
+      <td>Female</td>
+      <td>United-States</td>
+    </tr>
+    <tr>
+      <th>48840</th>
+      <td>Private</td>
+      <td>HS-grad</td>
+      <td>Never-married</td>
+      <td>Adm-clerical</td>
+      <td>Own-child</td>
+      <td>White</td>
+      <td>Male</td>
+      <td>United-States</td>
+    </tr>
+    <tr>
+      <th>48841</th>
+      <td>Self-emp-inc</td>
+      <td>HS-grad</td>
+      <td>Married-civ-spouse</td>
+      <td>Exec-managerial</td>
+      <td>Wife</td>
+      <td>White</td>
+      <td>Female</td>
+      <td>United-States</td>
+    </tr>
   </tbody>
 </table>
+<p>48842 rows × 8 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1510,7 +1565,7 @@ returned, for each sample, a 1 to specify which category it belongs to.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The dataset is composed of </span><span class="si">{</span><span class="n">data_categorical</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> features&quot;</span><span class="p">)</span>
-<span class="n">data_categorical</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">data_categorical</span>
 </pre></div>
 </div>
 </div>
@@ -1602,8 +1657,75 @@ returned, for each sample, a 1 to specify which category it belongs to.</p>
       <td>Female</td>
       <td>United-States</td>
     </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>48837</th>
+      <td>Private</td>
+      <td>Assoc-acdm</td>
+      <td>Married-civ-spouse</td>
+      <td>Tech-support</td>
+      <td>Wife</td>
+      <td>White</td>
+      <td>Female</td>
+      <td>United-States</td>
+    </tr>
+    <tr>
+      <th>48838</th>
+      <td>Private</td>
+      <td>HS-grad</td>
+      <td>Married-civ-spouse</td>
+      <td>Machine-op-inspct</td>
+      <td>Husband</td>
+      <td>White</td>
+      <td>Male</td>
+      <td>United-States</td>
+    </tr>
+    <tr>
+      <th>48839</th>
+      <td>Private</td>
+      <td>HS-grad</td>
+      <td>Widowed</td>
+      <td>Adm-clerical</td>
+      <td>Unmarried</td>
+      <td>White</td>
+      <td>Female</td>
+      <td>United-States</td>
+    </tr>
+    <tr>
+      <th>48840</th>
+      <td>Private</td>
+      <td>HS-grad</td>
+      <td>Never-married</td>
+      <td>Adm-clerical</td>
+      <td>Own-child</td>
+      <td>White</td>
+      <td>Male</td>
+      <td>United-States</td>
+    </tr>
+    <tr>
+      <th>48841</th>
+      <td>Self-emp-inc</td>
+      <td>HS-grad</td>
+      <td>Married-civ-spouse</td>
+      <td>Exec-managerial</td>
+      <td>Wife</td>
+      <td>White</td>
+      <td>Female</td>
+      <td>United-States</td>
+    </tr>
   </tbody>
 </table>
+<p>48842 rows × 8 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1836,7 +1958,7 @@ exercise</strong> of this sequence.</p>
 did with numerical data: let’s train a linear classifier on the encoded data
 and check the generalization performance of this machine learning pipeline using
 cross-validation.</p>
-<p>Before we create the pipeline, we have to linger on the <code class="docutils literal notranslate"><span class="pre">native-country</span></code>.
+<p>Before we create the pipeline, we have to focus on the <code class="docutils literal notranslate"><span class="pre">native-country</span></code>.
 Let’s recall some statistics regarding this column.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1956,8 +2078,8 @@ categorical columns.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;fit_time&#39;: array([0.1801312 , 0.16934681, 0.17822409, 0.18152452, 0.16968417]),
- &#39;score_time&#39;: array([0.02234864, 0.02239132, 0.02237892, 0.02327776, 0.02266836]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;fit_time&#39;: array([0.18055844, 0.17126203, 0.17328715, 0.17655182, 0.16910458]),
+ &#39;score_time&#39;: array([0.02274585, 0.02395415, 0.02362037, 0.02493382, 0.02333736]),
  &#39;test_score&#39;: array([0.83232675, 0.83570478, 0.82831695, 0.83292383, 0.83497133])}
 </pre></div>
 </div>
@@ -1976,9 +2098,10 @@ categorical columns.</p>
 </div>
 </div>
 </div>
-<p>As you can see, this representation of the categorical variables is
-slightly more predictive of the revenue than the numerical variables
-that we used previously.</p>
+<p>As you can see, this representation of the categorical variables is slightly
+more predictive of the revenue than the numerical variables that we used
+previously. The reason being that we have more (predictive) categorical
+features than numerical ones.</p>
 <p>In this notebook we have:</p>
 <ul class="simple">
 <li><p>seen two common strategies for encoding categorical features: <strong>ordinal
@@ -2086,7 +2209,7 @@ By scikit-learn developers
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2022-2024.
       <br/>
     
   </p>

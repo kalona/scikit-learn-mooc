@@ -346,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ensemble/ensemble_boosting_index.html">Ensemble based on boosting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ensemble/boosting_slides.html">🎥 Intuitions on ensemble models: boosting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_adaboost.html">Adaptive Boosting (AdaBoost)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree (GBDT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_ex_03.html">📝 Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_sol_03.html">📃 Solution for Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_hist_gradient_boosting.html">Speeding-up gradient-boosting</a></li>
@@ -705,18 +705,6 @@ penguin species.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2259/1413994050.py:2: DeprecationWarning: 
-Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
-(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
-but was not found to be installed on your system.
-If this would cause problems for you,
-please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
-        
-  import pandas as pd
-</pre></div>
-</div>
-</div>
 </div>
 <p>Show a few samples of the data.</p>
 <p>How many features are numerical? How many features are categorical?</p>
@@ -818,7 +806,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f63a80f70c1b24d62b0eb738c2098172082dede89d3d2cc4299c53b3b55790b3.png" src="../_images/f63a80f70c1b24d62b0eb738c2098172082dede89d3d2cc4299c53b3b55790b3.png" />
+<img alt="../_images/5c576d31c9aa26af2dfe1b296d9c3418cb672a34266a20d33e4bdf6ee10489e5.png" src="../_images/5c576d31c9aa26af2dfe1b296d9c3418cb672a34266a20d33e4bdf6ee10489e5.png" />
 </div>
 </div>
 <p>Show features distribution for each class. Hint: use
@@ -833,21 +821,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-</pre></div>
-</div>
-<img alt="../_images/fb8ebff8666e9bce1fb354d0ff1bad8fcdc6502a2d41251c2b4b7141e446ea34.png" src="../_images/fb8ebff8666e9bce1fb354d0ff1bad8fcdc6502a2d41251c2b4b7141e446ea34.png" />
+<img alt="../_images/49697e586f6d5629f9ce32fd0c6d34433089526dcc60a2968c115749dd97ce77.png" src="../_images/49697e586f6d5629f9ce32fd0c6d34433089526dcc60a2968c115749dd97ce77.png" />
 </div>
 </div>
 <p>We observe that the labels on the axis are overlapping. Even if it is not the
@@ -860,21 +834,7 @@ subfigure.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-</pre></div>
-</div>
-<img alt="../_images/06268b84797872c66aa46a6aa5edba78d8f226ccedd77bed36436f055d596684.png" src="../_images/06268b84797872c66aa46a6aa5edba78d8f226ccedd77bed36436f055d596684.png" />
+<img alt="../_images/fb81c5de17b578205bbdbc31b8da36a7351df26b42e706bbf7587d186aeb9c51.png" src="../_images/fb81c5de17b578205bbdbc31b8da36a7351df26b42e706bbf7587d186aeb9c51.png" />
 </div>
 </div>
 <p>Looking at these distributions, how hard do you think it would be to classify
@@ -965,7 +925,7 @@ By scikit-learn developers
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2022-2024.
       <br/>
     
   </p>

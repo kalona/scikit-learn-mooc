@@ -346,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ensemble/ensemble_boosting_index.html">Ensemble based on boosting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ensemble/boosting_slides.html">🎥 Intuitions on ensemble models: boosting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_adaboost.html">Adaptive Boosting (AdaBoost)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree (GBDT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_ex_03.html">📝 Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_sol_03.html">📃 Solution for Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_hist_gradient_boosting.html">Speeding-up gradient-boosting</a></li>
@@ -718,10 +718,10 @@ this is a toy dataset.</p>
 </div>
 </div>
 </div>
-<p>Once we created our model, we will use the cross-validation framework to
-evaluate it. We will use the <code class="docutils literal notranslate"><span class="pre">KFold</span></code> cross-validation strategy. We will define
-a dataset with nine samples and repeat the cross-validation three times (i.e.
-<code class="docutils literal notranslate"><span class="pre">n_splits</span></code>).</p>
+<p>Once the model is created, we can evaluate it using cross-validation. We start
+by using the <code class="docutils literal notranslate"><span class="pre">KFold</span></code> strategy.</p>
+<p>Let’s review how this strategy works. For such purpose, we define a dataset
+with nine samples and split the dataset into three folds (i.e. <code class="docutils literal notranslate"><span class="pre">n_splits=3</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -742,12 +742,12 @@ TRAIN: [0 1 2 3 4 5] TEST: [6 7 8]
 </div>
 </div>
 </div>
-<p>By defining three splits, we will use three samples for testing and six for
-training each time. <code class="docutils literal notranslate"><span class="pre">KFold</span></code> does not shuffle by default. It means that it will
-select the three first samples for the testing set at the first split, then
-the three next three samples for the second split, and the three next for the
-last split. In the end, all samples have been used in testing at least once
-among the different splits.</p>
+<p>By defining three splits, we use three samples (1-fold) for testing and six
+(2-folds) for training each time. <code class="docutils literal notranslate"><span class="pre">KFold</span></code> does not shuffle by default. It
+means that the three first samples are selected for the testing set at the
+first split, then the three next three samples for the second split, and the
+three next for the last split. In the end, all samples have been used in
+testing at least once among the different splits.</p>
 <p>Now, let’s apply this strategy to check the generalization performance of our
 model.</p>
 <div class="cell docutils container">
@@ -770,8 +770,8 @@ model.</p>
 </div>
 </div>
 <p>It is a real surprise that our model cannot correctly classify any sample in
-any cross-validation split. We will now check our target’s value to understand
-the issue.</p>
+any cross-validation split. We now check our target’s value to understand the
+issue.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -785,19 +785,18 @@ the issue.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5fee188058b37180fcf2903b33c00d274d5c0572b9f98c2c68b8a3157a9df249.png" src="../_images/5fee188058b37180fcf2903b33c00d274d5c0572b9f98c2c68b8a3157a9df249.png" />
+<img alt="../_images/1eba0d141e61136c771e1c138bf6ed461f11b114072757ec2192a6d1a44c431e.png" src="../_images/1eba0d141e61136c771e1c138bf6ed461f11b114072757ec2192a6d1a44c431e.png" />
 </div>
 </div>
-<p>We see that the target vector <code class="docutils literal notranslate"><span class="pre">target</span></code> is ordered. It will have some
-unexpected consequences when using the <code class="docutils literal notranslate"><span class="pre">KFold</span></code> cross-validation. To illustrate
-the consequences, we will show the class count in each fold of the
-cross-validation in the train and test set.</p>
+<p>We see that the target vector <code class="docutils literal notranslate"><span class="pre">target</span></code> is ordered. This has some unexpected
+consequences when using the <code class="docutils literal notranslate"><span class="pre">KFold</span></code> cross-validation. To illustrate the
+consequences, we show the class count in each fold of the cross-validation in
+the train and test set.</p>
 <p>Let’s compute the class counts for both the training and testing sets using
 the <code class="docutils literal notranslate"><span class="pre">KFold</span></code> cross-validation, and plot these information in a bar plot.</p>
-<p>We will iterate given the number of split and check how many samples of each
-are present in the training and testing set. We will store the information
-into two distincts lists; one for the training set and one for the testing
-set.</p>
+<p>We iterate given the number of split and check how many samples of each are
+present in the training and testing set. We then store the information into
+two distinct lists; one for the training set and one for the testing set.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -816,8 +815,8 @@ set.</p>
 </div>
 </div>
 </div>
-<p>To plot the information on a single figure, we will concatenate the
-information regarding the fold within the same dataset.</p>
+<p>To plot the information on a single figure, we concatenate the information
+regarding the fold within the same dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_cv_counts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
@@ -950,12 +949,12 @@ information regarding the fold within the same dataset.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_cv_counts</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Count&quot;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Training set&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Training set class counts&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/40dfc2ce883ce1bfedc35f4df6b844b8530cbd6db5b5d8e3ece5bf3b33584c77.png" src="../_images/40dfc2ce883ce1bfedc35f4df6b844b8530cbd6db5b5d8e3ece5bf3b33584c77.png" />
+<img alt="../_images/ed236e08f361b99be15fb0aebb313b4a614465f6a03b7f25ad4b8b98b38ef653.png" src="../_images/ed236e08f361b99be15fb0aebb313b4a614465f6a03b7f25ad4b8b98b38ef653.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -963,12 +962,12 @@ information regarding the fold within the same dataset.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_cv_counts</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Count&quot;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Test set&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Test set class counts&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f9cd4e7a3aed4ac37f91688a8e0f418ef0b3f3b77f5808dedd75fa910ce8252d.png" src="../_images/f9cd4e7a3aed4ac37f91688a8e0f418ef0b3f3b77f5808dedd75fa910ce8252d.png" />
+<img alt="../_images/f6775c9cfacd000140139bba907417d558bfbe112c49635f08a71427b9b14cd2.png" src="../_images/f6775c9cfacd000140139bba907417d558bfbe112c49635f08a71427b9b14cd2.png" />
 </div>
 </div>
 <p>We can confirm that in each fold, only two of the three classes are present in
@@ -998,7 +997,7 @@ data into three groups.</p>
 90%. Now that we solved our first issue, it would be interesting to check if
 the class frequency in the training and testing set is equal to our original
 set’s class frequency. It would ensure that we are training and testing our
-model with a class distribution that we will encounter in production.</p>
+model with a class distribution that we would encounter in production.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_cv_counts</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1025,12 +1024,12 @@ model with a class distribution that we will encounter in production.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_cv_counts</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Count&quot;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Training set&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Training set class counts</span><span class="se">\n</span><span class="s2">(with suffling)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/eceee456aec4bbaf46a3c46976d9a89a549cd380123a1eebe29849c6b811cc49.png" src="../_images/eceee456aec4bbaf46a3c46976d9a89a549cd380123a1eebe29849c6b811cc49.png" />
+<img alt="../_images/6fe2431ab2860d68a5cbbd3b8bae1522332cf168bb5e477404facc6791d88f13.png" src="../_images/6fe2431ab2860d68a5cbbd3b8bae1522332cf168bb5e477404facc6791d88f13.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1038,12 +1037,12 @@ model with a class distribution that we will encounter in production.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_cv_counts</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Count&quot;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Test set&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Test set class counts</span><span class="se">\n</span><span class="s2">(with suffling)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ffb89894b012967a35a3f5e92cb58dae3def86d6971ee08cceb9da28fb98840d.png" src="../_images/ffb89894b012967a35a3f5e92cb58dae3def86d6971ee08cceb9da28fb98840d.png" />
+<img alt="../_images/a02686147976a4974ba8e5701f00ef2d150f2c7a16c06c9e0bcb02ee6187f747.png" src="../_images/a02686147976a4974ba8e5701f00ef2d150f2c7a16c06c9e0bcb02ee6187f747.png" />
 </div>
 </div>
 <p>We see that neither the training and testing sets have the same class
@@ -1104,12 +1103,12 @@ cross-validation strategies implement the stratification; they contain
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_cv_counts</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Count&quot;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Training set&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Training set class counts</span><span class="se">\n</span><span class="s2">(with stratifying)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/599959d2c64957bb4c397e9f36a5b26f21de012f605f80d3b4de3c923945c7de.png" src="../_images/599959d2c64957bb4c397e9f36a5b26f21de012f605f80d3b4de3c923945c7de.png" />
+<img alt="../_images/804f03ccd90f611cf09d0a2877ff4b38a034653f1561809ace702c35ddbeb643.png" src="../_images/804f03ccd90f611cf09d0a2877ff4b38a034653f1561809ace702c35ddbeb643.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1117,19 +1116,27 @@ cross-validation strategies implement the stratification; they contain
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_cv_counts</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Count&quot;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Test set&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Test set class counts</span><span class="se">\n</span><span class="s2">(with stratifying)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ae9a8fb1f8bece79b2300e145029a4a66db34bc347a7810758ec10d2ca406fc6.png" src="../_images/ae9a8fb1f8bece79b2300e145029a4a66db34bc347a7810758ec10d2ca406fc6.png" />
+<img alt="../_images/1ee8b865671a2ec2a79d7e3397c5d58cdcbd7475eff44511d0f699d8707382f8.png" src="../_images/1ee8b865671a2ec2a79d7e3397c5d58cdcbd7475eff44511d0f699d8707382f8.png" />
 </div>
 </div>
 <p>In this case, we observe that the class counts are very close both in the
 train set and the test set. The difference is due to the small number of
 samples in the iris dataset.</p>
-<p>In conclusion, this is a good practice to use stratification within the
-cross-validation framework when dealing with a classification problem.</p>
+<p>In other words, stratifying is more effective than just shuffling when it
+comes to making sure that the distributions of classes in all the folds are
+representative of the entire dataset. As training and testing folds have
+similar class distributions, stratifying leads to a more realistic measure of
+the model’s ability to generalize. This is specially important when the
+performance metrics depend on the proportion of the positive class, as we will
+see in a future notebook.</p>
+<p>The interested reader can learn about other stratified cross-validation
+techniques in the <a class="reference external" href="https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation-iterators-with-stratification-based-on-class-labels">scikit-learn user
+guide</a>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1208,7 +1215,7 @@ By scikit-learn developers
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2022-2024.
       <br/>
     
   </p>

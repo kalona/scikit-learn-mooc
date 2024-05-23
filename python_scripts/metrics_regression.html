@@ -348,7 +348,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ensemble/ensemble_boosting_index.html">Ensemble based on boosting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ensemble/boosting_slides.html">🎥 Intuitions on ensemble models: boosting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_adaboost.html">Adaptive Boosting (AdaBoost)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree (GBDT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_ex_03.html">📝 Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_sol_03.html">📃 Solution for Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_hist_gradient_boosting.html">Speeding-up gradient-boosting</a></li>
@@ -712,18 +712,6 @@ train-test split to focus solely on the regression metrics.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_5422/1042772600.py:1: DeprecationWarning: 
-Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
-(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
-but was not found to be installed on your system.
-If this would cause problems for you,
-please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
-        
-  import pandas as pd
-</pre></div>
-</div>
-</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -804,15 +792,16 @@ Indeed, this is the default score used in scikit-learn by calling the method
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6872520581075463
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6872520581075443
 </pre></div>
 </div>
 </div>
 </div>
 <p>The <span class="math notranslate nohighlight">\(R^2\)</span> score represents the proportion of variance of the target that is
 explained by the independent variables in the model. The best score possible
-is 1 but there is no lower bound. However, a model that predicts the expected
-value of the target would get a score of 0.</p>
+is 1 but there is no lower bound. However, a model that predicts the <a class="reference external" href="https://en.wikipedia.org/wiki/Expected_value">expected
+value</a> of the target would get a
+score of 0.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.dummy</span> <span class="kn">import</span> <span class="n">DummyRegressor</span>
@@ -953,7 +942,7 @@ model associated with the lowest or highest predicted values.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/287b6333ae48705107348cc71867e6188578f4c5e12e06e616d9839cf255b226.png" src="../_images/287b6333ae48705107348cc71867e6188578f4c5e12e06e616d9839cf255b226.png" />
+<img alt="../_images/f13e2e6fa4faccd3d47be9e09af62dc14983c8413916b9ae2581aecd16f015fe.png" src="../_images/f13e2e6fa4faccd3d47be9e09af62dc14983c8413916b9ae2581aecd16f015fe.png" />
 </div>
 </div>
 <p>On these plots, we see that our model tends to under-estimate the price of the
@@ -1010,7 +999,7 @@ reshapes the target variable to follow a normal distribution.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9ed841110e818462273ba51020022707b3de72d2a49d2284c43e810308b6a165.png" src="../_images/9ed841110e818462273ba51020022707b3de72d2a49d2284c43e810308b6a165.png" />
+<img alt="../_images/4a0e3cc390d00770128cf705651d3957e368e7f5454607ab4e8ee989479f2343.png" src="../_images/4a0e3cc390d00770128cf705651d3957e368e7f5454607ab4e8ee989479f2343.png" />
 </div>
 </div>
 <p>The model with the transformed target seems to exhibit fewer structure in its
@@ -1136,7 +1125,7 @@ By scikit-learn developers
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2022-2024.
       <br/>
     
   </p>

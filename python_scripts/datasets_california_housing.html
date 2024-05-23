@@ -346,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ensemble/ensemble_boosting_index.html">Ensemble based on boosting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ensemble/boosting_slides.html">🎥 Intuitions on ensemble models: boosting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_adaboost.html">Adaptive Boosting (AdaBoost)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree (GBDT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_ex_03.html">📝 Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_sol_03.html">📃 Solution for Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_hist_gradient_boosting.html">Speeding-up gradient-boosting</a></li>
@@ -1031,7 +1031,7 @@ their histograms.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/179656215c3f97cf5233c51c887d9ad9a964b3dc094d4b6d89baa8bb36d72943.png" src="../_images/179656215c3f97cf5233c51c887d9ad9a964b3dc094d4b6d89baa8bb36d72943.png" />
+<img alt="../_images/9fa8182237f9f94d39cf98dbd60c7acdcbbcb2689009e6f057ae070b81d5e5fd.png" src="../_images/9fa8182237f9f94d39cf98dbd60c7acdcbbcb2689009e6f057ae070b81d5e5fd.png" />
 </div>
 </div>
 <p>We can first focus on features for which their distributions would be more or
@@ -1169,7 +1169,7 @@ in the district.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/14c8d19fab4966599eacbfd57f16b6c2a0719878c3d068367089c589cbc7f35d.png" src="../_images/14c8d19fab4966599eacbfd57f16b6c2a0719878c3d068367089c589cbc7f35d.png" />
+<img alt="../_images/707f42edaa9e76fd03870c95a0f9277c47d452818bee7523c8323ee27bbdb020.png" src="../_images/707f42edaa9e76fd03870c95a0f9277c47d452818bee7523c8323ee27bbdb020.png" />
 </div>
 </div>
 <p>If you are not familiar with the state of California, it is interesting to
@@ -1208,7 +1208,7 @@ still allow us to see these specificities.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cccdb0ba729bc1abbba9e68ab2395ee21731e62f7ca44953b19894ac37e05ffd.png" src="../_images/cccdb0ba729bc1abbba9e68ab2395ee21731e62f7ca44953b19894ac37e05ffd.png" />
+<img alt="../_images/eacae0af80b707ad2a68c5b0fb0a42ba7e84d0c1ea98f886770379e63b89f0a8.png" src="../_images/eacae0af80b707ad2a68c5b0fb0a42ba7e84d0c1ea98f886770379e63b89f0a8.png" />
 </div>
 </div>
 <p>We can make a final analysis by making a pair plot of all features and the
@@ -1235,23 +1235,7 @@ such that we can create proper histogram.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/seaborn/_base.py:949: FutureWarning: When grouping with a length-1 list-like, you will need to pass a length-1 tuple to get_group in a future version of pandas. Pass `(name,)` instead of `name` to silence this warning.
-  data_subset = grouped_data.get_group(pd_key)
-</pre></div>
-</div>
-<img alt="../_images/d864a0b0f5a655787ec2e49b63b171765614ff7e59871ac232e6d1e8bddd005e.png" src="../_images/d864a0b0f5a655787ec2e49b63b171765614ff7e59871ac232e6d1e8bddd005e.png" />
+<img alt="../_images/119a5ccb7693f862c5a187c9559ba9eefe3e60d33fb28bc46be132d2cce31154.png" src="../_images/119a5ccb7693f862c5a187c9559ba9eefe3e60d33fb28bc46be132d2cce31154.png" />
 </div>
 </div>
 <p>While it is always complicated to interpret a pairplot since there is a lot of
@@ -1318,7 +1302,7 @@ values of the coefficients obtained via cross-validation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c01524974221a09e2f0894e8af2fc60bb0371f58fda73ebb4bacd9418377686c.png" src="../_images/c01524974221a09e2f0894e8af2fc60bb0371f58fda73ebb4bacd9418377686c.png" />
+<img alt="../_images/476ea2aadac0f52a6f302d7f3c24d83f25e55a61a38d152a261c7e0d9b889416.png" src="../_images/476ea2aadac0f52a6f302d7f3c24d83f25e55a61a38d152a261c7e0d9b889416.png" />
 </div>
 </div>
 <p>It seems that the three features that we earlier spotted are found important
@@ -1403,7 +1387,7 @@ By scikit-learn developers
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2022-2024.
       <br/>
     
   </p>

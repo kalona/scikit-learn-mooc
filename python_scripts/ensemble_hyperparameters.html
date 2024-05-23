@@ -348,7 +348,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ensemble/ensemble_boosting_index.html">Ensemble based on boosting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ensemble/boosting_slides.html">🎥 Intuitions on ensemble models: boosting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_adaboost.html">Adaptive Boosting (AdaBoost)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree (GBDT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_ex_03.html">📝 Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_sol_03.html">📃 Solution for Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_hist_gradient_boosting.html">Speeding-up gradient-boosting</a></li>
@@ -835,83 +835,83 @@ trees (i.e. shallow trees) might also lead to an underfitted forest.</p>
   <tbody>
     <tr>
       <th>3</th>
+      <td>2.0</td>
+      <td>NaN</td>
       <td>2</td>
-      <td>None</td>
-      <td>2</td>
-      <td>34.051794</td>
-      <td>0.481154</td>
+      <td>33.940159</td>
+      <td>0.423931</td>
     </tr>
     <tr>
       <th>0</th>
-      <td>2</td>
-      <td>1000</td>
+      <td>2.0</td>
+      <td>1000.0</td>
       <td>10</td>
-      <td>36.801198</td>
-      <td>0.512122</td>
+      <td>36.693522</td>
+      <td>0.648451</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>None</td>
-      <td>None</td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>20</td>
-      <td>37.265406</td>
-      <td>0.385303</td>
+      <td>37.294506</td>
+      <td>0.465589</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5</td>
-      <td>100</td>
+      <td>5.0</td>
+      <td>100.0</td>
       <td>2</td>
-      <td>40.157613</td>
-      <td>0.533704</td>
+      <td>39.960893</td>
+      <td>0.568312</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>None</td>
-      <td>100</td>
+      <td>NaN</td>
+      <td>100.0</td>
       <td>10</td>
-      <td>40.473632</td>
-      <td>0.596045</td>
+      <td>40.467880</td>
+      <td>0.563443</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>None</td>
-      <td>1000</td>
+      <td>NaN</td>
+      <td>1000.0</td>
       <td>50</td>
-      <td>40.830564</td>
-      <td>0.454449</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1</td>
-      <td>100</td>
-      <td>1</td>
-      <td>50.035533</td>
-      <td>0.983094</td>
+      <td>40.738486</td>
+      <td>0.457694</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>1</td>
-      <td>100</td>
+      <td>1.0</td>
+      <td>100.0</td>
       <td>2</td>
-      <td>50.119910</td>
-      <td>0.738622</td>
+      <td>49.829537</td>
+      <td>0.593815</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.0</td>
+      <td>100.0</td>
+      <td>1</td>
+      <td>50.084321</td>
+      <td>0.679253</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>1</td>
-      <td>None</td>
+      <td>1.0</td>
+      <td>NaN</td>
       <td>100</td>
-      <td>54.632744</td>
-      <td>0.998273</td>
+      <td>54.617721</td>
+      <td>0.527515</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>3</td>
+      <td>3.0</td>
+      <td>10.0</td>
       <td>10</td>
-      <td>10</td>
-      <td>54.847140</td>
-      <td>0.662223</td>
+      <td>55.005918</td>
+      <td>0.620646</td>
     </tr>
   </tbody>
 </table>
@@ -940,7 +940,7 @@ the unseen data.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On average, our random forest regressor makes an error of 33.64 k$
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On average, our random forest regressor makes an error of 34.10 k$
 </pre></div>
 </div>
 </div>
@@ -1039,161 +1039,161 @@ deep trees.</p>
       <th>14</th>
       <td>300</td>
       <td>100</td>
-      <td>0.01864</td>
-      <td>30.955040</td>
-      <td>0.303339</td>
+      <td>0.018640</td>
+      <td>30.958762</td>
+      <td>0.297209</td>
     </tr>
     <tr>
       <th>6</th>
       <td>300</td>
       <td>20</td>
       <td>0.047293</td>
-      <td>31.755321</td>
-      <td>0.299144</td>
+      <td>31.838089</td>
+      <td>0.379938</td>
     </tr>
     <tr>
       <th>2</th>
       <td>30</td>
       <td>50</td>
       <td>0.176656</td>
-      <td>32.444269</td>
-      <td>0.265595</td>
+      <td>32.549182</td>
+      <td>0.326322</td>
     </tr>
     <tr>
       <th>13</th>
       <td>300</td>
       <td>10</td>
       <td>0.297739</td>
-      <td>32.494669</td>
-      <td>0.203465</td>
+      <td>32.873124</td>
+      <td>0.600918</td>
     </tr>
     <tr>
       <th>9</th>
       <td>100</td>
       <td>20</td>
       <td>0.083745</td>
-      <td>33.079600</td>
-      <td>0.356807</td>
+      <td>33.205467</td>
+      <td>0.493873</td>
     </tr>
     <tr>
       <th>19</th>
       <td>100</td>
       <td>10</td>
       <td>0.215543</td>
-      <td>33.204725</td>
-      <td>0.516395</td>
+      <td>33.274480</td>
+      <td>0.421552</td>
     </tr>
     <tr>
       <th>12</th>
       <td>100</td>
       <td>20</td>
       <td>0.067503</td>
-      <td>33.779960</td>
-      <td>0.439629</td>
+      <td>33.514934</td>
+      <td>0.473841</td>
     </tr>
     <tr>
       <th>16</th>
       <td>300</td>
       <td>5</td>
-      <td>0.05929</td>
-      <td>35.831521</td>
-      <td>0.424460</td>
+      <td>0.059290</td>
+      <td>35.879747</td>
+      <td>0.502994</td>
     </tr>
     <tr>
       <th>1</th>
       <td>100</td>
       <td>5</td>
       <td>0.160519</td>
-      <td>36.240783</td>
-      <td>0.294166</td>
+      <td>36.150566</td>
+      <td>0.521984</td>
     </tr>
     <tr>
       <th>0</th>
       <td>1000</td>
       <td>2</td>
       <td>0.125207</td>
-      <td>40.828229</td>
-      <td>0.564779</td>
+      <td>40.906096</td>
+      <td>0.671789</td>
     </tr>
     <tr>
       <th>7</th>
       <td>1000</td>
       <td>2</td>
       <td>0.054511</td>
-      <td>42.264991</td>
-      <td>0.618221</td>
+      <td>42.203391</td>
+      <td>0.601803</td>
     </tr>
     <tr>
       <th>8</th>
       <td>3</td>
       <td>5</td>
       <td>0.906226</td>
-      <td>50.192456</td>
-      <td>0.815285</td>
+      <td>50.031057</td>
+      <td>0.956822</td>
     </tr>
     <tr>
       <th>18</th>
       <td>10</td>
       <td>5</td>
       <td>0.248463</td>
-      <td>50.262047</td>
-      <td>0.709132</td>
+      <td>50.345474</td>
+      <td>0.864657</td>
     </tr>
     <tr>
       <th>5</th>
       <td>10</td>
       <td>100</td>
       <td>0.061034</td>
-      <td>61.577236</td>
-      <td>0.689916</td>
+      <td>61.634656</td>
+      <td>0.694770</td>
     </tr>
     <tr>
       <th>17</th>
       <td>3</td>
       <td>5</td>
       <td>0.079415</td>
-      <td>81.490018</td>
-      <td>0.924013</td>
+      <td>81.502565</td>
+      <td>0.929997</td>
     </tr>
     <tr>
       <th>4</th>
       <td>10</td>
       <td>2</td>
-      <td>0.0351</td>
-      <td>82.484847</td>
-      <td>1.008686</td>
+      <td>0.035100</td>
+      <td>82.537259</td>
+      <td>1.019266</td>
     </tr>
     <tr>
       <th>15</th>
       <td>3</td>
       <td>50</td>
       <td>0.019923</td>
-      <td>87.630396</td>
-      <td>1.064356</td>
+      <td>87.658898</td>
+      <td>1.038346</td>
     </tr>
     <tr>
       <th>3</th>
       <td>3</td>
       <td>2</td>
       <td>0.039361</td>
-      <td>87.803493</td>
-      <td>1.074755</td>
+      <td>87.781518</td>
+      <td>1.096584</td>
     </tr>
     <tr>
       <th>11</th>
       <td>3</td>
       <td>10</td>
       <td>0.019351</td>
-      <td>88.403649</td>
-      <td>1.087739</td>
+      <td>88.361842</td>
+      <td>1.106869</td>
     </tr>
     <tr>
       <th>10</th>
       <td>3</td>
       <td>5</td>
-      <td>0.01724</td>
-      <td>88.923345</td>
-      <td>1.113783</td>
+      <td>0.017240</td>
+      <td>88.947471</td>
+      <td>1.065636</td>
     </tr>
   </tbody>
 </table>
@@ -1220,7 +1220,7 @@ test set.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On average, our HGBT regressor makes an error of 30.44 k$
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On average, our HGBT regressor makes an error of 30.46 k$
 </pre></div>
 </div>
 </div>
@@ -1347,7 +1347,7 @@ By scikit-learn developers
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2022-2024.
       <br/>
     
   </p>

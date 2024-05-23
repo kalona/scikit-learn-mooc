@@ -346,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ensemble/ensemble_boosting_index.html">Ensemble based on boosting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ensemble/boosting_slides.html">🎥 Intuitions on ensemble models: boosting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_adaboost.html">Adaptive Boosting (AdaBoost)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree (GBDT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_ex_03.html">📝 Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_sol_03.html">📃 Solution for Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_hist_gradient_boosting.html">Speeding-up gradient-boosting</a></li>
@@ -722,21 +722,11 @@ Appendix - Datasets description section at the end of this MOOC.</p>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">penguins_non_missing</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span>
 <span class="n">target</span> <span class="o">=</span> <span class="n">penguins_non_missing</span><span class="p">[</span><span class="n">target_name</span><span class="p">]</span>
-<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">data</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_5144/2869420921.py:1: DeprecationWarning: 
-Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
-(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
-but was not found to be installed on your system.
-If this would cause problems for you,
-please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
-        
-  import pandas as pd
-</pre></div>
-</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -791,8 +781,45 @@ please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
       <td>39.3</td>
       <td>20.6</td>
     </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>339</th>
+      <td>207.0</td>
+      <td>55.8</td>
+      <td>19.8</td>
+    </tr>
+    <tr>
+      <th>340</th>
+      <td>202.0</td>
+      <td>43.5</td>
+      <td>18.1</td>
+    </tr>
+    <tr>
+      <th>341</th>
+      <td>193.0</td>
+      <td>49.6</td>
+      <td>18.2</td>
+    </tr>
+    <tr>
+      <th>342</th>
+      <td>210.0</td>
+      <td>50.8</td>
+      <td>19.0</td>
+    </tr>
+    <tr>
+      <th>343</th>
+      <td>198.0</td>
+      <td>50.2</td>
+      <td>18.7</td>
+    </tr>
   </tbody>
 </table>
+<p>342 rows × 3 columns</p>
 </div></div></div>
 </div>
 <p>Now it is your turn to train a linear regression model on this dataset. First,
@@ -1057,7 +1084,7 @@ performance.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4d28ab1b72e25a536d302a272ebde574370460b78122e53b63bbe387c1554e40.png" src="../_images/4d28ab1b72e25a536d302a272ebde574370460b78122e53b63bbe387c1554e40.png" />
+<img alt="../_images/ac2e5093936c091f1feb63b92f402fe3ac4c4088ab9236f46529700f952730eb.png" src="../_images/ac2e5093936c091f1feb63b92f402fe3ac4c4088ab9236f46529700f952730eb.png" />
 </div>
 </div>
 <p>In the validation curve above we can observe that a small number of components
@@ -1186,7 +1213,7 @@ By scikit-learn developers
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2022-2024.
       <br/>
     
   </p>

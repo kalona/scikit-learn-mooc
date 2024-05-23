@@ -346,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ensemble/ensemble_boosting_index.html">Ensemble based on boosting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ensemble/boosting_slides.html">🎥 Intuitions on ensemble models: boosting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_adaboost.html">Adaptive Boosting (AdaBoost)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree (GBDT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_ex_03.html">📝 Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_sol_03.html">📃 Solution for Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_hist_gradient_boosting.html">Speeding-up gradient-boosting</a></li>
@@ -724,18 +724,6 @@ Appendix - Datasets description section at the end of this MOOC.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_5331/251916216.py:1: DeprecationWarning: 
-Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
-(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
-but was not found to be installed on your system.
-If this would cause problems for you,
-please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
-        
-  import pandas as pd
-</pre></div>
-</div>
-</div>
 </div>
 <p>We can quickly start by visualizing the feature distribution by class:</p>
 <div class="cell docutils container">
@@ -751,8 +739,8 @@ please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/299fb887bceff66cc440237cbc1b35c5c27bfe13c36fd6f14df2c035c09a0ae9.png" src="../_images/299fb887bceff66cc440237cbc1b35c5c27bfe13c36fd6f14df2c035c09a0ae9.png" />
-<img alt="../_images/e596360997c1ce175d0ed9df7ee2e8bbf60122d8ab0722ccdb25bb224ac71b6a.png" src="../_images/e596360997c1ce175d0ed9df7ee2e8bbf60122d8ab0722ccdb25bb224ac71b6a.png" />
+<img alt="../_images/d9725d072d41af352d909bc0e7b2cfe4f824ffcf3ae6f9008cf4a90191ea9c7f.png" src="../_images/d9725d072d41af352d909bc0e7b2cfe4f824ffcf3ae6f9008cf4a90191ea9c7f.png" />
+<img alt="../_images/732429aa6411efa9bffd5d673082bfba52aad283b0dcb2b50bca0efc97c4cd3b.png" src="../_images/732429aa6411efa9bffd5d673082bfba52aad283b0dcb2b50bca0efc97c4cd3b.png" />
 </div>
 </div>
 <p>We can observe that we have quite a simple problem. When the culmen length
@@ -837,7 +825,7 @@ general.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f268d3436f283d055fdd76296bbcb7022a7693923f1df80d5a978fe0384ec0b1.png" src="../_images/f268d3436f283d055fdd76296bbcb7022a7693923f1df80d5a978fe0384ec0b1.png" />
+<img alt="../_images/ab5b3d36f8ae901a4299177078f093fbf3825541b721601950f1066d43adb91a.png" src="../_images/ab5b3d36f8ae901a4299177078f093fbf3825541b721601950f1066d43adb91a.png" />
 </div>
 </div>
 <p>Thus, we see that our decision function is represented by a straight line
@@ -887,7 +875,7 @@ could use <code class="docutils literal notranslate"><span class="pre">coef_.rav
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/68a23855e2467c014672a7eea8664cf6ba2697183302e6bd5da52d09a8f6a2d6.png" src="../_images/68a23855e2467c014672a7eea8664cf6ba2697183302e6bd5da52d09a8f6a2d6.png" />
+<img alt="../_images/33a4a66de131f3116d1298b208ccdce1f05f1a1948cb5ebd806710e4ce710781.png" src="../_images/33a4a66de131f3116d1298b208ccdce1f05f1a1948cb5ebd806710e4ce710781.png" />
 </div>
 </div>
 <p>If one of the weights had been zero, the decision boundary would have been
@@ -970,7 +958,7 @@ follows:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b44c358360a90e8afd7473704dd0ebd97b762c70d71552693b0e1fd9eb249b12.png" src="../_images/b44c358360a90e8afd7473704dd0ebd97b762c70d71552693b0e1fd9eb249b12.png" />
+<img alt="../_images/77e99a12ad18399b509c7309ccd571f71e9926c375d63c2fd70ae0a0e1af6cd4.png" src="../_images/77e99a12ad18399b509c7309ccd571f71e9926c375d63c2fd70ae0a0e1af6cd4.png" />
 </div>
 </div>
 <div class="admonition warning">
@@ -1014,7 +1002,7 @@ classifier is in its predictions.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/362e7a15b0a48f00eadab327d1b4546820e16c78efbc1ae0c15118ae18f0e1f7.png" src="../_images/362e7a15b0a48f00eadab327d1b4546820e16c78efbc1ae0c15118ae18f0e1f7.png" />
+<img alt="../_images/b6b2249b08333316696037fee06bb4b673ba591c1de24aa02ec97ce484be464d.png" src="../_images/b6b2249b08333316696037fee06bb4b673ba591c1de24aa02ec97ce484be464d.png" />
 </div>
 </div>
 <p>For multi-class classification the logistic regression uses the <a class="reference external" href="https://en.wikipedia.org/wiki/Softmax_function">softmax
@@ -1115,7 +1103,7 @@ By scikit-learn developers
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2022-2024.
       <br/>
     
   </p>

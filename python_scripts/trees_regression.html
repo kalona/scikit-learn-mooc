@@ -346,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ensemble/ensemble_boosting_index.html">Ensemble based on boosting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ensemble/boosting_slides.html">🎥 Intuitions on ensemble models: boosting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_adaboost.html">Adaptive Boosting (AdaBoost)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree (GBDT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ensemble_gradient_boosting.html">Gradient-boosting decision tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_ex_03.html">📝 Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_sol_03.html">📃 Solution for Exercise M6.03</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ensemble_hist_gradient_boosting.html">Speeding-up gradient-boosting</a></li>
@@ -710,18 +710,6 @@ Appendix - Datasets description section at the end of this MOOC.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_5892/3649234165.py:1: DeprecationWarning: 
-Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
-(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
-but was not found to be installed on your system.
-If this would cause problems for you,
-please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
-        
-  import pandas as pd
-</pre></div>
-</div>
-</div>
 </div>
 <p>To illustrate how decision trees predict in a regression setting, we create a
 synthetic dataset containing some of the possible flipper length values
@@ -761,7 +749,7 @@ as the real world data on which the model would be deployed.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/100b495235d8596d7c276f58aed655c0255984a082444543e11342aa9c880a7e.png" src="../_images/100b495235d8596d7c276f58aed655c0255984a082444543e11342aa9c880a7e.png" />
+<img alt="../_images/c9538b9787c529e7481df28b3d59f74c1a77f23421c7c08fa94759f7985b402c.png" src="../_images/c9538b9787c529e7481df28b3d59f74c1a77f23421c7c08fa94759f7985b402c.png" />
 </div>
 </div>
 <p>We first illustrate the difference between a linear model and a decision
@@ -789,7 +777,7 @@ tree.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ea69750691e0703db5a33341e7a246a0405883dd27762744bc200d7682089c29.png" src="../_images/ea69750691e0703db5a33341e7a246a0405883dd27762744bc200d7682089c29.png" />
+<img alt="../_images/5a8546cf4cc9b15493acb2ef5ad0fd90e1b2341144e240cec1064a754fde5923.png" src="../_images/5a8546cf4cc9b15493acb2ef5ad0fd90e1b2341144e240cec1064a754fde5923.png" />
 </div>
 </div>
 <p>On the plot above, we see that a non-regularized <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code> is able to
@@ -818,7 +806,7 @@ the line.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/89bf03c26863b3aaf829286c0df9b658e64441d0d8f3e8b3cef3e44521443826.png" src="../_images/89bf03c26863b3aaf829286c0df9b658e64441d0d8f3e8b3cef3e44521443826.png" />
+<img alt="../_images/5969dcf1bba9fd67a2609519a47fc27ede1c32f6b50c042f0e284187254862c1.png" src="../_images/5969dcf1bba9fd67a2609519a47fc27ede1c32f6b50c042f0e284187254862c1.png" />
 </div>
 </div>
 <p>Contrary to linear models, decision trees are non-parametric models: they do
@@ -847,7 +835,7 @@ prediction scheme. Repeating the above experiment highlights the differences.</p
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/eaf2f1e1315a757118f73d88f93e7bd44ea0284c49f7a02233773602a201ce05.png" src="../_images/eaf2f1e1315a757118f73d88f93e7bd44ea0284c49f7a02233773602a201ce05.png" />
+<img alt="../_images/279d2e9e498cf931e079433902993aa4ef5dc4003fdbf69358e6af4a50eace52.png" src="../_images/279d2e9e498cf931e079433902993aa4ef5dc4003fdbf69358e6af4a50eace52.png" />
 </div>
 </div>
 <p>We see that the decision tree model does not have an <em>a priori</em> distribution
@@ -866,7 +854,7 @@ structure to see what was the threshold found during the training.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0c584599d8b2b764298573f4a8fd195150bf05ea5971130973eb190a20898778.png" src="../_images/0c584599d8b2b764298573f4a8fd195150bf05ea5971130973eb190a20898778.png" />
+<img alt="../_images/506524a74a1087f292a5f66775b7cf7d8d9ceb2e6e99a64e2654567d469fbf90.png" src="../_images/506524a74a1087f292a5f66775b7cf7d8d9ceb2e6e99a64e2654567d469fbf90.png" />
 </div>
 </div>
 <p>The threshold for our feature (flipper length) is 206.5 mm. The predicted
@@ -897,7 +885,7 @@ depth in a regression setting:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6099045b8bff04b31d7c92d8935803aebd8e278491c6390b1b14082721e975bd.png" src="../_images/6099045b8bff04b31d7c92d8935803aebd8e278491c6390b1b14082721e975bd.png" />
+<img alt="../_images/3ae45b2442b2974819f7eb5f22cdcf509a532488db910a028875ca1f4f635b9f.png" src="../_images/3ae45b2442b2974819f7eb5f22cdcf509a532488db910a028875ca1f4f635b9f.png" />
 </div>
 </div>
 <p>Increasing the depth of the tree increases the number of partitions and thus
@@ -982,7 +970,7 @@ By scikit-learn developers
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2022-2024.
       <br/>
     
   </p>
