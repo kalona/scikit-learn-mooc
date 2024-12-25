@@ -797,7 +797,7 @@ proportion of the training set from 10% to 100%.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1947fd1291619f85a18cd7f03ba3e74ab58c9a022b1fc57425cbd01d6d4effa3.png" src="../_images/1947fd1291619f85a18cd7f03ba3e74ab58c9a022b1fc57425cbd01d6d4effa3.png" />
+<img alt="../_images/8fed854676ef28ba9ad0d0c5b3262d62d4aeb3d52232607047dfc00b79100d7a.png" src="../_images/8fed854676ef28ba9ad0d0c5b3262d62d4aeb3d52232607047dfc00b79100d7a.png" />
 </div>
 </div>
 <p>Looking at the training error alone, we see that we get an error of 0 k$. It
@@ -808,10 +808,14 @@ added into the training set, the lower the testing error becomes. Also, we
 are searching for the plateau of the testing error for which there is no
 benefit to adding samples anymore or assessing the potential gain of adding
 more samples into the training set.</p>
-<p>If we achieve a plateau and adding new samples in the training set does not
-reduce the testing error, we might have reached the Bayes error rate using the
-available model. Using a more complex model might be the only possibility to
-reduce the testing error further.</p>
+<p>If the testing error plateaus despite adding more training samples, it’s
+possible that the model has achieved its optimal performance. In this case,
+using a more expressive model might help reduce the error further. Otherwise,
+the error may have reached the Bayes error rate, the theoretical minimum error
+due to inherent uncertainty not resolved by the available data. This minimum error is
+non-zero whenever some of the variation of the target variable <code class="docutils literal notranslate"><span class="pre">y</span></code> depends on
+external factors not fully observed in the features available in <code class="docutils literal notranslate"><span class="pre">X</span></code>, which is
+almost always the case in practice.</p>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>

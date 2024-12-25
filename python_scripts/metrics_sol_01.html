@@ -739,7 +739,7 @@ Check its documentation to learn how to do that.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy score: 0.629 ± 0.139
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy score: 0.630 ± 0.138
 </pre></div>
 </div>
 </div>
@@ -756,7 +756,7 @@ Check its documentation to learn how to do that.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Balanced accuracy score: 0.511 ± 0.107
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Balanced accuracy score: 0.507 ± 0.105
 </pre></div>
 </div>
 </div>
@@ -780,132 +780,132 @@ will not be supported by scikit-learn because it is indeed ambiguous.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1000: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:978: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 139, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 140, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 371, in _score
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 380, in _score
     y_pred = method_caller(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 89, in _cached_call
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 90, in _cached_call
     result, _ = _get_response_values(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 204, in _get_response_values
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 207, in _get_response_values
     raise ValueError(
 ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1000: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:978: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 139, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 140, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 371, in _score
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 380, in _score
     y_pred = method_caller(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 89, in _cached_call
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 90, in _cached_call
     result, _ = _get_response_values(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 204, in _get_response_values
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 207, in _get_response_values
     raise ValueError(
 ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1000: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:978: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 139, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 140, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 371, in _score
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 380, in _score
     y_pred = method_caller(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 89, in _cached_call
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 90, in _cached_call
     result, _ = _get_response_values(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 204, in _get_response_values
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 207, in _get_response_values
     raise ValueError(
 ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1000: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:978: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 139, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 140, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 371, in _score
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 380, in _score
     y_pred = method_caller(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 89, in _cached_call
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 90, in _cached_call
     result, _ = _get_response_values(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 204, in _get_response_values
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 207, in _get_response_values
     raise ValueError(
 ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1000: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:978: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 139, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 140, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 371, in _score
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 380, in _score
     y_pred = method_caller(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 89, in _cached_call
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 90, in _cached_call
     result, _ = _get_response_values(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 204, in _get_response_values
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 207, in _get_response_values
     raise ValueError(
 ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1000: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:978: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 139, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 140, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 371, in _score
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 380, in _score
     y_pred = method_caller(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 89, in _cached_call
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 90, in _cached_call
     result, _ = _get_response_values(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 204, in _get_response_values
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 207, in _get_response_values
     raise ValueError(
 ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1000: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:978: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 139, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 140, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 371, in _score
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 380, in _score
     y_pred = method_caller(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 89, in _cached_call
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 90, in _cached_call
     result, _ = _get_response_values(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 204, in _get_response_values
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 207, in _get_response_values
     raise ValueError(
 ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1000: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:978: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 139, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 140, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 371, in _score
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 380, in _score
     y_pred = method_caller(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 89, in _cached_call
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 90, in _cached_call
     result, _ = _get_response_values(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 204, in _get_response_values
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 207, in _get_response_values
     raise ValueError(
 ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1000: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:978: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 139, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 140, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 371, in _score
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 380, in _score
     y_pred = method_caller(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 89, in _cached_call
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 90, in _cached_call
     result, _ = _get_response_values(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 204, in _get_response_values
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 207, in _get_response_values
     raise ValueError(
 ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
   warnings.warn(
-/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:1000: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:978: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 139, in __call__
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 140, in __call__
     score = scorer._score(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 371, in _score
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 380, in _score
     y_pred = method_caller(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 89, in _cached_call
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/metrics/_scorer.py&quot;, line 90, in _cached_call
     result, _ = _get_response_values(
-  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 204, in _get_response_values
+  File &quot;/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/sklearn/utils/_response.py&quot;, line 207, in _get_response_values
     raise ValueError(
 ValueError: pos_label=1 is not a valid label: It should be one of [&#39;donated&#39; &#39;not donated&#39;]
 
@@ -947,7 +947,7 @@ in the <code class="docutils literal notranslate"><span class="pre">cross_val_sc
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Precision score: 0.261 ± 0.155
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Precision score: 0.260 ± 0.174
 </pre></div>
 </div>
 </div>
@@ -971,14 +971,14 @@ for both metrics using a box plot.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;fit_time&#39;: array([0.00253272, 0.00263286, 0.00256562, 0.00249076, 0.00246   ,
-        0.0024631 , 0.00241852, 0.00261855, 0.00242519, 0.00246668]),
- &#39;score_time&#39;: array([0.00249481, 0.00234365, 0.00233698, 0.00231791, 0.00231409,
-        0.00237966, 0.0024004 , 0.00233388, 0.00230575, 0.00229287]),
- &#39;test_accuracy&#39;: array([0.30666667, 0.53333333, 0.77333333, 0.56      , 0.57333333,
-        0.68      , 0.69333333, 0.78666667, 0.64864865, 0.75675676]),
- &#39;test_balanced_accuracy&#39;: array([0.42982456, 0.48391813, 0.66081871, 0.40643275, 0.41520468,
-        0.44736842, 0.55116959, 0.74561404, 0.48297214, 0.51186791])}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;fit_time&#39;: array([0.00289512, 0.00274873, 0.00279474, 0.00266385, 0.00268745,
+        0.00265479, 0.00273037, 0.00264978, 0.00267172, 0.00276971]),
+ &#39;score_time&#39;: array([0.00262237, 0.00253987, 0.00251365, 0.00251198, 0.00251985,
+        0.00251079, 0.00256348, 0.00253439, 0.0025146 , 0.0026052 ]),
+ &#39;test_accuracy&#39;: array([0.29333333, 0.53333333, 0.77333333, 0.57333333, 0.65333333,
+        0.68      , 0.69333333, 0.76      , 0.64864865, 0.74324324]),
+ &#39;test_balanced_accuracy&#39;: array([0.42105263, 0.48391813, 0.66081871, 0.41520468, 0.48684211,
+        0.44736842, 0.55116959, 0.72807018, 0.4623323 , 0.50309598])}
 </pre></div>
 </div>
 </div>
@@ -1007,7 +1007,7 @@ for both metrics using a box plot.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/667157e533e29ec5ec7c57e0a4198d568460a81f69989667b816e2598538ad49.png" src="../_images/667157e533e29ec5ec7c57e0a4198d568460a81f69989667b816e2598538ad49.png" />
+<img alt="../_images/7408005862721ec2ed9faba8230cc4ea1b0053b2becb5b4a0019c8ecffc09deb.png" src="../_images/7408005862721ec2ed9faba8230cc4ea1b0053b2becb5b4a0019c8ecffc09deb.png" />
 </div>
 </div>
 </section>
