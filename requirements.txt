@@ -3,6 +3,11 @@ pandas >= 1
 matplotlib
 seaborn >= 0.13
 plotly
-jupyterlab
-notebook
-IPython
+
+# Not needed for local VSCode env
+# jupyterlab
+# notebook
+# IPython
+
+ipykernel # Needed for local VSCode
+pyarrow   # Needed for pandas future release
