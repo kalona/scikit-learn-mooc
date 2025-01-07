@@ -716,8 +716,8 @@ parameters on the validation set.</p>
 <p>We start by loading the california housing dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_california_housing</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">fetch_california_housing</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
 
 <span class="n">data</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="n">fetch_california_housing</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">as_frame</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">target</span> <span class="o">*=</span> <span class="mi">100</span>  <span class="c1"># rescale the target in k$</span>
@@ -781,9 +781,9 @@ mitigated when combining the trees altogether, whereas assembling underfitted
 trees (i.e. shallow trees) might also lead to an underfitted forest.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">RandomizedSearchCV</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomizedSearchCV</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestRegressor</span>
 
 <span class="n">param_distributions</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;max_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span>
@@ -841,80 +841,80 @@ trees (i.e. shallow trees) might also lead to an underfitted forest.</p>
       <td>2</td>
       <td>None</td>
       <td>2</td>
-      <td>34.039694</td>
-      <td>0.507565</td>
+      <td>34.004536</td>
+      <td>0.446180</td>
     </tr>
     <tr>
       <th>0</th>
       <td>2</td>
       <td>1000</td>
       <td>10</td>
-      <td>36.950450</td>
-      <td>0.539888</td>
+      <td>36.806066</td>
+      <td>0.674354</td>
     </tr>
     <tr>
       <th>7</th>
       <td>None</td>
       <td>None</td>
       <td>20</td>
-      <td>37.345523</td>
-      <td>0.446888</td>
+      <td>37.339911</td>
+      <td>0.497734</td>
     </tr>
     <tr>
       <th>4</th>
       <td>5</td>
       <td>100</td>
       <td>2</td>
-      <td>40.098184</td>
-      <td>0.469192</td>
+      <td>40.033092</td>
+      <td>0.499790</td>
     </tr>
     <tr>
       <th>8</th>
       <td>None</td>
       <td>100</td>
       <td>10</td>
-      <td>40.468144</td>
-      <td>0.568582</td>
+      <td>40.569383</td>
+      <td>0.645181</td>
     </tr>
     <tr>
       <th>6</th>
       <td>None</td>
       <td>1000</td>
       <td>50</td>
-      <td>40.885734</td>
-      <td>0.493778</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>1</td>
-      <td>100</td>
-      <td>2</td>
-      <td>49.864643</td>
-      <td>0.649831</td>
+      <td>40.803950</td>
+      <td>0.446105</td>
     </tr>
     <tr>
       <th>2</th>
       <td>1</td>
       <td>100</td>
       <td>1</td>
-      <td>50.255939</td>
-      <td>0.742636</td>
+      <td>49.765069</td>
+      <td>0.725711</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1</td>
+      <td>100</td>
+      <td>2</td>
+      <td>49.923843</td>
+      <td>0.617549</td>
     </tr>
     <tr>
       <th>5</th>
       <td>1</td>
       <td>None</td>
       <td>100</td>
-      <td>54.669106</td>
-      <td>0.870533</td>
+      <td>54.363978</td>
+      <td>0.548593</td>
     </tr>
     <tr>
       <th>1</th>
       <td>3</td>
       <td>10</td>
       <td>10</td>
-      <td>54.998915</td>
-      <td>1.066945</td>
+      <td>54.906000</td>
+      <td>0.827840</td>
     </tr>
   </tbody>
 </table>
@@ -943,7 +943,7 @@ the unseen data.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On average, our random forest regressor makes an error of 33.45 k$
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On average, our random forest regressor makes an error of 34.03 k$
 </pre></div>
 </div>
 </div>
@@ -984,8 +984,8 @@ learning-rate tends to obtain an overfitted ensemble, similar to having very
 deep trees.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">loguniform</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">HistGradientBoostingRegressor</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">loguniform</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">HistGradientBoostingRegressor</span>
 
 <span class="n">param_distributions</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;max_iter&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">1000</span><span class="p">],</span>
@@ -1043,160 +1043,160 @@ deep trees.</p>
       <td>300</td>
       <td>100</td>
       <td>0.018640</td>
-      <td>31.176206</td>
-      <td>0.303270</td>
+      <td>30.906927</td>
+      <td>0.171724</td>
     </tr>
     <tr>
       <th>6</th>
       <td>300</td>
       <td>20</td>
       <td>0.047293</td>
-      <td>31.846675</td>
-      <td>0.398756</td>
+      <td>31.965521</td>
+      <td>0.292119</td>
     </tr>
     <tr>
       <th>13</th>
       <td>300</td>
       <td>10</td>
       <td>0.297739</td>
-      <td>32.418362</td>
-      <td>0.210004</td>
+      <td>32.571692</td>
+      <td>0.260902</td>
     </tr>
     <tr>
       <th>2</th>
       <td>30</td>
       <td>50</td>
       <td>0.176656</td>
-      <td>32.647674</td>
-      <td>0.405415</td>
+      <td>32.707248</td>
+      <td>0.383311</td>
     </tr>
     <tr>
       <th>9</th>
       <td>100</td>
       <td>20</td>
       <td>0.083745</td>
-      <td>33.181168</td>
-      <td>0.423124</td>
+      <td>33.199627</td>
+      <td>0.309600</td>
     </tr>
     <tr>
       <th>19</th>
       <td>100</td>
       <td>10</td>
       <td>0.215543</td>
-      <td>33.346799</td>
-      <td>0.270832</td>
+      <td>33.226048</td>
+      <td>0.348729</td>
     </tr>
     <tr>
       <th>12</th>
       <td>100</td>
       <td>20</td>
       <td>0.067503</td>
-      <td>33.787363</td>
-      <td>0.475664</td>
+      <td>33.653871</td>
+      <td>0.529844</td>
     </tr>
     <tr>
       <th>16</th>
       <td>300</td>
       <td>5</td>
       <td>0.059290</td>
-      <td>35.863426</td>
-      <td>0.483203</td>
+      <td>35.841611</td>
+      <td>0.534915</td>
     </tr>
     <tr>
       <th>1</th>
       <td>100</td>
       <td>5</td>
       <td>0.160519</td>
-      <td>36.279344</td>
-      <td>0.383217</td>
+      <td>36.301159</td>
+      <td>0.445115</td>
     </tr>
     <tr>
       <th>0</th>
       <td>1000</td>
       <td>2</td>
       <td>0.125207</td>
-      <td>41.011638</td>
-      <td>0.691093</td>
+      <td>40.999030</td>
+      <td>0.856034</td>
     </tr>
     <tr>
       <th>7</th>
       <td>1000</td>
       <td>2</td>
       <td>0.054511</td>
-      <td>42.170237</td>
-      <td>0.737140</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>3</td>
-      <td>5</td>
-      <td>0.906226</td>
-      <td>50.022049</td>
-      <td>0.769696</td>
+      <td>42.182865</td>
+      <td>0.657134</td>
     </tr>
     <tr>
       <th>18</th>
       <td>10</td>
       <td>5</td>
       <td>0.248463</td>
-      <td>50.306830</td>
-      <td>1.024857</td>
+      <td>50.025486</td>
+      <td>1.110379</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>3</td>
+      <td>5</td>
+      <td>0.906226</td>
+      <td>50.167600</td>
+      <td>0.954212</td>
     </tr>
     <tr>
       <th>5</th>
       <td>10</td>
       <td>100</td>
       <td>0.061034</td>
-      <td>61.480003</td>
-      <td>0.643288</td>
+      <td>61.584064</td>
+      <td>0.742887</td>
     </tr>
     <tr>
       <th>17</th>
       <td>3</td>
       <td>5</td>
       <td>0.079415</td>
-      <td>81.445580</td>
-      <td>0.904779</td>
+      <td>81.452386</td>
+      <td>0.967859</td>
     </tr>
     <tr>
       <th>4</th>
       <td>10</td>
       <td>2</td>
       <td>0.035100</td>
-      <td>82.568711</td>
-      <td>0.974997</td>
+      <td>82.539983</td>
+      <td>0.970695</td>
     </tr>
     <tr>
       <th>15</th>
       <td>3</td>
       <td>50</td>
       <td>0.019923</td>
-      <td>87.670216</td>
-      <td>1.054302</td>
+      <td>87.585182</td>
+      <td>1.070234</td>
     </tr>
     <tr>
       <th>3</th>
       <td>3</td>
       <td>2</td>
       <td>0.039361</td>
-      <td>87.772940</td>
-      <td>1.044117</td>
+      <td>87.810858</td>
+      <td>1.068696</td>
     </tr>
     <tr>
       <th>11</th>
       <td>3</td>
       <td>10</td>
       <td>0.019351</td>
-      <td>88.333056</td>
-      <td>1.100372</td>
+      <td>88.351096</td>
+      <td>1.101112</td>
     </tr>
     <tr>
       <th>10</th>
       <td>3</td>
       <td>5</td>
       <td>0.017240</td>
-      <td>88.919849</td>
-      <td>1.117580</td>
+      <td>88.886797</td>
+      <td>1.051100</td>
     </tr>
   </tbody>
 </table>
@@ -1223,7 +1223,7 @@ test set.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On average, our HGBT regressor makes an error of 30.39 k$
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On average, our HGBT regressor makes an error of 30.23 k$
 </pre></div>
 </div>
 </div>
