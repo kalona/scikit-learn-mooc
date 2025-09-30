@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Cross-validation framework &#8212; Scikit-learn course</title>
   
@@ -29,46 +28,42 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sklearn_mooc.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sklearn_mooc.css?v=80799b6b" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../_static/sklearn_mooc.js"></script>
-    <script src="../_static/matomo.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'python_scripts/cross_validation_train_test';</script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/matomo.js?v=8af330ab"></script>
+    <script src="../_static/sklearn_mooc.js?v=cdec65c7"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="✅ Quiz M2.01" href="../overfit/overfitting_vs_under_fitting_quiz_m2_01.html" />
@@ -169,6 +164,17 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
@@ -473,9 +479,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -500,14 +506,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/INRIA/scikit-learn-mooc/main?urlpath=tree/python_scripts/cross_validation_train_test.py" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -664,9 +670,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -703,7 +709,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="cross-validation-framework">
-<h1>Cross-validation framework<a class="headerlink" href="#cross-validation-framework" title="Permalink to this heading">#</a></h1>
+<h1>Cross-validation framework<a class="headerlink" href="#cross-validation-framework" title="Link to this heading">#</a></h1>
 <p>In the previous notebooks, we introduce some concepts regarding the evaluation
 of predictive models. While this section could be slightly redundant, we
 intend to go into details into the cross-validation framework.</p>
@@ -981,7 +987,7 @@ Name: MedHouseVal, Length: 20640, dtype: float64
 Appendix - Datasets description section at the end of this MOOC.</p>
 </div>
 <section id="training-error-vs-testing-error">
-<h2>Training error vs testing error<a class="headerlink" href="#training-error-vs-testing-error" title="Permalink to this heading">#</a></h2>
+<h2>Training error vs testing error<a class="headerlink" href="#training-error-vs-testing-error" title="Link to this heading">#</a></h2>
 <p>To solve this regression task, we will use a decision tree regressor.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1921,7 +1927,7 @@ memorized the training set. However, we now compute the testing error.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The testing error of our model is 47.39 k$
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The testing error of our model is 47.28 k$
 </pre></div>
 </div>
 </div>
@@ -1930,7 +1936,7 @@ memorized the training set. However, we now compute the testing error.</p>
 was used in a production environment.</p>
 </section>
 <section id="stability-of-the-cross-validation-estimates">
-<h2>Stability of the cross-validation estimates<a class="headerlink" href="#stability-of-the-cross-validation-estimates" title="Permalink to this heading">#</a></h2>
+<h2>Stability of the cross-validation estimates<a class="headerlink" href="#stability-of-the-cross-validation-estimates" title="Link to this heading">#</a></h2>
 <p>When doing a single train-test split we don’t give any indication regarding
 the robustness of the evaluation of our predictive model: in particular, if
 the test set is small, this estimate of the testing error will be unstable and
@@ -2023,242 +2029,242 @@ it into a pandas dataframe to ease visualization and manipulation.</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.145068</td>
-      <td>0.003059</td>
+      <td>0.145864</td>
+      <td>0.003351</td>
       <td>-46.909797</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.146225</td>
-      <td>0.002876</td>
+      <td>0.146736</td>
+      <td>0.003339</td>
       <td>-46.421170</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.144290</td>
-      <td>0.003334</td>
-      <td>-47.413608</td>
+      <td>0.144976</td>
+      <td>0.003429</td>
+      <td>-47.411089</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.146481</td>
-      <td>0.003366</td>
-      <td>-44.575623</td>
+      <td>0.146603</td>
+      <td>0.003355</td>
+      <td>-44.319824</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.143090</td>
-      <td>0.002781</td>
+      <td>0.143732</td>
+      <td>0.003351</td>
       <td>-47.607875</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.145770</td>
-      <td>0.003388</td>
-      <td>-45.850154</td>
+      <td>0.145726</td>
+      <td>0.003378</td>
+      <td>-45.901300</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.146641</td>
-      <td>0.003474</td>
-      <td>-46.566775</td>
+      <td>0.146566</td>
+      <td>0.003478</td>
+      <td>-46.572767</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.146544</td>
-      <td>0.003617</td>
-      <td>-46.193971</td>
+      <td>0.146579</td>
+      <td>0.003335</td>
+      <td>-46.194585</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.147108</td>
-      <td>0.003825</td>
-      <td>-45.602123</td>
+      <td>0.146912</td>
+      <td>0.003360</td>
+      <td>-45.590236</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.147713</td>
-      <td>0.003568</td>
+      <td>0.147540</td>
+      <td>0.003468</td>
       <td>-45.727998</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>0.146314</td>
-      <td>0.003581</td>
+      <td>0.145242</td>
+      <td>0.003392</td>
       <td>-49.325285</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.145719</td>
-      <td>0.003634</td>
+      <td>0.145494</td>
+      <td>0.003417</td>
       <td>-47.433377</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.144409</td>
-      <td>0.003591</td>
-      <td>-46.900995</td>
+      <td>0.144469</td>
+      <td>0.003375</td>
+      <td>-46.899316</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>0.142433</td>
-      <td>0.003414</td>
+      <td>0.142484</td>
+      <td>0.003387</td>
       <td>-46.413821</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>0.143414</td>
-      <td>0.003216</td>
-      <td>-46.734312</td>
+      <td>0.143851</td>
+      <td>0.003331</td>
+      <td>-46.727109</td>
     </tr>
     <tr>
       <th>15</th>
-      <td>0.144515</td>
-      <td>0.003106</td>
+      <td>0.145120</td>
+      <td>0.003353</td>
       <td>-44.254324</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>0.144574</td>
-      <td>0.003511</td>
+      <td>0.144705</td>
+      <td>0.003366</td>
       <td>-48.042372</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>0.146767</td>
-      <td>0.003273</td>
-      <td>-43.017008</td>
+      <td>0.147071</td>
+      <td>0.003379</td>
+      <td>-43.026746</td>
     </tr>
     <tr>
       <th>18</th>
-      <td>0.144346</td>
-      <td>0.003394</td>
+      <td>0.144209</td>
+      <td>0.003323</td>
       <td>-46.176363</td>
     </tr>
     <tr>
       <th>19</th>
-      <td>0.144761</td>
-      <td>0.003079</td>
-      <td>-47.827578</td>
+      <td>0.146276</td>
+      <td>0.003397</td>
+      <td>-47.662623</td>
     </tr>
     <tr>
       <th>20</th>
-      <td>0.144495</td>
-      <td>0.002845</td>
-      <td>-44.461020</td>
+      <td>0.144707</td>
+      <td>0.003349</td>
+      <td>-44.451056</td>
     </tr>
     <tr>
       <th>21</th>
-      <td>0.144720</td>
-      <td>0.003728</td>
-      <td>-46.174426</td>
+      <td>0.145282</td>
+      <td>0.003305</td>
+      <td>-46.173780</td>
     </tr>
     <tr>
       <th>22</th>
-      <td>0.147460</td>
-      <td>0.003298</td>
-      <td>-45.981538</td>
+      <td>0.147886</td>
+      <td>0.003473</td>
+      <td>-45.795231</td>
     </tr>
     <tr>
       <th>23</th>
-      <td>0.147149</td>
-      <td>0.003141</td>
-      <td>-45.952741</td>
+      <td>0.147712</td>
+      <td>0.003313</td>
+      <td>-46.166307</td>
     </tr>
     <tr>
       <th>24</th>
-      <td>0.144499</td>
-      <td>0.003390</td>
+      <td>0.144803</td>
+      <td>0.003367</td>
       <td>-46.360169</td>
     </tr>
     <tr>
       <th>25</th>
-      <td>0.144761</td>
-      <td>0.002887</td>
+      <td>0.145651</td>
+      <td>0.003358</td>
       <td>-46.968612</td>
     </tr>
     <tr>
       <th>26</th>
-      <td>0.145875</td>
-      <td>0.003184</td>
-      <td>-46.328320</td>
+      <td>0.145018</td>
+      <td>0.003467</td>
+      <td>-46.325623</td>
     </tr>
     <tr>
       <th>27</th>
-      <td>0.144056</td>
-      <td>0.002823</td>
-      <td>-46.518178</td>
+      <td>0.144528</td>
+      <td>0.003484</td>
+      <td>-46.522054</td>
     </tr>
     <tr>
       <th>28</th>
-      <td>0.145242</td>
-      <td>0.003787</td>
-      <td>-47.486351</td>
+      <td>0.146158</td>
+      <td>0.003411</td>
+      <td>-47.415111</td>
     </tr>
     <tr>
       <th>29</th>
-      <td>0.145595</td>
-      <td>0.003284</td>
-      <td>-46.053691</td>
+      <td>0.145431</td>
+      <td>0.003375</td>
+      <td>-46.050461</td>
     </tr>
     <tr>
       <th>30</th>
-      <td>0.144722</td>
-      <td>0.002795</td>
+      <td>0.145889</td>
+      <td>0.003394</td>
       <td>-46.182242</td>
     </tr>
     <tr>
       <th>31</th>
-      <td>0.145821</td>
-      <td>0.002753</td>
+      <td>0.146958</td>
+      <td>0.003467</td>
       <td>-45.305162</td>
     </tr>
     <tr>
       <th>32</th>
-      <td>0.145190</td>
-      <td>0.003387</td>
+      <td>0.146196</td>
+      <td>0.003484</td>
       <td>-44.359681</td>
     </tr>
     <tr>
       <th>33</th>
-      <td>0.145652</td>
-      <td>0.003449</td>
+      <td>0.146037</td>
+      <td>0.003339</td>
       <td>-46.829014</td>
     </tr>
     <tr>
       <th>34</th>
-      <td>0.145323</td>
-      <td>0.003269</td>
+      <td>0.146002</td>
+      <td>0.003416</td>
       <td>-46.648786</td>
     </tr>
     <tr>
       <th>35</th>
-      <td>0.144631</td>
-      <td>0.002805</td>
-      <td>-45.649481</td>
+      <td>0.145540</td>
+      <td>0.003377</td>
+      <td>-45.653002</td>
     </tr>
     <tr>
       <th>36</th>
-      <td>0.144600</td>
-      <td>0.003179</td>
+      <td>0.145962</td>
+      <td>0.003407</td>
       <td>-46.864559</td>
     </tr>
     <tr>
       <th>37</th>
-      <td>0.143676</td>
-      <td>0.003349</td>
+      <td>0.144557</td>
+      <td>0.003652</td>
       <td>-47.420250</td>
     </tr>
     <tr>
       <th>38</th>
-      <td>0.143185</td>
-      <td>0.002744</td>
+      <td>0.144200</td>
+      <td>0.003516</td>
       <td>-47.352148</td>
     </tr>
     <tr>
       <th>39</th>
-      <td>0.143738</td>
-      <td>0.003535</td>
+      <td>0.144922</td>
+      <td>0.003392</td>
       <td>-47.102818</td>
     </tr>
   </tbody>
@@ -2322,71 +2328,71 @@ score.</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.145068</td>
-      <td>0.003059</td>
+      <td>0.145864</td>
+      <td>0.003351</td>
       <td>-46.909797</td>
       <td>46.909797</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.146225</td>
-      <td>0.002876</td>
+      <td>0.146736</td>
+      <td>0.003339</td>
       <td>-46.421170</td>
       <td>46.421170</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.144290</td>
-      <td>0.003334</td>
-      <td>-47.413608</td>
-      <td>47.413608</td>
+      <td>0.144976</td>
+      <td>0.003429</td>
+      <td>-47.411089</td>
+      <td>47.411089</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.146481</td>
-      <td>0.003366</td>
-      <td>-44.575623</td>
-      <td>44.575623</td>
+      <td>0.146603</td>
+      <td>0.003355</td>
+      <td>-44.319824</td>
+      <td>44.319824</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.143090</td>
-      <td>0.002781</td>
+      <td>0.143732</td>
+      <td>0.003351</td>
       <td>-47.607875</td>
       <td>47.607875</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.145770</td>
-      <td>0.003388</td>
-      <td>-45.850154</td>
-      <td>45.850154</td>
+      <td>0.145726</td>
+      <td>0.003378</td>
+      <td>-45.901300</td>
+      <td>45.901300</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.146641</td>
-      <td>0.003474</td>
-      <td>-46.566775</td>
-      <td>46.566775</td>
+      <td>0.146566</td>
+      <td>0.003478</td>
+      <td>-46.572767</td>
+      <td>46.572767</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.146544</td>
-      <td>0.003617</td>
-      <td>-46.193971</td>
-      <td>46.193971</td>
+      <td>0.146579</td>
+      <td>0.003335</td>
+      <td>-46.194585</td>
+      <td>46.194585</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.147108</td>
-      <td>0.003825</td>
-      <td>-45.602123</td>
-      <td>45.602123</td>
+      <td>0.146912</td>
+      <td>0.003360</td>
+      <td>-45.590236</td>
+      <td>45.590236</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.147713</td>
-      <td>0.003568</td>
+      <td>0.147540</td>
+      <td>0.003468</td>
       <td>-45.727998</td>
       <td>45.727998</td>
     </tr>
@@ -2423,7 +2429,7 @@ estimate of its variability.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/88968835d967870c44780ac2ce77b6c643251b3445ede932365b980693779e70.png" src="../_images/88968835d967870c44780ac2ce77b6c643251b3445ede932365b980693779e70.png" />
+<img alt="../_images/bf25f056ed9a7b2e596ca2007c6fdb392d5675e18dbb21ec22f0e56a295132a2.png" src="../_images/bf25f056ed9a7b2e596ca2007c6fdb392d5675e18dbb21ec22f0e56a295132a2.png" />
 </div>
 </div>
 <p>We observe that the testing error is clustered around 47 k$ and ranges from
@@ -2438,7 +2444,7 @@ estimate of its variability.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean cross-validated testing error is: 46.37 k$
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean cross-validated testing error is: 46.36 k$
 </pre></div>
 </div>
 </div>
@@ -2511,7 +2517,7 @@ mean absolute percentage error would have been a much better choice.</p>
 our model to tag house values without expert supervision.</p>
 </section>
 <section id="more-detail-regarding-cross-validate">
-<h2>More detail regarding <code class="docutils literal notranslate"><span class="pre">cross_validate</span></code><a class="headerlink" href="#more-detail-regarding-cross-validate" title="Permalink to this heading">#</a></h2>
+<h2>More detail regarding <code class="docutils literal notranslate"><span class="pre">cross_validate</span></code><a class="headerlink" href="#more-detail-regarding-cross-validate" title="Link to this heading">#</a></h2>
 <p>During cross-validation, many models are trained and evaluated. Indeed, the
 number of elements in each array of the output of <code class="docutils literal notranslate"><span class="pre">cross_validate</span></code> is a result
 from one of these <code class="docutils literal notranslate"><span class="pre">fit</span></code>/<code class="docutils literal notranslate"><span class="pre">score</span></code> procedures. To make it explicit, it is
@@ -2525,14 +2531,14 @@ passing the option <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;fit_time&#39;: array([0.17671609, 0.16589141, 0.16916966, 0.16652226, 0.16233087]),
- &#39;score_time&#39;: array([0.00240445, 0.00200105, 0.00205898, 0.00230002, 0.00240493]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;fit_time&#39;: array([0.17152286, 0.16661119, 0.16731572, 0.16726971, 0.16235924]),
+ &#39;score_time&#39;: array([0.00256467, 0.00266409, 0.00267935, 0.00244832, 0.00246549]),
  &#39;estimator&#39;: [DecisionTreeRegressor(random_state=0),
   DecisionTreeRegressor(random_state=0),
   DecisionTreeRegressor(random_state=0),
   DecisionTreeRegressor(random_state=0),
   DecisionTreeRegressor(random_state=0)],
- &#39;test_score&#39;: array([0.26291527, 0.41947109, 0.43969189, 0.23357874, 0.40788361])}
+ &#39;test_score&#39;: array([0.26291527, 0.41947109, 0.44492564, 0.23357874, 0.40788361])}
 </pre></div>
 </div>
 </div>
@@ -2571,14 +2577,14 @@ extensively did in the previous notebooks).</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.26291527, 0.41947109, 0.43969189, 0.23357874, 0.40788361])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.26291527, 0.41947109, 0.44492564, 0.23357874, 0.40788361])
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>In this notebook, we saw:</p>
 <ul class="simple">
 <li><p>the necessity of splitting the data into a train and test set;</p></li>
@@ -2697,12 +2703,14 @@ By scikit-learn developers
 <div class="extra_footer">
   <div>
   <div class="mooc_add">
-   <a href="https://www.fun-mooc.fr/en/courses/machine-learning-python-scikit-learn">Join the full MOOC for better learning!</a>
+   <a href="https://www.fun-mooc.fr/en/courses/machine-learning-python-scikit-learn">Join the full MOOC experience</a>
+   <a href="https://certification.probabl.ai/">Get officially certified!</a>
   </div>
   Brought to you under a <a href="https://github.com/INRIA/scikit-learn-mooc/blob/main/LICENSE">CC-BY License</a> by
   <a href="https://learninglab.inria.fr">Inria Learning Lab</a>,
   <a href="https://scikit-learn.fondation-inria.fr">scikit-learn @ La Fondation Inria</a>,
   <a href="https://www.inria-academy.fr/formation/scikit-learn-la-boite-a-outils-de-lapprentissage-automatique/">Inria Academy</a>,
+  <a href="https://probabl.ai/">probabl</a>,
   with many thanks to the <a href="https://scikit-learn.org">scikit-learn</a> community as a whole!
 </div>
 

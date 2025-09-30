@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Comparing model performance with a simple baseline &#8212; Scikit-learn course</title>
   
@@ -29,46 +28,44 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sklearn_mooc.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sklearn_mooc.css?v=80799b6b" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../_static/sklearn_mooc.js"></script>
-    <script src="../_static/matomo.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'python_scripts/cross_validation_baseline';</script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/matomo.js?v=8af330ab"></script>
+    <script src="../_static/sklearn_mooc.js?v=cdec65c7"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="📝 Exercise M7.01" href="cross_validation_ex_02.html" />
@@ -169,6 +166,17 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
@@ -473,9 +481,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -500,14 +508,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/INRIA/scikit-learn-mooc/main?urlpath=tree/python_scripts/cross_validation_baseline.py" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -690,7 +698,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="comparing-model-performance-with-a-simple-baseline">
-<h1>Comparing model performance with a simple baseline<a class="headerlink" href="#comparing-model-performance-with-a-simple-baseline" title="Permalink to this heading">#</a></h1>
+<h1>Comparing model performance with a simple baseline<a class="headerlink" href="#comparing-model-performance-with-a-simple-baseline" title="Link to this heading">#</a></h1>
 <p>In this notebook, we present how to compare the generalization performance of
 a model to a minimal baseline. In regression, we can use the <code class="docutils literal notranslate"><span class="pre">DummyRegressor</span></code>
 class to predict the mean target value observed on the training set without
@@ -723,9 +731,10 @@ with 20% of the data held on the validation side of the split.</p>
 </div>
 </div>
 </div>
-<p>We start by running the cross-validation for a simple decision tree regressor
-which is our model of interest. Besides, we will store the testing error in a
-pandas series to make it easier to plot the results.</p>
+<p>We start by running the cross-validation for a simple decision tree regressor.
+Here we compute the testing errors in terms of the mean absolute error (MAE)
+and then we store them in a pandas series to make it easier to plot the
+results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -746,13 +755,13 @@ pandas series to make it easier to plot the results.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    30.000000
-mean     45.711079
-std       1.196576
-min      42.993887
-25%      44.973194
-50%      45.830140
-75%      46.529628
-max      48.049512
+mean     45.805968
+std       1.150217
+min      43.443864
+25%      45.092441
+50%      45.809175
+75%      46.455097
+max      48.317779
 Name: Decision tree regressor, dtype: float64
 </pre></div>
 </div>
@@ -829,152 +838,152 @@ and the actual decision tree regressor.</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>46.982819</td>
+      <td>47.006536</td>
       <td>90.713153</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>46.291227</td>
+      <td>47.002565</td>
       <td>90.539353</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>44.314529</td>
+      <td>45.044083</td>
       <td>91.941912</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>43.489720</td>
+      <td>43.829110</td>
       <td>90.213912</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>47.503434</td>
+      <td>48.179237</td>
       <td>92.015862</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>44.948006</td>
+      <td>45.273829</td>
       <td>90.542490</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>44.218136</td>
+      <td>44.352462</td>
       <td>89.757566</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>45.067945</td>
+      <td>45.248904</td>
       <td>92.477244</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>45.048756</td>
+      <td>45.237515</td>
       <td>90.947952</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>44.670753</td>
+      <td>44.895001</td>
       <td>91.991373</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>47.162691</td>
+      <td>46.154719</td>
       <td>92.023571</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>46.147181</td>
+      <td>46.177220</td>
       <td>90.556965</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>45.804015</td>
+      <td>45.606046</td>
       <td>91.539567</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>45.547766</td>
+      <td>45.687495</td>
       <td>91.185225</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>46.968742</td>
+      <td>47.230999</td>
       <td>92.298971</td>
     </tr>
     <tr>
       <th>15</th>
-      <td>44.362250</td>
+      <td>44.457384</td>
       <td>91.084639</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>45.860122</td>
+      <td>45.852977</td>
       <td>90.984471</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>47.047737</td>
+      <td>46.515156</td>
       <td>89.981744</td>
     </tr>
     <tr>
       <th>18</th>
-      <td>44.628889</td>
+      <td>44.997642</td>
       <td>90.547140</td>
     </tr>
     <tr>
       <th>19</th>
-      <td>46.799000</td>
+      <td>46.924992</td>
       <td>89.820219</td>
     </tr>
     <tr>
       <th>20</th>
-      <td>42.993887</td>
+      <td>43.443864</td>
       <td>91.768721</td>
     </tr>
     <tr>
       <th>21</th>
-      <td>45.856265</td>
+      <td>45.765373</td>
       <td>92.305556</td>
     </tr>
     <tr>
       <th>22</th>
-      <td>45.640787</td>
+      <td>45.933206</td>
       <td>90.503017</td>
     </tr>
     <tr>
       <th>23</th>
-      <td>46.574583</td>
+      <td>46.274921</td>
       <td>92.147974</td>
     </tr>
     <tr>
       <th>24</th>
-      <td>46.394764</td>
+      <td>46.585169</td>
       <td>91.386320</td>
     </tr>
     <tr>
       <th>25</th>
-      <td>45.897186</td>
+      <td>46.183886</td>
       <td>90.815660</td>
     </tr>
     <tr>
       <th>26</th>
-      <td>45.230886</td>
+      <td>44.464072</td>
       <td>92.216574</td>
     </tr>
     <tr>
       <th>27</th>
-      <td>46.356192</td>
+      <td>46.129136</td>
       <td>90.107460</td>
     </tr>
     <tr>
       <th>28</th>
-      <td>45.474577</td>
+      <td>45.407765</td>
       <td>90.620318</td>
     </tr>
     <tr>
       <th>29</th>
-      <td>48.049512</td>
+      <td>48.317779</td>
       <td>91.165331</td>
     </tr>
   </tbody>
@@ -995,7 +1004,7 @@ and the actual decision tree regressor.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f0b59fe4df2b1e1ac69680f7ab9b28aacb2a3ee45833dfb63754580d383fe5d5.png" src="../_images/f0b59fe4df2b1e1ac69680f7ab9b28aacb2a3ee45833dfb63754580d383fe5d5.png" />
+<img alt="../_images/65499c3d0172769202c3a2a782099cae92e51a71ed8b65b6bf98e79f630e1bdd.png" src="../_images/65499c3d0172769202c3a2a782099cae92e51a71ed8b65b6bf98e79f630e1bdd.png" />
 </div>
 </div>
 <p>We see that the generalization performance of our decision tree is far from
@@ -1012,6 +1021,97 @@ have used the median instead. See the online documentation of the
 class for other options. For this particular example, using the mean instead
 of the median does not make much of a difference but this could have been the
 case for dataset with extreme outliers.</p>
+<p>Finally, let us see what happens if we measure the test score using <span class="math notranslate nohighlight">\(R^2\)</span>
+instead of the mean absolute error:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result_dummy</span> <span class="o">=</span> <span class="n">cross_validate</span><span class="p">(</span>
+    <span class="n">dummy</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">cv</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;r2&quot;</span><span class="p">,</span> <span class="n">return_train_score</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">2</span>
+<span class="p">)</span>
+<span class="n">r2_train_score_dummy_regressor</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+    <span class="n">result_dummy</span><span class="p">[</span><span class="s2">&quot;train_score&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Dummy regressor train score&quot;</span>
+<span class="p">)</span>
+<span class="n">r2_train_score_dummy_regressor</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    30.0
+mean      0.0
+std       0.0
+min       0.0
+25%       0.0
+50%       0.0
+75%       0.0
+max       0.0
+Name: Dummy regressor train score, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <span class="math notranslate nohighlight">\(R^2\)</span> score is always 0. It can be shown that this is always the case,
+because of its mathematical definition. If you are interested in the proof,
+unfold the dropdown below.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Mathematical explanation</p>
+<p>Recall that the <span class="math notranslate nohighlight">\(R^2\)</span> score is defined as:</p>
+<p><span class="math notranslate nohighlight">\(
+R^2 = 1 - \frac{\sum_i (y_i - \hat{y}_i)^2}{\sum_i (y_i - \bar{y})^2}
+\)</span></p>
+<p>But our model always predicts the mean, i.e. for all <span class="math notranslate nohighlight">\(i\)</span>,
+<span class="math notranslate nohighlight">\(\hat{y}_i = \bar{y}\)</span>, so:</p>
+<p><span class="math notranslate nohighlight">\(
+R^2 = 1 - \frac{\sum_i (y_i - \hat{y}_i)^2}{\sum_i (y_i - \bar{y})^2}
+    = 1 - \frac{\sum_i (y_i - \bar{y}  )^2}{\sum_i (y_i - \bar{y})^2}
+    = 1 - 1
+    = 0.
+\)</span></p>
+</div>
+<p>This helps put your model’s <span class="math notranslate nohighlight">\(R^2\)</span> score in perspective: if your model has an
+<span class="math notranslate nohighlight">\(R^2\)</span> score higher than 0 then it performs better than a <code class="docutils literal notranslate"><span class="pre">DummyRegressor</span></code> with
+<code class="docutils literal notranslate"><span class="pre">strategy=&quot;mean&quot;</span></code>; similarly, if the <span class="math notranslate nohighlight">\(R^2\)</span> score is lower than 0 then your
+model is worse than the dummy regressor. For the test score, we observe
+something similar, but with an additional effect coming from the dataset
+variations: the mean target value measured on the testing set is slightly
+different from the mean target value measured on the training set.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r2_test_score_dummy_regressor</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+    <span class="n">result_dummy</span><span class="p">[</span><span class="s2">&quot;test_score&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Dummy regressor test score&quot;</span>
+<span class="p">)</span>
+<span class="n">r2_test_score_dummy_regressor</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    3.000000e+01
+mean    -2.203750e-04
+std      3.572610e-04
+min     -1.797131e-03
+25%     -2.753534e-04
+50%     -1.083489e-04
+75%     -3.344120e-05
+max     -1.015390e-07
+Name: Dummy regressor test score, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>In conclusion, <span class="math notranslate nohighlight">\(R^2\)</span> is a normalized metric, which makes it independent of the
+physical unit of the target variable, unlike MAE. A <span class="math notranslate nohighlight">\(R^2\)</span> score of 0.0 is the
+performance of a model that always predicts the mean observed value of the
+target, while 1.0 corresponds to a model that predicts exactly the observed
+target variable for each given input observation. Notice that it is only
+possible to reach 1.0 if the target variable is a deterministic function of
+the available input features. In practice, external factors often introduce
+variability in the target that cannot be explained by the available features.
+Therefore, the <span class="math notranslate nohighlight">\(R^2\)</span> score of an optimal model is typically less than 1.0, not
+due to a limitation of the machine learning algorithm itself, but because
+the chosen input features are fundamentally not informative enough to
+deterministically predict the target.</p>
+<p>Overall, <span class="math notranslate nohighlight">\(R^2\)</span> represents the proportion of the target’s variability explained
+by the model, while MAE, which retains the physical units of the target, can
+be helpful for reporting errors in those units.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1104,12 +1204,14 @@ By scikit-learn developers
 <div class="extra_footer">
   <div>
   <div class="mooc_add">
-   <a href="https://www.fun-mooc.fr/en/courses/machine-learning-python-scikit-learn">Join the full MOOC for better learning!</a>
+   <a href="https://www.fun-mooc.fr/en/courses/machine-learning-python-scikit-learn">Join the full MOOC experience</a>
+   <a href="https://certification.probabl.ai/">Get officially certified!</a>
   </div>
   Brought to you under a <a href="https://github.com/INRIA/scikit-learn-mooc/blob/main/LICENSE">CC-BY License</a> by
   <a href="https://learninglab.inria.fr">Inria Learning Lab</a>,
   <a href="https://scikit-learn.fondation-inria.fr">scikit-learn @ La Fondation Inria</a>,
   <a href="https://www.inria-academy.fr/formation/scikit-learn-la-boite-a-outils-de-lapprentissage-automatique/">Inria Academy</a>,
+  <a href="https://probabl.ai/">probabl</a>,
   with many thanks to the <a href="https://scikit-learn.org">scikit-learn</a> community as a whole!
 </div>
 

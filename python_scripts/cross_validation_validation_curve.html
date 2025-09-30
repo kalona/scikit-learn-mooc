@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Overfit-generalization-underfit &#8212; Scikit-learn course</title>
   
@@ -29,46 +28,42 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sklearn_mooc.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sklearn_mooc.css?v=80799b6b" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../_static/sklearn_mooc.js"></script>
-    <script src="../_static/matomo.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'python_scripts/cross_validation_validation_curve';</script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/matomo.js?v=8af330ab"></script>
+    <script src="../_static/sklearn_mooc.js?v=cdec65c7"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Effect of the sample size in cross-validation" href="cross_validation_learning_curve.html" />
@@ -169,6 +164,17 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
@@ -473,9 +479,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -500,14 +506,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/INRIA/scikit-learn-mooc/main?urlpath=tree/python_scripts/cross_validation_validation_curve.py" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -664,9 +670,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -689,6 +695,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overfitting-vs-underfitting">Overfitting vs. underfitting</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validation-curve">Validation curve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-noise">What is noise?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary:</a></li>
 </ul>
             </nav>
@@ -702,7 +709,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="overfit-generalization-underfit">
-<h1>Overfit-generalization-underfit<a class="headerlink" href="#overfit-generalization-underfit" title="Permalink to this heading">#</a></h1>
+<h1>Overfit-generalization-underfit<a class="headerlink" href="#overfit-generalization-underfit" title="Link to this heading">#</a></h1>
 <p>In the previous notebook, we presented the general cross-validation framework
 and how it helps us quantify the training and testing errors as well as their
 fluctuations.</p>
@@ -736,7 +743,7 @@ Appendix - Datasets description section at the end of this MOOC.</p>
 </div>
 </div>
 <section id="overfitting-vs-underfitting">
-<h2>Overfitting vs. underfitting<a class="headerlink" href="#overfitting-vs-underfitting" title="Permalink to this heading">#</a></h2>
+<h2>Overfitting vs. underfitting<a class="headerlink" href="#overfitting-vs-underfitting" title="Link to this heading">#</a></h2>
 <p>To better understand the generalization performance of our model and maybe
 find insights on how to improve it, we compare the testing error with the
 training error. Thus, we need to compute the error on the training set, which
@@ -784,7 +791,7 @@ negative mean absolute error into a positive mean absolute error.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c4c991bfcd81dd866306d7643c51495a98db0ee3a559ebabb37e1ba81a50b683.png" src="../_images/c4c991bfcd81dd866306d7643c51495a98db0ee3a559ebabb37e1ba81a50b683.png" />
+<img alt="../_images/6eea4aec91a28b97bb084740dccdf81a4bc220208bfa1302a177dbb66ac18c5f.png" src="../_images/6eea4aec91a28b97bb084740dccdf81a4bc220208bfa1302a177dbb66ac18c5f.png" />
 </div>
 </div>
 <p>By plotting the distribution of the training and testing errors, we get
@@ -799,7 +806,7 @@ that could be considered “noisy” because they do not generalize to help us
 make good prediction on the test set.</p>
 </section>
 <section id="validation-curve">
-<h2>Validation curve<a class="headerlink" href="#validation-curve" title="Permalink to this heading">#</a></h2>
+<h2>Validation curve<a class="headerlink" href="#validation-curve" title="Link to this heading">#</a></h2>
 <p>We call <strong>hyperparameters</strong> those parameters that potentially impact the
 result of the learning and subsequent predictions of a predictor. For example:</p>
 <ul class="simple">
@@ -841,11 +848,11 @@ tradeoff between under-fitting and over-fitting.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 259 ms, sys: 53 ms, total: 312 ms
-Wall time: 10.4 s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 299 ms, sys: 44.8 ms, total: 343 ms
+Wall time: 10.6 s
 </pre></div>
 </div>
-<img alt="../_images/f9609b794cfe9b85021c18fc812fbcb66db1e0e3aad48358c29691d54bd71920.png" src="../_images/f9609b794cfe9b85021c18fc812fbcb66db1e0e3aad48358c29691d54bd71920.png" />
+<img alt="../_images/c3a6f869163fa69df1f331b9869e71aec1de495254ab004c6d44159ce2dab836.png" src="../_images/c3a6f869163fa69df1f331b9869e71aec1de495254ab004c6d44159ce2dab836.png" />
 </div>
 </div>
 <p>The validation curve can be divided into three areas:</p>
@@ -876,8 +883,50 @@ deviation of the errors as well. In this case, the variance of the errors is
 small compared to their respective values, and therefore the conclusions above
 are quite clear. This is not necessarily always the case.</p>
 </section>
+<section id="what-is-noise">
+<h2>What is noise?<a class="headerlink" href="#what-is-noise" title="Link to this heading">#</a></h2>
+<p>In this notebook, we talked about the fact that datasets can contain noise.</p>
+<p>There can be several kinds of noises, among which we can identify:</p>
+<ul class="simple">
+<li><p>measurement imprecision from a physical sensor (e.g. temperature);</p></li>
+<li><p>reporting errors by human collectors.</p></li>
+</ul>
+<p>Those unpredictable data acquisition errors can happen either on the input
+features or in the target variable (in which case we often name this label
+noise).</p>
+<p>In practice, the <strong>most common source of “noise” is not necessarily a
+real noise</strong>, but rather <strong>the absence of the measurement of a relevant
+feature</strong>.</p>
+<p>Consider the following example: when predicting the price of a house, the
+surface area will surely impact the price. However, the price will also be
+influenced by whether the seller is in a rush and decides to sell the house
+below the market price. A model will be able to make predictions based on the
+former but not the latter, so “seller’s rush” is a source of noise since it
+won’t be present in the features.</p>
+<p>Since this missing/unobserved feature is randomly varying from one sample to
+the next, it appears as if the target variable was changing because of the
+impact of a random perturbation or noise, even if there were no significant
+errors made during the data collection process (besides not measuring the
+unobserved input feature).</p>
+<p>One extreme case could happen if there where samples in the dataset with
+exactly the same input feature values but different values for the target
+variable. That is very unlikely in real life settings, but could the case if
+all features are categorical or if the numerical features were discretized
+or rounded up naively. In our example, we can imagine two houses having
+the exact same features in our dataset, but having different prices because
+of the (unmeasured) seller’s rush.</p>
+<p>Apart from these extreme case, it’s hard to know for sure what should qualify
+or not as noise and which kind of “noise” as introduced above is dominating.
+But in practice, the best ways to make our predictive models robust to noise
+are to avoid overfitting models by:</p>
+<ul class="simple">
+<li><p>selecting models that are simple enough or with tuned hyper-parameters as
+explained in this module;</p></li>
+<li><p>collecting a larger number of labeled samples for the training set.</p></li>
+</ul>
+</section>
 <section id="summary">
-<h2>Summary:<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<h2>Summary:<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>In this notebook, we saw:</p>
 <ul class="simple">
 <li><p>how to identify whether a model is generalizing, overfitting, or
@@ -953,6 +1002,7 @@ underfitting;</p></li>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overfitting-vs-underfitting">Overfitting vs. underfitting</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validation-curve">Validation curve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-noise">What is noise?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary:</a></li>
 </ul>
   </nav></div>
@@ -994,12 +1044,14 @@ By scikit-learn developers
 <div class="extra_footer">
   <div>
   <div class="mooc_add">
-   <a href="https://www.fun-mooc.fr/en/courses/machine-learning-python-scikit-learn">Join the full MOOC for better learning!</a>
+   <a href="https://www.fun-mooc.fr/en/courses/machine-learning-python-scikit-learn">Join the full MOOC experience</a>
+   <a href="https://certification.probabl.ai/">Get officially certified!</a>
   </div>
   Brought to you under a <a href="https://github.com/INRIA/scikit-learn-mooc/blob/main/LICENSE">CC-BY License</a> by
   <a href="https://learninglab.inria.fr">Inria Learning Lab</a>,
   <a href="https://scikit-learn.fondation-inria.fr">scikit-learn @ La Fondation Inria</a>,
   <a href="https://www.inria-academy.fr/formation/scikit-learn-la-boite-a-outils-de-lapprentissage-automatique/">Inria Academy</a>,
+  <a href="https://probabl.ai/">probabl</a>,
   with many thanks to the <a href="https://scikit-learn.org">scikit-learn</a> community as a whole!
 </div>
 

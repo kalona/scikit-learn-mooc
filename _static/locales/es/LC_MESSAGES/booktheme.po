@@ -8,38 +8,53 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Download notebook file"
-msgstr "Descargar archivo de cuaderno"
+msgid "By the"
+msgstr "Por el"
 
-msgid "Fullscreen mode"
-msgstr "Modo de pantalla completa"
+msgid "By"
+msgstr "Por"
 
-msgid "Source repository"
-msgstr "Repositorio de origen"
-
-msgid "Print to PDF"
-msgstr "Imprimir en PDF"
+msgid "Contents"
+msgstr "Contenido"
 
 msgid "Copyright"
 msgstr "Derechos de autor"
 
-msgid "Sphinx Book Theme"
-msgstr "Tema del libro de la esfinge"
-
-msgid "By the"
-msgstr "Por el"
-
-msgid "Download this page"
-msgstr "Descarga esta pagina"
-
-msgid "repository"
-msgstr "repositorio"
+msgid "Download notebook file"
+msgstr "Descargar archivo de cuaderno"
 
 msgid "Download source file"
 msgstr "Descargar archivo fuente"
 
-msgid "By"
-msgstr "Por"
+msgid "Download this page"
+msgstr "Descarga esta pagina"
+
+msgid "Edit this page"
+msgstr "Edita esta página"
+
+msgid "Fullscreen mode"
+msgstr "Modo de pantalla completa"
+
+msgid "Last updated on"
+msgstr "Ultima actualización en"
+
+msgid "Launch"
+msgstr "Lanzamiento"
+
+msgid "Open an issue"
+msgstr "Abrir un problema"
+
+msgid "Print to PDF"
+msgstr "Imprimir en PDF"
+
+msgid "Source repository"
+msgstr "Repositorio de origen"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema del libro de la esfinge"
+
+msgid "Theme by the"
+msgstr "Tema por el"
 
 msgid "Toggle navigation"
 msgstr "Navegación de palanca"
@@ -47,29 +62,14 @@ msgstr "Navegación de palanca"
 msgid "next page"
 msgstr "siguiente página"
 
-msgid "Last updated on"
-msgstr "Ultima actualización en"
-
-msgid "Contents"
-msgstr "Contenido"
-
-msgid "Launch"
-msgstr "Lanzamiento"
-
-msgid "Theme by the"
-msgstr "Tema por el"
-
-msgid "Open an issue"
-msgstr "Abrir un problema"
-
 msgid "open issue"
 msgstr "Tema abierto"
 
-msgid "suggest edit"
-msgstr "sugerir editar"
-
-msgid "Edit this page"
-msgstr "Edita esta página"
-
 msgid "previous page"
 msgstr "pagina anterior"
+
+msgid "repository"
+msgstr "repositorio"
+
+msgid "suggest edit"
+msgstr "sugerir editar"

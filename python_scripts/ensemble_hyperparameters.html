@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Hyperparameter tuning &#8212; Scikit-learn course</title>
   
@@ -29,48 +28,44 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sklearn_mooc.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sklearn_mooc.css?v=80799b6b" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../_static/sklearn_mooc.js"></script>
-    <script src="../_static/matomo.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'python_scripts/ensemble_hyperparameters';</script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/matomo.js?v=8af330ab"></script>
+    <script src="../_static/sklearn_mooc.js?v=cdec65c7"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="📝 Exercise M6.04" href="ensemble_ex_04.html" />
@@ -171,6 +166,17 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
@@ -475,9 +481,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -502,14 +508,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/INRIA/scikit-learn-mooc/main?urlpath=tree/python_scripts/ensemble_hyperparameters.py" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -666,9 +672,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -703,7 +709,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="hyperparameter-tuning">
-<h1>Hyperparameter tuning<a class="headerlink" href="#hyperparameter-tuning" title="Permalink to this heading">#</a></h1>
+<h1>Hyperparameter tuning<a class="headerlink" href="#hyperparameter-tuning" title="Link to this heading">#</a></h1>
 <p>In the previous section, we did not discuss the hyperparameters of random
 forest and histogram gradient-boosting. This notebook gives crucial
 information regarding how to set them.</p>
@@ -729,7 +735,7 @@ parameters on the validation set.</p>
 </div>
 </div>
 <section id="random-forest">
-<h2>Random forest<a class="headerlink" href="#random-forest" title="Permalink to this heading">#</a></h2>
+<h2>Random forest<a class="headerlink" href="#random-forest" title="Link to this heading">#</a></h2>
 <p>The main parameter to select in random forest is the <code class="docutils literal notranslate"><span class="pre">n_estimators</span></code> parameter.
 In general, the more trees in the forest, the better the generalization
 performance would be. However, adding trees slows down the fitting and prediction
@@ -796,7 +802,7 @@ trees (i.e. shallow trees) might also lead to an underfitted forest.</p>
     <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;neg_mean_absolute_error&quot;</span><span class="p">,</span>
     <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
     <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-    <span class="n">n_jobs</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="c1"># n_jobs=2,  # Uncomment this line if you run locally</span>
 <span class="p">)</span>
 <span class="n">search_cv</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">target_train</span><span class="p">)</span>
 
@@ -841,80 +847,80 @@ trees (i.e. shallow trees) might also lead to an underfitted forest.</p>
       <td>2</td>
       <td>None</td>
       <td>2</td>
-      <td>34.004536</td>
-      <td>0.446180</td>
+      <td>33.971327</td>
+      <td>0.440450</td>
     </tr>
     <tr>
       <th>0</th>
       <td>2</td>
       <td>1000</td>
       <td>10</td>
-      <td>36.806066</td>
-      <td>0.674354</td>
+      <td>36.809038</td>
+      <td>0.636961</td>
     </tr>
     <tr>
       <th>7</th>
       <td>None</td>
       <td>None</td>
       <td>20</td>
-      <td>37.339911</td>
-      <td>0.497734</td>
+      <td>37.289024</td>
+      <td>0.349739</td>
     </tr>
     <tr>
       <th>4</th>
       <td>5</td>
       <td>100</td>
       <td>2</td>
-      <td>40.033092</td>
-      <td>0.499790</td>
+      <td>40.171339</td>
+      <td>0.669741</td>
     </tr>
     <tr>
       <th>8</th>
       <td>None</td>
       <td>100</td>
       <td>10</td>
-      <td>40.569383</td>
-      <td>0.645181</td>
+      <td>40.393677</td>
+      <td>0.722235</td>
     </tr>
     <tr>
       <th>6</th>
       <td>None</td>
       <td>1000</td>
       <td>50</td>
-      <td>40.803950</td>
-      <td>0.446105</td>
+      <td>40.922899</td>
+      <td>0.409217</td>
     </tr>
     <tr>
       <th>2</th>
       <td>1</td>
       <td>100</td>
       <td>1</td>
-      <td>49.765069</td>
-      <td>0.725711</td>
+      <td>50.098238</td>
+      <td>0.707189</td>
     </tr>
     <tr>
       <th>9</th>
       <td>1</td>
       <td>100</td>
       <td>2</td>
-      <td>49.923843</td>
-      <td>0.617549</td>
+      <td>50.287164</td>
+      <td>0.964526</td>
     </tr>
     <tr>
       <th>5</th>
       <td>1</td>
       <td>None</td>
       <td>100</td>
-      <td>54.363978</td>
-      <td>0.548593</td>
+      <td>54.698135</td>
+      <td>1.065458</td>
     </tr>
     <tr>
       <th>1</th>
       <td>3</td>
       <td>10</td>
       <td>10</td>
-      <td>54.906000</td>
-      <td>0.827840</td>
+      <td>54.850162</td>
+      <td>0.864919</td>
     </tr>
   </tbody>
 </table>
@@ -943,14 +949,14 @@ the unseen data.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On average, our random forest regressor makes an error of 34.03 k$
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On average, our random forest regressor makes an error of 34.05 k$
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="histogram-gradient-boosting-decision-trees">
-<h2>Histogram gradient-boosting decision trees<a class="headerlink" href="#histogram-gradient-boosting-decision-trees" title="Permalink to this heading">#</a></h2>
+<h2>Histogram gradient-boosting decision trees<a class="headerlink" href="#histogram-gradient-boosting-decision-trees" title="Link to this heading">#</a></h2>
 <p>For gradient-boosting, hyperparameters are coupled, so we cannot set them
 one after the other anymore. The important hyperparameters are <code class="docutils literal notranslate"><span class="pre">max_iter</span></code>,
 <code class="docutils literal notranslate"><span class="pre">learning_rate</span></code>, and <code class="docutils literal notranslate"><span class="pre">max_depth</span></code> or <code class="docutils literal notranslate"><span class="pre">max_leaf_nodes</span></code> (as previously discussed
@@ -973,15 +979,15 @@ have a low depth, typically between 3 to 8 levels, or few leaves (<span class="m
 <p>With this consideration in mind, the deeper the trees, the faster the
 residuals are corrected and then less learners are required. Therefore,
 it can be beneficial to increase <code class="docutils literal notranslate"><span class="pre">max_iter</span></code> if <code class="docutils literal notranslate"><span class="pre">max_depth</span></code> is low.</p>
-<p>Finally, we have overlooked the impact of the <code class="docutils literal notranslate"><span class="pre">learning_rate</span></code> parameter until
-now. When fitting the residuals, we would like the tree to try to correct all
-possible errors or only a fraction of them. The learning-rate allows you to
-control this behaviour. A small learning-rate value would only correct the
-residuals of very few samples. If a large learning-rate is set (e.g., 1), we
-would fit the residuals of all samples. So, with a very low learning-rate, we
-would need more estimators to correct the overall error. However, a too large
-learning-rate tends to obtain an overfitted ensemble, similar to having very
-deep trees.</p>
+<p>Finally, we have overlooked the impact of the <code class="docutils literal notranslate"><span class="pre">learning_rate</span></code> parameter
+until now. This parameter controls how much each correction contributes to the
+final prediction. A smaller learning-rate means the corrections of a new
+tree result in small adjustments to the model prediction. When the
+learning-rate is small, the model generally needs more trees to achieve good
+performance. A higher learning-rate makes larger adjustments with each tree,
+which requires fewer trees and trains faster, at the risk of overfitting. The
+learning-rate needs to be tuned by hyperparameter tuning to obtain the best
+value that results in a model with good generalization performance.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">loguniform</span>
@@ -998,7 +1004,7 @@ deep trees.</p>
     <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;neg_mean_absolute_error&quot;</span><span class="p">,</span>
     <span class="n">n_iter</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
     <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-    <span class="n">n_jobs</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="c1"># n_jobs=2, # Uncomment this line if you run locally</span>
 <span class="p">)</span>
 <span class="n">search_cv</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">target_train</span><span class="p">)</span>
 
@@ -1043,160 +1049,160 @@ deep trees.</p>
       <td>300</td>
       <td>100</td>
       <td>0.018640</td>
-      <td>30.906927</td>
-      <td>0.171724</td>
+      <td>31.088572</td>
+      <td>0.207595</td>
     </tr>
     <tr>
       <th>6</th>
       <td>300</td>
       <td>20</td>
       <td>0.047293</td>
-      <td>31.965521</td>
-      <td>0.292119</td>
+      <td>31.687824</td>
+      <td>0.232696</td>
     </tr>
     <tr>
       <th>13</th>
       <td>300</td>
       <td>10</td>
       <td>0.297739</td>
-      <td>32.571692</td>
-      <td>0.260902</td>
+      <td>32.395795</td>
+      <td>0.434278</td>
     </tr>
     <tr>
       <th>2</th>
       <td>30</td>
       <td>50</td>
       <td>0.176656</td>
-      <td>32.707248</td>
-      <td>0.383311</td>
+      <td>32.482783</td>
+      <td>0.208801</td>
     </tr>
     <tr>
       <th>9</th>
       <td>100</td>
       <td>20</td>
       <td>0.083745</td>
-      <td>33.199627</td>
-      <td>0.309600</td>
+      <td>33.113293</td>
+      <td>0.400079</td>
     </tr>
     <tr>
       <th>19</th>
       <td>100</td>
       <td>10</td>
       <td>0.215543</td>
-      <td>33.226048</td>
-      <td>0.348729</td>
+      <td>33.201608</td>
+      <td>0.323722</td>
     </tr>
     <tr>
       <th>12</th>
       <td>100</td>
       <td>20</td>
       <td>0.067503</td>
-      <td>33.653871</td>
-      <td>0.529844</td>
+      <td>33.720754</td>
+      <td>0.386916</td>
     </tr>
     <tr>
       <th>16</th>
       <td>300</td>
       <td>5</td>
       <td>0.059290</td>
-      <td>35.841611</td>
-      <td>0.534915</td>
+      <td>35.776689</td>
+      <td>0.436176</td>
     </tr>
     <tr>
       <th>1</th>
       <td>100</td>
       <td>5</td>
       <td>0.160519</td>
-      <td>36.301159</td>
-      <td>0.445115</td>
+      <td>36.294798</td>
+      <td>0.503011</td>
     </tr>
     <tr>
       <th>0</th>
       <td>1000</td>
       <td>2</td>
       <td>0.125207</td>
-      <td>40.999030</td>
-      <td>0.856034</td>
+      <td>40.973845</td>
+      <td>0.369808</td>
     </tr>
     <tr>
       <th>7</th>
       <td>1000</td>
       <td>2</td>
       <td>0.054511</td>
-      <td>42.182865</td>
-      <td>0.657134</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>10</td>
-      <td>5</td>
-      <td>0.248463</td>
-      <td>50.025486</td>
-      <td>1.110379</td>
+      <td>42.228920</td>
+      <td>0.635994</td>
     </tr>
     <tr>
       <th>8</th>
       <td>3</td>
       <td>5</td>
       <td>0.906226</td>
-      <td>50.167600</td>
-      <td>0.954212</td>
+      <td>50.022310</td>
+      <td>0.883495</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>10</td>
+      <td>5</td>
+      <td>0.248463</td>
+      <td>50.432538</td>
+      <td>1.456927</td>
     </tr>
     <tr>
       <th>5</th>
       <td>10</td>
       <td>100</td>
       <td>0.061034</td>
-      <td>61.584064</td>
-      <td>0.742887</td>
+      <td>61.558059</td>
+      <td>0.656333</td>
     </tr>
     <tr>
       <th>17</th>
       <td>3</td>
       <td>5</td>
       <td>0.079415</td>
-      <td>81.452386</td>
-      <td>0.967859</td>
+      <td>81.497228</td>
+      <td>0.937289</td>
     </tr>
     <tr>
       <th>4</th>
       <td>10</td>
       <td>2</td>
       <td>0.035100</td>
-      <td>82.539983</td>
-      <td>0.970695</td>
+      <td>82.573601</td>
+      <td>0.957224</td>
     </tr>
     <tr>
       <th>15</th>
       <td>3</td>
       <td>50</td>
       <td>0.019923</td>
-      <td>87.585182</td>
-      <td>1.070234</td>
+      <td>87.608347</td>
+      <td>1.059672</td>
     </tr>
     <tr>
       <th>3</th>
       <td>3</td>
       <td>2</td>
       <td>0.039361</td>
-      <td>87.810858</td>
-      <td>1.068696</td>
+      <td>87.819097</td>
+      <td>1.016219</td>
     </tr>
     <tr>
       <th>11</th>
       <td>3</td>
       <td>10</td>
       <td>0.019351</td>
-      <td>88.351096</td>
-      <td>1.101112</td>
+      <td>88.288911</td>
+      <td>1.028295</td>
     </tr>
     <tr>
       <th>10</th>
       <td>3</td>
       <td>5</td>
       <td>0.017240</td>
-      <td>88.886797</td>
-      <td>1.051100</td>
+      <td>88.974861</td>
+      <td>1.051243</td>
     </tr>
   </tbody>
 </table>
@@ -1223,7 +1229,7 @@ test set.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On average, our HGBT regressor makes an error of 30.23 k$
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On average, our HGBT regressor makes an error of 30.54 k$
 </pre></div>
 </div>
 </div>
@@ -1367,12 +1373,14 @@ By scikit-learn developers
 <div class="extra_footer">
   <div>
   <div class="mooc_add">
-   <a href="https://www.fun-mooc.fr/en/courses/machine-learning-python-scikit-learn">Join the full MOOC for better learning!</a>
+   <a href="https://www.fun-mooc.fr/en/courses/machine-learning-python-scikit-learn">Join the full MOOC experience</a>
+   <a href="https://certification.probabl.ai/">Get officially certified!</a>
   </div>
   Brought to you under a <a href="https://github.com/INRIA/scikit-learn-mooc/blob/main/LICENSE">CC-BY License</a> by
   <a href="https://learninglab.inria.fr">Inria Learning Lab</a>,
   <a href="https://scikit-learn.fondation-inria.fr">scikit-learn @ La Fondation Inria</a>,
   <a href="https://www.inria-academy.fr/formation/scikit-learn-la-boite-a-outils-de-lapprentissage-automatique/">Inria Academy</a>,
+  <a href="https://probabl.ai/">probabl</a>,
   with many thanks to the <a href="https://scikit-learn.org">scikit-learn</a> community as a whole!
 </div>
 
